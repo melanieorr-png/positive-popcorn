@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Positive Popcorn</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #f8f5f1;
+      color: #2d342f;
+      line-height: 1.6;
+    }
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 20px;
+      background: linear-gradient(to bottom right, #f8f5f1, #ebe4d9);
+      text-align: center;
+    }
+
+    .hero {
+      max-width: 850px;
+    }
+
+    .tag {
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #73806f;
+      font-size: 13px;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 82px;
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 10px;
+      color: #5d6d60;
+    }
+
+    h2 {
+      font-size: 28px;
+      font-weight: 300;
+      margin-bottom: 40px;
+      color: #343b36;
+    }
+
+    .popcorn {
+      font-size: 85px;
+      margin: 20px 0;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 16px 36px;
+      border-radius: 40px;
+      background: #c98a68;
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 13px;
+      transition: 0.3s ease;
+    }
+
+    .button:hover {
+      background: #a86d4f;
+    }
+
+    section {
+      padding: 100px 20px;
+    }
+
+    .services {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+    }
+
+    .service-card {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 24px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    .service-card h3 {
+      margin: 20px 0 10px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px;
+      color: #5d6d60;
+    }
+
+    .service-card p {
+      font-size: 15px;
+      color: #555;
+    }
+
+    footer {
+      background: #667462;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    footer p {
+      margin: 10px 0;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 56px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="hero">
+    <div class="tag">Darwin Based Creative Studio</div>
+
+    <h1>Positive Popcorn</h1>
+
+    <div class="popcorn">🍿</div>
+
+    <h2>
+      Creative websites, branding and digital ideas that pop into impact.
+    </h2>
+
+    <a href="#services" class="button">Explore Services</a>
+  </div>
+</header>
+
+<section id="services">
+  <div class="services">
+
+    <div class="service-card">
+      <div style="font-size:40px;">💻</div>
+      <h3>Website Design</h3>
+      <p>
+        Beautiful, responsive websites designed to connect with your audience.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <div style="font-size:40px;">✨</div>
+      <h3>Branding</h3>
+      <p>
+        Logos, colour palettes and creative direction that feels aligned.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <div style="font-size:40px;">📱</div>
+      <h3>Social Graphics</h3>
+      <p>
+        Scroll-stopping visuals for social media and digital campaigns.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>Positive Popcorn</p>
+  <p>Darwin • Northern Territory • Australia</p>
+  <p>where ideas pop into impact</p>
+</footer>
+
+</body>
+</html>
