@@ -7,8 +7,8 @@ import {
   Mail,
   Phone,
   MapPin,
-  Smartphone,
   MessageCircle,
+  Smartphone,
 } from "lucide-react";
 
 export default function App() {
@@ -16,12 +16,8 @@ export default function App() {
     <main className="site">
       <section className="hero" id="home">
         <header className="header">
-          <a href="#home" className="logoWrap">
-            <img
-              src="/positive_popcorn_logo.png"
-              alt="Positive Popcorn Logo"
-              className="mainLogo"
-            />
+          <a href="#home" className="smallLogo">
+            <img src="/positive_popcorn_logo.png" alt="Positive Popcorn" />
           </a>
 
           <nav className="nav">
@@ -33,6 +29,10 @@ export default function App() {
             <a className="navButton" href="#contact">Let’s Work Together</a>
           </nav>
         </header>
+
+        <div className="heroBrand">
+          <img src="/positive_popcorn_logo.png" alt="Positive Popcorn" />
+        </div>
 
         <div className="heroContent">
           <h1>
@@ -49,74 +49,38 @@ export default function App() {
           </p>
 
           <a className="primaryButton" href="#contact">
-            Start Your Project
+            Start Your Project <ArrowRight size={22} />
           </a>
         </div>
 
         <div className="heroHeart">♡</div>
       </section>
 
-      <section className="whatIDo" id="services">
-        <SectionTitle title="What I Do" />
-
-        <div className="serviceGrid">
-          <Service
-            icon={<Monitor />}
-            title="Website Design"
-            text="Beautiful, responsive websites that are easy to use and built to grow with your business."
-          />
-          <Service
-            icon={<PenTool />}
-            title="Digital Logos"
-            text="Custom logo concepts that capture your brand and leave a lasting impression."
-          />
-          <Service
-            icon={<Palette />}
-            title="Brand Look & Feel"
-            text="Colour palettes, fonts and style direction that bring your brand to life."
-          />
-          <Service
-            icon={<Lightbulb />}
-            title="Creative Brand Support"
-            text="Logos, branding and graphics that help your ideas pop and your brand shine."
-          />
-        </div>
+      <section className="serviceStrip" id="services">
+        <StripItem icon={<Monitor />} title="Websites & Digital" />
+        <StripItem icon={<PenTool />} title="Application & Tender Writing" />
+        <StripItem icon={<Palette />} title="Brand Design" />
+        <StripItem icon={<Lightbulb />} title="Creative Support" />
       </section>
 
       <section className="feature" id="popcorn">
-        <div className="featureText">
+        <div>
           <p className="eyebrow">Featured Creative Studio</p>
           <h2>Positive Popcorn</h2>
           <p>
             Websites, digital logos and ideas that pop — with a warm coastal
             feel and a Territory-inspired creative edge.
           </p>
-          <a href="#services">
-            Explore Positive Popcorn <ArrowRight size={16} />
-          </a>
         </div>
 
-        <div className="featureVisual">
-          <div className="paperCard">
-            <img
-              src="/positive_popcorn_logo.png"
-              alt="Positive Popcorn Logo"
-              className="paperLogo"
-            />
-          </div>
+        <div className="paperCard">
+          <img src="/positive_popcorn_logo.png" alt="Positive Popcorn" />
         </div>
       </section>
 
       <section className="locationStrip">
-        <div>
-          <MapPin size={18} />
-          Darwin Based • Working Across the NT & Australia
-        </div>
-
-        <div className="stripIcons">
-          <Mail size={22} />
-          <Phone size={22} />
-        </div>
+        <div><MapPin size={18} /> Darwin Based • Working Across the NT & Australia</div>
+        <div><Mail size={22} /><Phone size={22} /></div>
       </section>
 
       <section className="help" id="about">
@@ -137,11 +101,16 @@ export default function App() {
         <p>Let’s create something that pops.</p>
         <a href="mailto:hello@positivepopcorn.com.au">Let’s Chat</a>
       </section>
-
-      <footer>
-        © 2026 Positive Popcorn • Coastal digital design from the Northern Territory
-      </footer>
     </main>
+  );
+}
+
+function StripItem({ icon, title }) {
+  return (
+    <div className="stripItem">
+      <div>{icon}</div>
+      <h3>{title}</h3>
+    </div>
   );
 }
 
@@ -155,24 +124,13 @@ function SectionTitle({ title }) {
   );
 }
 
-function Service({ icon, title, text }) {
-  return (
-    <div className="serviceItem">
-      <div className="serviceIcon">{icon}</div>
-      <h3>{title}</h3>
-      <p>{text}</p>
-    </div>
-  );
-}
-
 function MiniService({ icon, title }) {
   return (
     <div className="miniService">
       <div className="miniIcon">{icon}</div>
       <h3>{title}</h3>
       <p>
-        Clear, creative support to help your brand feel polished, warm and
-        connected.
+        Clear, creative support to help your brand feel polished, warm and connected.
       </p>
     </div>
   );
