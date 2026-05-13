@@ -1,103 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: #f5eee4;
+  background: #f6eee3;
+  color: #1d1d1d;
+  font-family: 'Montserrat', sans-serif;
   overflow-x: hidden;
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .site {
   width: 100%;
-  min-height: 100vh;
+  overflow: hidden;
 }
+
+/* HERO MOCKUP */
 
 .heroMockup {
   position: relative;
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
+  background: #f6eee3;
 }
 
 .heroImage {
-  position: absolute;
-  inset: 0;
-  background-image: url("/hero_mockup.png");
+  width: 100%;
+  height: 100vh;
+  background-image: url('/hero-mockup.png');
   background-size: cover;
-  background-position: top center;
+  background-position: center top;
   background-repeat: no-repeat;
 }
 
-.navOverlay {
+/* INVISIBLE NAVIGATION HOTSPOTS */
+
+.navHotspots {
   position: absolute;
-  top: 56px;
-  right: 56px;
+  top: 55px;
+  right: 210px;
   display: flex;
-  align-items: center;
-  gap: 34px;
-  z-index: 5;
+  height: 50px;
+  z-index: 50;
 }
 
-.navOverlay a {
-  color: #252525;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 1.8px;
+.navHotspots a {
+  display: block;
+  height: 50px;
 }
 
-.navOverlay .active {
-  color: #747f68;
-  border-bottom: 4px solid #747f68;
-  padding-bottom: 10px;
+.navHotspots a:nth-child(1) {
+  width: 90px;
 }
 
-.navButton {
-  background: #747f68;
-  color: white !important;
-  padding: 18px 28px;
-  border-radius: 4px;
+.navHotspots a:nth-child(2) {
+  width: 95px;
 }
 
-.buttonOverlay {
-  position: absolute;
-  left: 78px;
-  top: 632px;
-  z-index: 5;
-  background: #747f68;
+.navHotspots a:nth-child(3) {
+  width: 130px;
+}
+
+.navHotspots a:nth-child(4) {
+  width: 230px;
+}
+
+.navHotspots a:nth-child(5) {
+  width: 120px;
+}
+
+/* TABS SECTION */
+
+.tabsSection {
+  padding: 80px 8%;
+  background: #f6eee3;
+}
+
+.tabButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.tabButtons button {
+  background: #7a846e;
   color: white;
-  text-decoration: none;
-  padding: 20px 34px;
-  border-radius: 4px;
+  border: none;
+  padding: 16px 28px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
-  display: inline-flex;
-  align-items: center;
-  gap: 32px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.tabButtons button:hover {
+  background: #5d6652;
+}
+
+.tabContent {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(8px);
+  padding: 50px;
+  border-radius: 6px;
+  max-width: 900px;
+}
+
+.tabContent h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 58px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #1f1f1f;
+}
+
+.tabContent p {
+  font-size: 19px;
+  line-height: 1.9;
+  color: #444;
+}
+
+/* PAGE SECTIONS */
+
+.pageSection {
+  padding: 100px 8%;
+  background: #f6eee3;
+}
+
+.pageSection h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 60px;
+  font-weight: 500;
+  margin-bottom: 24px;
+  color: #1f1f1f;
+}
+
+.pageSection p {
+  max-width: 850px;
+  font-size: 20px;
+  line-height: 1.9;
+  color: #444;
+}
+
+/* CONTACT SECTION */
+
+.contactSection {
+  background: #7a846e;
+  color: white;
+}
+
+.contactSection h2,
+.contactSection p {
+  color: white;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1200px) {
+  .heroImage {
+    height: 90vh;
+  }
+
+  .navHotspots {
+    top: 45px;
+    right: 120px;
+    transform: scale(0.9);
+    transform-origin: top right;
+  }
 }
 
 @media (max-width: 900px) {
-  .heroMockup {
-    min-height: 760px;
-  }
-
   .heroImage {
-    background-size: cover;
-    background-position: top left;
+    height: 80vh;
+    background-position: center;
   }
 
-  .navOverlay {
+  .navHotspots {
     display: none;
   }
 
-  .buttonOverlay {
-    left: 32px;
-    top: 560px;
+  .tabContent {
+    padding: 32px;
+  }
+
+  .tabContent h2,
+  .pageSection h2 {
+    font-size: 42px;
+  }
+
+  .tabContent p,
+  .pageSection p {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 600px) {
+  .heroImage {
+    height: 65vh;
+    background-position: center;
+  }
+
+  .tabsSection,
+  .pageSection {
+    padding: 60px 6%;
+  }
+
+  .tabButtons {
+    flex-direction: column;
+  }
+
+  .tabButtons button {
+    width: 100%;
+  }
+
+  .tabContent {
+    padding: 24px;
+  }
+
+  .tabContent h2,
+  .pageSection h2 {
+    font-size: 36px;
   }
 }
