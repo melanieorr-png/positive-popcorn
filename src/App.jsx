@@ -1,117 +1,110 @@
 import {
   ArrowRight,
-  Mail,
-  Phone,
   Monitor,
   PenTool,
   Palette,
-  MessageCircle,
-  MapPin,
-  Sparkles,
-  Leaf,
-  FilePenLine,
   Lightbulb,
+  ChevronDown,
+  Mail,
+  Phone,
+  MapPin,
+  Leaf,
+  Armchair,
+  ClipboardPenLine,
   Smartphone,
+  MessageCircle,
 } from "lucide-react";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#f7efe5] text-[#1f1f1f]">
+    <div className="min-h-screen bg-[#f7efe5] text-[#222]">
       {/* HERO */}
       <section
         id="home"
-        className="relative min-h-[760px] bg-cover bg-center"
+        className="relative min-h-[760px] bg-cover bg-center overflow-hidden"
         style={{
           backgroundImage:
-            "linear-gradient(90deg, rgba(247,239,229,0.98) 0%, rgba(247,239,229,0.88) 36%, rgba(247,239,229,0.20) 100%), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=80')",
+            "linear-gradient(90deg, rgba(247,239,229,0.98) 0%, rgba(247,239,229,0.86) 38%, rgba(247,239,229,0.18) 100%), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2200&q=90')",
         }}
       >
-        {/* HEADER */}
-        <header className="max-w-7xl mx-auto px-6 py-7 flex items-start justify-between">
+        <header className="relative z-20 max-w-[1500px] mx-auto px-8 py-8 flex items-start justify-between">
           <a href="#home">
             <img
               src="/positive_popcorn_logo.png"
               alt="Positive Popcorn Logo"
-              className="w-72 max-w-[70vw] h-auto"
+              className="w-[360px] max-w-[42vw] h-auto"
             />
           </a>
 
-          <nav className="hidden lg:flex items-center gap-8 text-xs font-bold tracking-wide uppercase">
-            <a href="#home" className="border-b-2 border-[#6d7b68] pb-2">
+          <nav className="hidden lg:flex items-center gap-8 pt-8 text-[13px] font-bold tracking-wide uppercase">
+            <a href="#home" className="border-b-2 border-[#63725f] pb-2">
               Home
             </a>
-            <a href="#about" className="hover:text-[#c66f45]">
-              About
+            <a href="#about" className="hover:text-[#c66f45]">About</a>
+            <a href="#services" className="hover:text-[#c66f45] flex items-center gap-1">
+              Services <ChevronDown className="w-3 h-3" />
             </a>
-            <a href="#services" className="hover:text-[#c66f45]">
-              Services
-            </a>
-            <a href="#popcorn" className="hover:text-[#c66f45]">
-              Positive Popcorn
-            </a>
-            <a href="#contact" className="hover:text-[#c66f45]">
-              Contact
-            </a>
+            <a href="#popcorn" className="hover:text-[#c66f45]">Positive Popcorn</a>
+            <a href="#projects" className="hover:text-[#c66f45]">Projects</a>
+            <a href="#contact" className="hover:text-[#c66f45]">Contact</a>
             <a
               href="#contact"
-              className="bg-[#6d7b68] text-white px-5 py-3 rounded-sm hover:bg-[#556251]"
+              className="bg-[#63725f] text-white px-6 py-4 rounded-sm hover:bg-[#4e5c4b]"
             >
               Let’s Work Together
             </a>
           </nav>
         </header>
 
-        {/* HERO TEXT */}
-        <div className="max-w-7xl mx-auto px-6 pt-20 lg:pt-24">
-          <div className="max-w-xl">
-            <h1 className="font-serif text-5xl lg:text-7xl leading-tight text-[#1f1f1f]">
+        <div className="relative z-10 max-w-[1500px] mx-auto px-8 pt-16 lg:pt-24">
+          <div className="max-w-[620px]">
+            <h1 className="font-serif text-[56px] lg:text-[76px] leading-[1.08] text-[#242424]">
               Strategic thinking.
               <br />
               Creative solutions.
             </h1>
 
-            <div className="w-24 h-1 bg-[#c66f45] mt-8 mb-8 rounded-full" />
+            <div className="w-24 h-[5px] bg-[#c66f45] mt-8 mb-8 rounded-full" />
 
-            <p className="text-lg leading-8 text-[#263029] max-w-lg">
+            <p className="text-[21px] leading-[1.7] text-[#333] max-w-[520px]">
               Supporting businesses, projects and communities with websites,
-              digital design and creative brand support that brings ideas to life.
+              digital design and creative support that bring ideas to life.
             </p>
 
             <a
               href="#contact"
-              className="inline-flex items-center gap-3 mt-10 bg-[#6d7b68] text-white px-8 py-4 rounded-sm text-sm font-bold uppercase tracking-wide hover:bg-[#556251]"
+              className="inline-flex items-center gap-3 mt-10 bg-[#63725f] text-white px-9 py-5 rounded-sm text-sm font-bold uppercase tracking-wide hover:bg-[#4e5c4b]"
             >
-              Start Your Project <ArrowRight className="w-4 h-4" />
+              Start Your Project
             </a>
           </div>
         </div>
 
-        {/* HAND-DRAWN ACCENTS */}
-        <div className="absolute right-10 bottom-8 hidden lg:block text-[#c66f45] text-6xl opacity-70">
+        <div className="absolute right-12 bottom-10 text-[#c66f45] text-7xl opacity-75 rotate-[-8deg]">
           ♡
         </div>
       </section>
 
       {/* WHAT I DO */}
-      <section id="services" className="bg-[#fffaf4]">
-        <div className="max-w-7xl mx-auto px-6 py-16">
+      <section id="services" className="bg-[#fffaf4] py-14">
+        <div className="max-w-[1450px] mx-auto px-8">
           <SectionTitle title="What I Do" />
 
-          <div className="grid md:grid-cols-4 gap-10 text-center mt-12">
+          <div className="grid md:grid-cols-4 gap-0 mt-12 text-center">
+            <Service
+              icon={<Armchair />}
+              title="Space Design"
+              text="Functional, beautiful spaces that support how people live and work."
+            />
+            <Service
+              icon={<ClipboardPenLine />}
+              title="Application & Tender Writing"
+              text="Clear, compelling responses that meet the brief and stand out."
+            />
             <Service
               icon={<Monitor />}
-              title="Website Design"
-              text="Beautiful, responsive websites that are easy to use and built to grow with your business."
-            />
-            <Service
-              icon={<Palette />}
-              title="Digital Logos"
-              text="Custom logo concepts that capture your brand and leave a lasting impression."
-            />
-            <Service
-              icon={<PenTool />}
-              title="Brand Look & Feel"
-              text="Colour palettes, fonts and style direction that bring your brand to life."
+              title="Websites & Digital"
+              text="User-friendly websites and digital solutions that look great and work seamlessly."
             />
             <Service
               icon={<Lightbulb />}
@@ -123,122 +116,118 @@ export default function App() {
       </section>
 
       {/* FEATURED POSITIVE POPCORN */}
-      <section id="popcorn" className="grid lg:grid-cols-2 bg-[#e8e0d3]">
-        <div className="p-10 lg:p-20 flex items-center">
-          <div>
-            <p className="uppercase tracking-[0.3em] text-[#6d7b68] text-sm mb-5">
-              Featured Creative Studio
-            </p>
+      <section id="popcorn" className="relative bg-[#e7dfd2] overflow-hidden">
+        <div className="grid lg:grid-cols-[0.9fr_1.4fr] min-h-[360px]">
+          <div className="relative z-10 p-10 lg:p-16 flex items-center bg-[#e7dfd2]/95">
+            <div>
+              <p className="uppercase tracking-[0.28em] text-[#63725f] text-sm mb-5">
+                Featured Creative Studio
+              </p>
 
-            <h2 className="font-serif text-5xl mb-6">Positive Popcorn</h2>
+              <h2 className="font-serif text-5xl lg:text-6xl mb-5">
+                Positive Popcorn
+              </h2>
 
-            <p className="text-xl leading-8 max-w-md mb-8">
-              Websites, digital logos and ideas that pop — with a warm coastal
-              feel and a Territory-inspired creative edge.
-            </p>
+              <p className="text-xl leading-8 max-w-md mb-7">
+                The creative arm for websites, digital logos and ideas that pop.
+              </p>
 
-            <a
-              href="#services"
-              className="inline-flex items-center gap-3 text-[#c66f45] uppercase tracking-wide font-bold"
-            >
-              Explore Positive Popcorn <ArrowRight className="w-4 h-4" />
-            </a>
-          </div>
-        </div>
-
-        <div className="relative min-h-[420px] bg-[#f5eadf] flex items-center justify-center overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-white/70 via-transparent to-[#d7c2ad]/50" />
-
-          <div className="absolute top-8 left-10 w-28 h-28 rounded-full bg-white/40 blur-xl" />
-          <div className="absolute bottom-8 right-12 w-40 h-40 rounded-full bg-[#c66f45]/10 blur-2xl" />
-
-          <div className="relative rotate-[-2deg] max-w-lg mx-8">
-            <img
-              src="/positive_popcorn_logo.png"
-              alt="Positive Popcorn Logo"
-              className="w-full h-auto drop-shadow-xl"
-            />
+              <a
+                href="#services"
+                className="inline-flex items-center gap-3 text-[#c66f45] uppercase tracking-[0.16em] font-bold text-sm"
+              >
+                Explore Positive Popcorn <ArrowRight className="w-4 h-4" />
+              </a>
+            </div>
           </div>
 
-          <Leaf className="absolute bottom-8 left-10 w-20 h-20 text-[#6d7b68]/35" />
+          <div className="relative min-h-[360px] bg-[#f1e7da] flex items-center justify-center overflow-hidden">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_35%,rgba(255,255,255,0.8),transparent_32%),linear-gradient(120deg,rgba(255,250,244,0.6),rgba(214,194,174,0.45))]" />
+
+            <Leaf className="absolute left-16 top-24 w-28 h-28 text-[#63725f]/35 rotate-[-20deg]" />
+            <div className="absolute right-10 top-8 w-28 h-28 rounded-full bg-white/45 blur-xl" />
+            <div className="absolute right-28 bottom-8 w-52 h-52 rounded-full bg-[#63725f]/10 blur-2xl" />
+
+            <div className="relative bg-[#fffaf4] shadow-2xl rotate-[-3deg] px-10 py-8 w-[520px] max-w-[80%]">
+              <img
+                src="/positive_popcorn_logo.png"
+                alt="Positive Popcorn Logo"
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* LOCATION STRIP */}
-      <section className="bg-[#5f6f5d] text-white">
-        <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row items-center justify-between gap-4 text-sm uppercase tracking-wide">
+      {/* GREEN LOCATION STRIP */}
+      <section className="bg-[#63725f] text-white">
+        <div className="max-w-[1450px] mx-auto px-8 py-5 flex flex-col md:flex-row items-center justify-between gap-4 text-sm uppercase tracking-wide">
           <div className="flex items-center gap-3">
             <MapPin className="w-5 h-5" />
             Darwin Based • Working Across the NT & Australia
           </div>
 
-          <div className="flex items-center gap-6">
-            <Mail className="w-5 h-5" />
-            <Phone className="w-5 h-5" />
-          </div>
-        </div>
-      </section>
-
-      {/* ABOUT */}
-      <section id="about" className="bg-[#fffaf4] py-20">
-        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <p className="uppercase tracking-[0.35em] text-[#c66f45] text-xs font-bold mb-5">
-              About
-            </p>
-
-            <h2 className="font-serif text-5xl leading-tight mb-7">
-              Coastal calm, creative clarity and Territory soul.
-            </h2>
-
-            <p className="text-lg leading-8 text-[#3f3f3f] mb-5">
-              Positive Popcorn helps small businesses and creative projects
-              shape their online presence with thoughtful websites, simple brand
-              direction and digital content that feels polished but human.
-            </p>
-
-            <p className="text-lg leading-8 text-[#3f3f3f]">
-              The look is warm, earthy and Territory-inspired — drawing from
-              Darwin sunsets, coastal textures, sage greens, soft sand tones and
-              ideas that feel ready to be shared.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 gap-5">
-            <BohoCard icon={<Sparkles />} title="Warm" />
-            <BohoCard icon={<Leaf />} title="Natural" />
-            <BohoCard icon={<Palette />} title="Creative" />
-            <BohoCard icon={<Monitor />} title="Polished" />
+          <div className="flex items-center gap-7">
+            <Mail className="w-6 h-6" />
+            <Phone className="w-6 h-6" />
           </div>
         </div>
       </section>
 
       {/* HOW I CAN HELP */}
-      <section className="bg-[#f7efe5] py-20">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="bg-[#fffaf4] py-20">
+        <div className="max-w-[1450px] mx-auto px-8">
           <SectionTitle title="How I Can Help" />
 
-          <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-8 text-center mt-12">
-            <MiniService icon={<Monitor />} title="Website Design" />
-            <MiniService icon={<PenTool />} title="Digital Logos" />
-            <MiniService icon={<Palette />} title="Brand Look & Feel" />
-            <MiniService icon={<Smartphone />} title="Social Graphics" />
-            <MiniService icon={<FilePenLine />} title="Profile Banners" />
-            <MiniService icon={<MessageCircle />} title="Content & Copy" />
+          <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-10 text-center mt-12">
+            <MiniService
+              icon={<Monitor />}
+              title="Website Design"
+              text="Beautiful, responsive websites that are easy to use and built to grow with your business."
+            />
+            <MiniService
+              icon={<PenTool />}
+              title="Digital Logos"
+              text="Custom logo concepts that capture your brand and leave a lasting impression."
+            />
+            <MiniService
+              icon={<Palette />}
+              title="Brand Look & Feel"
+              text="Colour palettes, fonts and style direction that bring your brand to life."
+            />
+            <MiniService
+              icon={<Smartphone />}
+              title="Social Media Graphics"
+              text="Eye-catching graphics that help your content stand out and connect."
+            />
+            <MiniService
+              icon={<Monitor />}
+              title="LinkedIn Banners"
+              text="Professional banners that strengthen your profile and brand presence."
+            />
+            <MiniService
+              icon={<MessageCircle />}
+              title="Content & Copy Support"
+              text="Simple, clear words that tell your story and connect with your audience."
+            />
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section id="contact" className="bg-[#c66f45] text-white py-14">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center justify-between gap-8">
-          <p className="font-serif text-4xl lg:text-5xl">
+      {/* TERRACOTTA CTA */}
+      <section id="contact" className="relative bg-[#c66f45] text-white overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_40%,rgba(255,255,255,0.22),transparent_30%)]" />
+
+        <div className="relative max-w-[1450px] mx-auto px-8 py-12 flex flex-col lg:flex-row items-center justify-between gap-8">
+          <div className="text-6xl rotate-[-8deg] opacity-90">♡</div>
+
+          <p className="font-serif italic text-4xl lg:text-5xl">
             Let’s create something that pops.
           </p>
 
           <a
             href="mailto:hello@positivepopcorn.com.au"
-            className="bg-[#fffaf4] text-[#5f6f5d] px-10 py-4 rounded-sm uppercase tracking-wide font-bold hover:bg-white"
+            className="bg-[#fffaf4] text-[#222] px-14 py-5 rounded-sm uppercase tracking-wide font-bold hover:bg-white"
           >
             Let’s Chat
           </a>
@@ -255,50 +244,42 @@ export default function App() {
 function SectionTitle({ title }) {
   return (
     <div className="flex items-center justify-center gap-5">
-      <div className="w-12 h-px bg-[#c66f45]" />
-      <h2 className="uppercase tracking-[0.3em] text-sm font-bold">{title}</h2>
-      <div className="w-12 h-px bg-[#c66f45]" />
+      <div className="w-14 h-px bg-[#c66f45]" />
+      <h2 className="uppercase tracking-[0.35em] text-sm font-bold text-[#222]">
+        {title}
+      </h2>
+      <div className="w-14 h-px bg-[#c66f45]" />
     </div>
   );
 }
 
 function Service({ icon, title, text }) {
   return (
-    <div className="px-6 md:border-r md:last:border-r-0 border-[#c66f45]/30">
-      <div className="mx-auto mb-5 w-16 h-16 text-[#6d7b68] flex items-center justify-center">
+    <div className="px-8 md:border-r md:last:border-r-0 border-[#c66f45]/35">
+      <div className="mx-auto mb-5 w-20 h-20 text-[#63725f] flex items-center justify-center [&>svg]:w-14 [&>svg]:h-14 stroke-[1.4]">
         {icon}
       </div>
 
-      <h3 className="font-serif text-2xl mb-3">{title}</h3>
+      <h3 className="font-serif text-2xl mb-4">{title}</h3>
 
-      <p className="text-sm leading-7 text-[#333]">{text}</p>
+      <p className="text-[15px] leading-7 text-[#333] max-w-[230px] mx-auto">
+        {text}
+      </p>
     </div>
   );
 }
 
-function BohoCard({ icon, title }) {
-  return (
-    <div className="bg-white rounded-sm p-8 shadow-md border border-[#ead8c5] text-center">
-      <div className="mx-auto mb-4 w-12 h-12 text-[#c66f45] flex items-center justify-center">
-        {icon}
-      </div>
-
-      <h3 className="font-serif text-2xl">{title}</h3>
-    </div>
-  );
-}
-
-function MiniService({ icon, title }) {
+function MiniService({ icon, title, text }) {
   return (
     <div>
-      <div className="mx-auto mb-4 w-20 h-20 rounded-full bg-[#f0dfd2] flex items-center justify-center text-[#6d7b68]">
+      <div className="mx-auto mb-4 w-20 h-20 rounded-full bg-[#f0dfd2] flex items-center justify-center text-[#63725f] [&>svg]:w-9 [&>svg]:h-9 stroke-[1.5]">
         {icon}
       </div>
 
-      <h3 className="font-serif text-xl mb-2">{title}</h3>
+      <h3 className="font-serif text-xl mb-3">{title}</h3>
 
       <p className="text-sm leading-6 text-[#444]">
-        Clear, creative support to help your brand shine online.
+        {text}
       </p>
     </div>
   );
