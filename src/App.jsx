@@ -13,6 +13,7 @@ import {
   ClipboardPenLine,
   Smartphone,
   MessageCircle,
+  Sparkles,
 } from "lucide-react";
 
 export default function App() {
@@ -28,12 +29,13 @@ export default function App() {
         }}
       >
         <header className="relative z-20 max-w-[1500px] mx-auto px-8 py-8 flex items-start justify-between">
-          <a href="#home">
-            <img
-              src="/positive_popcorn_logo.png"
-              alt="Positive Popcorn Logo"
-              className="w-[360px] max-w-[42vw] h-auto"
-            />
+          <a href="#home" className="leading-none">
+            <p className="font-serif italic text-5xl lg:text-6xl text-[#c66f45]">
+              Positive
+            </p>
+            <p className="uppercase tracking-[0.35em] text-[#63725f] text-sm font-bold mt-1 ml-1">
+              Popcorn
+            </p>
           </a>
 
           <nav className="hidden lg:flex items-center gap-8 pt-8 text-[13px] font-bold tracking-wide uppercase">
@@ -75,7 +77,7 @@ export default function App() {
               href="#contact"
               className="inline-flex items-center gap-3 mt-10 bg-[#63725f] text-white px-9 py-5 rounded-sm text-sm font-bold uppercase tracking-wide hover:bg-[#4e5c4b]"
             >
-              Start Your Project
+              Start Your Project <ArrowRight className="w-4 h-4" />
             </a>
           </div>
         </div>
@@ -124,9 +126,12 @@ export default function App() {
                 Featured Creative Studio
               </p>
 
-              <h2 className="font-serif text-5xl lg:text-6xl mb-5">
-                Positive Popcorn
+              <h2 className="font-serif italic text-5xl lg:text-6xl text-[#c66f45] mb-2">
+                Positive
               </h2>
+              <h3 className="uppercase tracking-[0.35em] text-[#63725f] text-xl font-bold mb-6">
+                Popcorn
+              </h3>
 
               <p className="text-xl leading-8 max-w-md mb-7">
                 The creative arm for websites, digital logos and ideas that pop.
@@ -148,12 +153,17 @@ export default function App() {
             <div className="absolute right-10 top-8 w-28 h-28 rounded-full bg-white/45 blur-xl" />
             <div className="absolute right-28 bottom-8 w-52 h-52 rounded-full bg-[#63725f]/10 blur-2xl" />
 
-            <div className="relative bg-[#fffaf4] shadow-2xl rotate-[-3deg] px-10 py-8 w-[520px] max-w-[80%]">
-              <img
-                src="/positive_popcorn_logo.png"
-                alt="Positive Popcorn Logo"
-                className="w-full h-auto"
-              />
+            <div className="relative text-center rotate-[-3deg]">
+              <Sparkles className="w-16 h-16 text-[#c66f45] mx-auto mb-5" />
+              <p className="font-serif italic text-7xl lg:text-8xl text-[#c66f45] leading-none">
+                Positive
+              </p>
+              <p className="uppercase tracking-[0.5em] text-[#63725f] text-2xl font-bold mt-4">
+                Popcorn
+              </p>
+              <p className="mt-6 text-[#333] text-lg tracking-wide">
+                Creative Studio • Northern Territory
+              </p>
             </div>
           </div>
         </div>
@@ -278,9 +288,7 @@ function MiniService({ icon, title, text }) {
 
       <h3 className="font-serif text-xl mb-3">{title}</h3>
 
-      <p className="text-sm leading-6 text-[#444]">
-        {text}
-      </p>
+      <p className="text-sm leading-6 text-[#444]">{text}</p>
     </div>
   );
 }
