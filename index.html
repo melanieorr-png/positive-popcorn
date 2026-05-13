@@ -1,195 +1,164 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Positive Popcorn</title>
+import React from "react";
+import { ArrowRight, Sparkles, Globe, Palette, PenTool } from "lucide-react";
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+export default function App() {
+  return (
+    <div className="min-h-screen bg-[#fdf8f3] text-gray-800">
+      
+      {/* HERO SECTION */}
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-100 via-yellow-50 to-pink-100 opacity-80"></div>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+        <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 lg:py-28">
+          <div className="grid lg:grid-cols-2 gap-14 items-center">
 
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background: #f8f5f1;
-      color: #2d342f;
-      line-height: 1.6;
-    }
+            {/* LEFT CONTENT */}
+            <div>
+              <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur px-4 py-2 rounded-full shadow-sm mb-6">
+                <Sparkles className="w-4 h-4 text-orange-500" />
+                <span className="text-sm font-medium tracking-wide">
+                  Creative NT Digital Studio
+                </span>
+              </div>
 
-    header {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 60px 20px;
-      background: linear-gradient(to bottom right, #f8f5f1, #ebe4d9);
-      text-align: center;
-    }
+              <h1 className="text-5xl lg:text-7xl font-black leading-tight text-gray-900">
+                Websites with
+                <span className="block text-orange-500">
+                  personality.
+                </span>
+              </h1>
 
-    .hero {
-      max-width: 850px;
-    }
+              <p className="mt-6 text-lg leading-relaxed text-gray-600 max-w-xl">
+                Positive Popcorn creates vibrant websites, branding and digital
+                experiences inspired by the Northern Territory coastline,
+                creativity and community.
+              </p>
 
-    .tag {
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: #73806f;
-      font-size: 13px;
-      margin-bottom: 30px;
-    }
+              <div className="flex flex-wrap gap-4 mt-8">
+                <button className="bg-orange-500 hover:bg-orange-600 transition-all text-white px-7 py-4 rounded-2xl font-semibold shadow-lg flex items-center gap-2">
+                  View Services
+                  <ArrowRight className="w-5 h-5" />
+                </button>
 
-    h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 82px;
-      font-weight: 700;
-      line-height: 1;
-      margin-bottom: 10px;
-      color: #5d6d60;
-    }
+                <button className="bg-white hover:bg-gray-100 transition-all px-7 py-4 rounded-2xl font-semibold shadow-md">
+                  Let’s Create
+                </button>
+              </div>
+            </div>
 
-    h2 {
-      font-size: 28px;
-      font-weight: 300;
-      margin-bottom: 40px;
-      color: #343b36;
-    }
+            {/* RIGHT LOGO */}
+            <div className="flex justify-center">
+              <div className="bg-white/80 backdrop-blur-xl rounded-[40px] shadow-2xl p-10 w-full max-w-md">
+                <img
+                  src="/positive_popcorn_logo.png"
+                  alt="Positive Popcorn Logo"
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+            </div>
 
-    .popcorn {
-      font-size: 85px;
-      margin: 20px 0;
-    }
+          </div>
+        </div>
+      </section>
 
-    .button {
-      display: inline-block;
-      padding: 16px 36px;
-      border-radius: 40px;
-      background: #c98a68;
-      color: white;
-      text-decoration: none;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 13px;
-      transition: 0.3s ease;
-    }
+      {/* SERVICES */}
+      <section className="max-w-7xl mx-auto px-6 py-20">
+        <div className="text-center mb-14">
+          <h2 className="text-4xl font-black mb-4">
+            What We Create
+          </h2>
+          <p className="text-gray-600 text-lg">
+            Coastal-inspired digital creativity for Territory businesses.
+          </p>
+        </div>
 
-    .button:hover {
-      background: #a86d4f;
-    }
+        <div className="grid md:grid-cols-3 gap-8">
 
-    section {
-      padding: 100px 20px;
-    }
+          {/* CARD 1 */}
+          <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all">
+            <div className="bg-orange-100 w-14 h-14 rounded-2xl flex items-center justify-center mb-6">
+              <Globe className="text-orange-500 w-7 h-7" />
+            </div>
 
-    .services {
-      max-width: 1200px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 40px;
-    }
+            <h3 className="text-2xl font-bold mb-3">
+              Website Design
+            </h3>
 
-    .service-card {
-      background: white;
-      padding: 40px 30px;
-      border-radius: 24px;
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    }
+            <p className="text-gray-600 leading-relaxed mb-6">
+              Modern responsive websites designed to feel warm, engaging and
+              uniquely NT.
+            </p>
 
-    .service-card h3 {
-      margin: 20px 0 10px;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 32px;
-      color: #5d6d60;
-    }
+            <button className="font-semibold text-orange-500 hover:text-orange-600 flex items-center gap-2">
+              Learn More
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          </div>
 
-    .service-card p {
-      font-size: 15px;
-      color: #555;
-    }
+          {/* CARD 2 */}
+          <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all">
+            <div className="bg-yellow-100 w-14 h-14 rounded-2xl flex items-center justify-center mb-6">
+              <Palette className="text-yellow-600 w-7 h-7" />
+            </div>
 
-    footer {
-      background: #667462;
-      color: white;
-      text-align: center;
-      padding: 60px 20px;
-    }
+            <h3 className="text-2xl font-bold mb-3">
+              Branding & Logos
+            </h3>
 
-    footer p {
-      margin: 10px 0;
-    }
+            <p className="text-gray-600 leading-relaxed mb-6">
+              Creative branding that captures your story, energy and identity.
+            </p>
 
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 56px;
-      }
+            <button className="font-semibold text-orange-500 hover:text-orange-600 flex items-center gap-2">
+              Learn More
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          </div>
 
-      h2 {
-        font-size: 22px;
-      }
-    }
-  </style>
-</head>
+          {/* CARD 3 */}
+          <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all">
+            <div className="bg-pink-100 w-14 h-14 rounded-2xl flex items-center justify-center mb-6">
+              <PenTool className="text-pink-500 w-7 h-7" />
+            </div>
 
-<body>
+            <h3 className="text-2xl font-bold mb-3">
+              Creative Content
+            </h3>
 
-<header>
-  <div class="hero">
-    <div class="tag">Darwin Based Creative Studio</div>
+            <p className="text-gray-600 leading-relaxed mb-6">
+              Digital storytelling, social content and visuals designed to make
+              brands stand out.
+            </p>
 
-    <h1>Positive Popcorn</h1>
+            <button className="font-semibold text-orange-500 hover:text-orange-600 flex items-center gap-2">
+              Learn More
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          </div>
 
-    <div class="popcorn">🍿</div>
+        </div>
+      </section>
 
-    <h2>
-      Creative websites, branding and digital ideas that pop into impact.
-    </h2>
+      {/* FOOTER */}
+      <footer className="bg-white border-t border-gray-200 py-10 mt-10">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-gray-500">
+            © 2026 Positive Popcorn • Northern Territory Creative Studio
+          </p>
 
-    <a href="#services" class="button">Explore Services</a>
-  </div>
-</header>
-
-<section id="services">
-  <div class="services">
-
-    <div class="service-card">
-      <div style="font-size:40px;">💻</div>
-      <h3>Website Design</h3>
-      <p>
-        Beautiful, responsive websites designed to connect with your audience.
-      </p>
+          <div className="flex gap-6 text-gray-500 text-sm">
+            <a href="#" className="hover:text-orange-500 transition-all">
+              Instagram
+            </a>
+            <a href="#" className="hover:text-orange-500 transition-all">
+              Facebook
+            </a>
+            <a href="#" className="hover:text-orange-500 transition-all">
+              Contact
+            </a>
+          </div>
+        </div>
+      </footer>
     </div>
-
-    <div class="service-card">
-      <div style="font-size:40px;">✨</div>
-      <h3>Branding</h3>
-      <p>
-        Logos, colour palettes and creative direction that feels aligned.
-      </p>
-    </div>
-
-    <div class="service-card">
-      <div style="font-size:40px;">📱</div>
-      <h3>Social Graphics</h3>
-      <p>
-        Scroll-stopping visuals for social media and digital campaigns.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<footer>
-  <p>Positive Popcorn</p>
-  <p>Darwin • Northern Territory • Australia</p>
-  <p>where ideas pop into impact</p>
-</footer>
-
-</body>
-</html>
+  );
+}
