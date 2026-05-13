@@ -4,38 +4,31 @@ import {
   PenTool,
   Palette,
   Lightbulb,
-  ChevronDown,
   Mail,
   Phone,
   MapPin,
-  Armchair,
-  ClipboardPenLine,
+  Smartphone,
+  MessageCircle,
 } from "lucide-react";
 
 export default function App() {
   return (
     <main className="site">
       <section className="hero" id="home">
-        <div className="heroOverlay" />
-
         <header className="header">
-          <a className="brand" href="#home">
-            <div className="brandScript">Positive</div>
-            <div className="brandRow">
-              <span>Popcorn</span>
-              <span className="popIcon">☁</span>
-            </div>
-            <div className="brandTag">Ideas that pop</div>
+          <a href="#home" className="logoWrap">
+            <img
+              src="/positive_popcorn_logo.png"
+              alt="Positive Popcorn Logo"
+              className="mainLogo"
+            />
           </a>
 
           <nav className="nav">
             <a className="active" href="#home">Home</a>
             <a href="#about">About</a>
-            <a href="#services" className="navDrop">
-              Services <ChevronDown size={12} />
-            </a>
+            <a href="#services">Services</a>
             <a href="#popcorn">Positive Popcorn</a>
-            <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
             <a className="navButton" href="#contact">Let’s Work Together</a>
           </nav>
@@ -68,19 +61,19 @@ export default function App() {
 
         <div className="serviceGrid">
           <Service
-            icon={<Armchair />}
-            title="Space Design"
-            text="Functional, beautiful spaces that support how people live and work."
-          />
-          <Service
-            icon={<ClipboardPenLine />}
-            title="Application & Tender Writing"
-            text="Clear, compelling responses that meet the brief and stand out."
-          />
-          <Service
             icon={<Monitor />}
-            title="Websites & Digital"
-            text="User-friendly websites and digital solutions that look great and work seamlessly."
+            title="Website Design"
+            text="Beautiful, responsive websites that are easy to use and built to grow with your business."
+          />
+          <Service
+            icon={<PenTool />}
+            title="Digital Logos"
+            text="Custom logo concepts that capture your brand and leave a lasting impression."
+          />
+          <Service
+            icon={<Palette />}
+            title="Brand Look & Feel"
+            text="Colour palettes, fonts and style direction that bring your brand to life."
           />
           <Service
             icon={<Lightbulb />}
@@ -95,7 +88,8 @@ export default function App() {
           <p className="eyebrow">Featured Creative Studio</p>
           <h2>Positive Popcorn</h2>
           <p>
-            The creative arm for websites, digital logos and ideas that pop.
+            Websites, digital logos and ideas that pop — with a warm coastal
+            feel and a Territory-inspired creative edge.
           </p>
           <a href="#services">
             Explore Positive Popcorn <ArrowRight size={16} />
@@ -104,14 +98,11 @@ export default function App() {
 
         <div className="featureVisual">
           <div className="paperCard">
-            <div className="paperBrand">
-              <div className="brandScript">Positive</div>
-              <div className="brandRow">
-                <span>Popcorn</span>
-                <span className="popIcon">☁</span>
-              </div>
-              <div className="brandTag">Ideas that pop</div>
-            </div>
+            <img
+              src="/positive_popcorn_logo.png"
+              alt="Positive Popcorn Logo"
+              className="paperLogo"
+            />
           </div>
         </div>
       </section>
@@ -135,9 +126,9 @@ export default function App() {
           <MiniService icon={<Monitor />} title="Website Design" />
           <MiniService icon={<PenTool />} title="Digital Logos" />
           <MiniService icon={<Palette />} title="Brand Look & Feel" />
-          <MiniService icon={<Phone />} title="Social Media Graphics" />
+          <MiniService icon={<Smartphone />} title="Social Media Graphics" />
           <MiniService icon={<Monitor />} title="LinkedIn Banners" />
-          <MiniService icon={<Mail />} title="Content & Copy Support" />
+          <MiniService icon={<MessageCircle />} title="Content & Copy Support" />
         </div>
       </section>
 
