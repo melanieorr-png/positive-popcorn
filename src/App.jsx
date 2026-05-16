@@ -1,33 +1,45 @@
+import "./index.css";
+
 export default function App() {
   return (
-    <main className="site">
-      {/* HERO SECTION */}
+    <main className="siteWrapper">
+      
+      {/* HERO MOCKUP */}
       <section className="heroMockup" id="home">
-        <div className="heroImage" />
+        <img
+          src="/hero-mockup.png"
+          alt="Positive Popcorn"
+          className="heroMockupImage"
+        />
       </section>
 
       {/* NAVIGATION TABS */}
-      <section className="mainTabs">
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#popcorn">Positive Popcorn</a>
-        <a href="#contact">Contact</a>
+      <section className="floatingTabs">
+        <div className="tabsWrap">
+          <a href="#services" className="tabButton">Services</a>
+          <a href="#about" className="tabButton">About</a>
+          <a href="#positive-popcorn" className="tabButton">Positive Popcorn</a>
+          <a href="#contact" className="tabButton">Contact</a>
+        </div>
       </section>
 
       {/* SERVICES */}
-      <section id="services" className="pageSection">
-        <div className="sectionContainer">
+      <section className="contentSection" id="services">
+        <div className="contentInner">
           <span className="sectionEyebrow">What We Create</span>
 
-          <h2>Websites with personality.</h2>
+          <h2 className="sectionHeading">
+            Websites with personality.
+          </h2>
 
-          <p>
+          <p className="sectionText">
             Positive Popcorn creates warm, coastal-inspired websites,
-            branding and digital experiences that feel human, creative
-            and memorable.
+            branding and digital experiences that feel human,
+            creative and memorable.
           </p>
 
           <div className="servicesGrid">
+
             <div className="serviceCard">
               <h3>Website Design</h3>
               <p>
@@ -47,8 +59,8 @@ export default function App() {
             <div className="serviceCard">
               <h3>Brand Design</h3>
               <p>
-                Fonts, colours, layouts and branding direction that help
-                your business feel polished and consistent online.
+                Fonts, colours, layouts and branding direction that
+                help your business feel polished and consistent online.
               </p>
             </div>
 
@@ -59,84 +71,89 @@ export default function App() {
                 presentations, ideas and online storytelling.
               </p>
             </div>
+
           </div>
         </div>
       </section>
 
       {/* ABOUT */}
-      <section id="about" className="pageSection altSection">
-        <div className="sectionContainer narrow">
-          <span className="sectionEyebrow">About Positive Popcorn</span>
+      <section className="aboutSection" id="about">
+        <div className="contentInner narrow">
+          
+          <span className="sectionEyebrow">
+            About Positive Popcorn
+          </span>
 
-          <h2>Coastal creativity from the Northern Territory.</h2>
+          <h2 className="sectionHeading">
+            Coastal creativity from the Northern Territory.
+          </h2>
 
-          <p>
+          <p className="sectionText">
             Inspired by warm sunsets, coastal textures and Territory
-            storytelling, Positive Popcorn blends creativity and strategy
-            into websites and digital experiences that feel authentic,
-            welcoming and visually memorable.
+            storytelling, Positive Popcorn blends creativity and
+            strategy into websites and digital experiences that feel
+            authentic, welcoming and visually memorable.
           </p>
 
-          <p>
+          <p className="sectionText">
             Every design is created to feel calm, elegant and natural —
             balancing modern functionality with personality and warmth.
           </p>
+
         </div>
       </section>
 
       {/* POSITIVE POPCORN */}
-      <section id="popcorn" className="pageSection popcornSection">
-        <div className="sectionContainer popcornGrid">
-          <div>
-            <span className="sectionEyebrow">Featured Creative Studio</span>
+      <section className="logoFeature" id="positive-popcorn">
+        <div className="contentInner">
 
-            <h2>Positive Popcorn</h2>
+          <h2 className="sectionHeading">
+            Positive Popcorn
+          </h2>
 
-            <p>
-              The creative arm of the business focused on digital
-              branding, websites, visual storytelling and ideas that pop
-              beautifully online.
-            </p>
+          <p className="sectionText">
+            The creative arm of the business focused on digital branding,
+            websites and visual storytelling that feels beautifully online.
+          </p>
 
-            <a href="#contact" className="textLink">
-              Let’s create something that pops →
-            </a>
-          </div>
-
-          <div className="popcornImageCard">
+          <div className="featureLogoWrap">
             <img
               src="/positive_popcorn_logo.png"
               alt="Positive Popcorn logo"
+              className="featureLogo"
             />
           </div>
+
         </div>
       </section>
 
       {/* CONTACT */}
-      <section id="contact" className="contactSection">
-        <div className="sectionContainer contactContent">
-          <div>
-            <span className="sectionEyebrow light">
-              Let’s Work Together
-            </span>
+      <section className="contactSection" id="contact">
+        <div className="contentInner narrow">
 
-            <h2>Create something beautiful online.</h2>
+          <span className="sectionEyebrow">
+            Let’s Work Together
+          </span>
 
-            <p>
-              Whether you need a website, branding refresh or digital
-              creative support, Positive Popcorn can help bring your
-              ideas to life.
-            </p>
-          </div>
+          <h2 className="sectionHeading">
+            Create something beautiful online.
+          </h2>
 
-          <div className="contactCard">
-            <p>Email</p>
-            <a href="mailto:hello@positivepopcorn.com.au">
-              hello@positivepopcorn.com.au
-            </a>
-          </div>
+          <p className="sectionText">
+            Whether you need a website, branding or creative digital support,
+            Positive Popcorn can help bring your ideas to life.
+          </p>
+
+          <a
+            href="mailto:hello@positivepopcorn.com.au"
+            className="emailLink"
+          >
+            hello@positivepopcorn.com.au
+          </a>
+
         </div>
       </section>
+
     </main>
   );
 }
