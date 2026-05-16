@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 * {
   margin: 0;
@@ -18,8 +18,8 @@ body {
 }
 
 a {
-  color: inherit;
   text-decoration: none;
+  color: inherit;
 }
 
 .site {
@@ -31,9 +31,9 @@ a {
 
 .heroMockup {
   width: 100%;
-  height: 80vh;
-  min-height: 620px;
-  max-height: 850px;
+  height: 92vh;
+  min-height: 720px;
+  max-height: 980px;
   overflow: hidden;
   background: #f6eee3;
 }
@@ -47,32 +47,38 @@ a {
   background-repeat: no-repeat;
 }
 
-/* NAV TABS */
+/* NAVIGATION */
 
 .mainTabs {
-  background: #f6eee3;
-  padding: 28px 8%;
+  background: #efe7dc;
+  padding: 32px 8%;
   display: flex;
+  justify-content: center;
   gap: 14px;
   flex-wrap: wrap;
-  justify-content: center;
+  border-top: 1px solid rgba(116, 127, 104, 0.08);
 }
 
 .mainTabs a {
-  background: #747f68;
+  background: #7a846c;
   color: white;
-  padding: 14px 22px;
+  padding: 14px 24px;
   text-transform: uppercase;
-  font-size: 12px;
+  letter-spacing: 1.6px;
+  font-size: 11px;
   font-weight: 700;
-  letter-spacing: 1.5px;
-  border-radius: 3px;
+  border-radius: 2px;
+  transition: 0.25s ease;
 }
 
-/* SECTIONS */
+.mainTabs a:hover {
+  background: #67705b;
+}
+
+/* GENERAL SECTIONS */
 
 .pageSection {
-  padding: 90px 8%;
+  padding: 100px 8%;
   background: #f6eee3;
 }
 
@@ -85,7 +91,7 @@ a {
 }
 
 .sectionContainer {
-  max-width: 1180px;
+  max-width: 980px;
   margin: 0 auto;
 }
 
@@ -94,89 +100,94 @@ a {
 }
 
 .sectionEyebrow {
-  display: block;
-  color: #c97952;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 13px;
-  font-weight: 700;
+  display: inline-block;
   margin-bottom: 18px;
+  color: #cb7f58;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
 
 .sectionEyebrow.light {
-  color: #f6eee3;
+  color: rgba(255,255,255,0.9);
 }
 
 .pageSection h2,
 .contactSection h2 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(42px, 5vw, 70px);
-  line-height: 1;
+  font-size: clamp(46px, 5vw, 76px);
+  line-height: 0.95;
   font-weight: 500;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
+  color: #1f1f1f;
 }
 
 .pageSection p,
 .contactSection p {
-  max-width: 760px;
   font-size: 19px;
-  line-height: 1.8;
-  color: #3f3f3f;
+  line-height: 1.9;
+  color: #454545;
   margin-bottom: 22px;
 }
 
 /* SERVICES */
 
 .servicesGrid {
-  margin-top: 45px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+  margin-top: 50px;
 }
 
 .serviceCard {
-  background: rgba(255, 250, 244, 0.78);
-  border: 1px solid rgba(116, 127, 104, 0.18);
-  padding: 32px;
-  min-height: 240px;
+  background: rgba(255, 250, 244, 0.75);
+  border: 1px solid rgba(116, 127, 104, 0.14);
+  padding: 36px;
+  transition: 0.25s ease;
+}
+
+.serviceCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.05);
 }
 
 .serviceCard h3 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 30px;
+  font-size: 34px;
   font-weight: 500;
   margin-bottom: 16px;
 }
 
 .serviceCard p {
   font-size: 15px;
-  line-height: 1.8;
+  line-height: 1.9;
   margin: 0;
 }
 
-/* POSITIVE POPCORN */
+/* POPCORN SECTION */
 
 .popcornGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 70px;
   align-items: center;
 }
 
 .textLink {
   display: inline-block;
-  margin-top: 10px;
-  color: #c97952;
+  margin-top: 12px;
+  color: #cb7f58;
   text-transform: uppercase;
-  letter-spacing: 1.8px;
+  letter-spacing: 2px;
   font-size: 13px;
   font-weight: 700;
 }
 
 .popcornImageCard {
-  background: rgba(255, 250, 244, 0.7);
-  padding: 34px;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.08);
+  background: rgba(255,255,255,0.45);
+  padding: 40px;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.08);
   transform: rotate(-2deg);
 }
 
@@ -188,33 +199,33 @@ a {
 /* CONTACT */
 
 .contactSection {
-  background: #747f68;
+  background: #7a846c;
   color: white;
-  padding: 90px 8%;
+  padding: 110px 8%;
 }
 
 .contactContent {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
-  gap: 50px;
+  gap: 60px;
   align-items: center;
 }
 
 .contactSection p {
-  color: rgba(255, 255, 255, 0.88);
+  color: rgba(255,255,255,0.88);
 }
 
 .contactCard {
-  background: rgba(255, 255, 255, 0.12);
-  padding: 34px;
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 36px;
 }
 
 .contactCard p {
+  margin-bottom: 12px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 13px;
-  margin-bottom: 12px;
+  font-size: 12px;
 }
 
 .contactCard a {
@@ -226,24 +237,23 @@ a {
 
 @media (max-width: 1100px) {
   .heroMockup {
-    height: 65vh;
-    min-height: 500px;
-  }
-
-  .servicesGrid,
-  .popcornGrid,
-  .contactContent {
-    grid-template-columns: 1fr 1fr;
+    height: 72vh;
+    min-height: 580px;
   }
 
   .servicesGrid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+  }
+
+  .popcornGrid,
+  .contactContent {
+    grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 760px) {
   .heroMockup {
-    height: 62vh;
+    height: 58vh;
     min-height: 420px;
   }
 
@@ -254,7 +264,7 @@ a {
 
   .mainTabs {
     justify-content: flex-start;
-    padding: 22px 6%;
+    padding: 24px 6%;
   }
 
   .mainTabs a {
@@ -264,21 +274,21 @@ a {
 
   .pageSection,
   .contactSection {
-    padding: 65px 6%;
+    padding: 70px 6%;
   }
 
-  .servicesGrid,
-  .popcornGrid,
-  .contactContent {
-    grid-template-columns: 1fr;
+  .pageSection h2,
+  .contactSection h2 {
+    font-size: 48px;
   }
 
   .serviceCard {
-    min-height: auto;
+    padding: 28px;
   }
 
   .popcornImageCard {
     transform: none;
+    padding: 24px;
   }
 
   .contactCard a {
