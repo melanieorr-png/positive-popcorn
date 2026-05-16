@@ -33,8 +33,8 @@ export default function App() {
           </h2>
 
           <p className="sectionText">
-            Positive Popcorn creates warm, coastal-inspired websites,
-            branding and digital experiences that feel human,
+            Positive Popcorn creates websites, branding and 
+            digital experiences that feel human,
             creative and memorable.
           </p>
 
