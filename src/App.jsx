@@ -1,66 +1,140 @@
-import { useState } from "react";
-
 export default function App() {
-  const [activeTab, setActiveTab] = useState("services");
-
   return (
     <main className="site">
+      {/* HERO SECTION */}
       <section className="heroMockup" id="home">
         <div className="heroImage" />
+      </section>
 
-        <div className="navHotspots">
-          <a href="#services" aria-label="Services"></a>
-          <a href="#about" aria-label="About"></a>
-          <a href="#popcorn" aria-label="Positive Popcorn"></a>
-          <a href="#contact" aria-label="Contact"></a>
+      {/* NAVIGATION TABS */}
+      <section className="mainTabs">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#popcorn">Positive Popcorn</a>
+        <a href="#contact">Contact</a>
+      </section>
+
+      {/* SERVICES */}
+      <section id="services" className="pageSection">
+        <div className="sectionContainer">
+          <span className="sectionEyebrow">What We Create</span>
+
+          <h2>Websites with personality.</h2>
+
+          <p>
+            Positive Popcorn creates warm, coastal-inspired websites,
+            branding and digital experiences that feel human, creative
+            and memorable.
+          </p>
+
+          <div className="servicesGrid">
+            <div className="serviceCard">
+              <h3>Website Design</h3>
+              <p>
+                Beautiful responsive websites designed to feel modern,
+                calming and easy to use across desktop and mobile.
+              </p>
+            </div>
+
+            <div className="serviceCard">
+              <h3>Digital Logos</h3>
+              <p>
+                Creative logos and visual identities inspired by
+                Territory warmth, coastal colours and natural textures.
+              </p>
+            </div>
+
+            <div className="serviceCard">
+              <h3>Brand Design</h3>
+              <p>
+                Fonts, colours, layouts and branding direction that help
+                your business feel polished and consistent online.
+              </p>
+            </div>
+
+            <div className="serviceCard">
+              <h3>Creative Support</h3>
+              <p>
+                Creative digital support for projects, social graphics,
+                presentations, ideas and online storytelling.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section className="tabsSection">
-        <div className="tabButtons">
-          <button onClick={() => setActiveTab("services")}>Services</button>
-          <button onClick={() => setActiveTab("about")}>About</button>
-          <button onClick={() => setActiveTab("popcorn")}>Positive Popcorn</button>
-          <button onClick={() => setActiveTab("contact")}>Contact</button>
+      {/* ABOUT */}
+      <section id="about" className="pageSection altSection">
+        <div className="sectionContainer narrow">
+          <span className="sectionEyebrow">About Positive Popcorn</span>
+
+          <h2>Coastal creativity from the Northern Territory.</h2>
+
+          <p>
+            Inspired by warm sunsets, coastal textures and Territory
+            storytelling, Positive Popcorn blends creativity and strategy
+            into websites and digital experiences that feel authentic,
+            welcoming and visually memorable.
+          </p>
+
+          <p>
+            Every design is created to feel calm, elegant and natural —
+            balancing modern functionality with personality and warmth.
+          </p>
         </div>
+      </section>
 
-        <div className="tabContent">
-          {activeTab === "services" && (
-            <>
-              <h2>Services</h2>
-              <p>
-                Websites, digital logos, brand design and creative support for
-                businesses ready to show up beautifully online.
-              </p>
-            </>
-          )}
+      {/* POSITIVE POPCORN */}
+      <section id="popcorn" className="pageSection popcornSection">
+        <div className="sectionContainer popcornGrid">
+          <div>
+            <span className="sectionEyebrow">Featured Creative Studio</span>
 
-          {activeTab === "about" && (
-            <>
-              <h2>About</h2>
-              <p>
-                Coastal creative support for businesses, projects and ideas
-                across the Northern Territory.
-              </p>
-            </>
-          )}
+            <h2>Positive Popcorn</h2>
 
-          {activeTab === "popcorn" && (
-            <>
-              <h2>Positive Popcorn</h2>
-              <p>
-                Creative websites, logos and digital support that feels warm,
-                human and memorable.
-              </p>
-            </>
-          )}
+            <p>
+              The creative arm of the business focused on digital
+              branding, websites, visual storytelling and ideas that pop
+              beautifully online.
+            </p>
 
-          {activeTab === "contact" && (
-            <>
-              <h2>Let’s Work Together</h2>
-              <p>hello@positivepopcorn.com.au</p>
-            </>
-          )}
+            <a href="#contact" className="textLink">
+              Let’s create something that pops →
+            </a>
+          </div>
+
+          <div className="popcornImageCard">
+            <img
+              src="/positive_popcorn_logo.png"
+              alt="Positive Popcorn logo"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* CONTACT */}
+      <section id="contact" className="contactSection">
+        <div className="sectionContainer contactContent">
+          <div>
+            <span className="sectionEyebrow light">
+              Let’s Work Together
+            </span>
+
+            <h2>Create something beautiful online.</h2>
+
+            <p>
+              Whether you need a website, branding refresh or digital
+              creative support, Positive Popcorn can help bring your
+              ideas to life.
+            </p>
+          </div>
+
+          <div className="contactCard">
+            <p>Email</p>
+            <a href="mailto:hello@positivepopcorn.com.au">
+              hello@positivepopcorn.com.au
+            </a>
+          </div>
         </div>
       </section>
     </main>
