@@ -1,159 +1,158 @@
 import "./index.css";
 
-export default function App() {
+function App() {
   return (
-    <main className="siteWrapper">
-      
-      {/* HERO MOCKUP */}
-      <section className="heroMockup" id="home">
-        <img
-          src="/hero-mockup.png"
-          alt="Positive Popcorn"
-          className="heroMockupImage"
-        />
-      </section>
+    <main className="page">
+      <section className="hero">
+        <div className="heroOverlay">
+          <p className="eyebrow">Local • Creative • AI-powered</p>
 
-      {/* NAVIGATION TABS */}
-      <section className="floatingTabs">
-        <div className="tabsWrap">
-          <a href="#services" className="tabButton">Services</a>
-          <a href="#about" className="tabButton">About</a>
-          <a href="#positive-popcorn" className="tabButton">Positive Popcorn</a>
-          <a href="#contact" className="tabButton">Contact</a>
-        </div>
-      </section>
+          <h1>Positive Popcorn</h1>
 
-      {/* SERVICES */}
-      <section className="contentSection" id="services">
-        <div className="contentInner">
-          <span className="sectionEyebrow">What We Create</span>
-
-          <h2 className="sectionHeading">
-            Websites with personality.
-          </h2>
-
-          <p className="sectionText">
-            Positive Popcorn creates websites, branding and 
-            digital experiences that feel human,
-            creative and memorable.
+          <p className="heroText">
+            From the Top End coast to Central Australia, inspired by warm
+            sunsets, coastal textures, red dirt landscapes and rugged remote
+            locations, Positive Popcorn creates websites, logos and digital
+            experiences that help businesses stand out.
           </p>
 
-          <div className="servicesGrid">
-
-            <div className="serviceCard">
-              <h3>Website Design</h3>
-              <p>
-                Beautiful responsive websites designed to feel modern,
-                calming and easy to use across desktop and mobile.
-              </p>
-            </div>
-
-            <div className="serviceCard">
-              <h3>Digital Logos</h3>
-              <p>
-                Creative logos and visual identities inspired by
-                Territory warmth, coastal colours and natural textures.
-              </p>
-            </div>
-
-            <div className="serviceCard">
-              <h3>Brand Design</h3>
-              <p>
-                Fonts, colours, layouts and branding direction that
-                help your business feel polished and consistent online.
-              </p>
-            </div>
-
-            <div className="serviceCard">
-              <h3>Creative Support</h3>
-              <p>
-                Creative digital support for projects, social graphics,
-                presentations, ideas and online storytelling.
-              </p>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* ABOUT */}
-      <section className="aboutSection" id="about">
-        <div className="contentInner narrow">
-          
-          <span className="sectionEyebrow">
-            About Positive Popcorn
-          </span>
-
-          <h2 className="sectionHeading">
-            Coastal creativity from the Northern Territory.
-          </h2>
-
-          <p className="sectionText">
-            Inspired by warm sunsets, coastal textures and Territory
-            storytelling, Positive Popcorn blends creativity and
-            strategy into websites and digital experiences that feel
-            authentic, welcoming and visually memorable.
-          </p>
-
-          <p className="sectionText">
-            Every design is created to feel calm, elegant and natural —
-            balancing modern functionality with personality and warmth.
-          </p>
-
-        </div>
-      </section>
-
-      {/* POSITIVE POPCORN */}
-      <section className="logoFeature" id="positive-popcorn">
-        <div className="contentInner">
-
-          <h2 className="sectionHeading">
-            Positive Popcorn
-          </h2>
-
-          <p className="sectionText">
-            The creative arm of the business focused on digital branding,
-            websites and visual storytelling that feels beautifully online.
-          </p>
-
-          <div className="featureLogoWrap">
-            <img
-              src="/positive_popcorn_logo.png"
-              alt="Positive Popcorn logo"
-              className="featureLogo"
-            />
-          </div>
-
-        </div>
-      </section>
-
-      {/* CONTACT */}
-      <section className="contactSection" id="contact">
-        <div className="contentInner narrow">
-
-          <span className="sectionEyebrow">
-            Let’s Work Together
-          </span>
-
-          <h2 className="sectionHeading">
-            Create something beautiful online.
-          </h2>
-
-          <p className="sectionText">
-            Whether you need a website, branding or creative digital support,
-            Positive Popcorn can help bring your ideas to life.
-          </p>
-
-          <a
-            href="mailto:hello@positivepopcorn.com.au"
-            className="emailLink"
-          >
-            hello@positivepopcorn.com.au
+          <a href="#services" className="button">
+            Let’s create something
           </a>
-
         </div>
       </section>
 
+      <section className="section intro">
+        <h2>Creative websites, branding and applications with pop.</h2>
+
+        <p>
+          Positive Popcorn uses cutting-edge AI technology combined with
+          creative direction to build modern websites, unique branding and
+          memorable visuals that help businesses stand out in a crowded digital
+          world.
+        </p>
+
+        <p>
+          I’m local, I understand the Territory, and I know how hard it can be
+          for small businesses, community groups and organisations to get
+          noticed, win opportunities and tell their story clearly.
+        </p>
+      </section>
+
+      <section className="section about">
+        <div>
+          <p className="eyebrow">Meet Mel</p>
+          <h2>Built from creative, business and strategic experience.</h2>
+        </div>
+
+        <div>
+          <p>
+            Before Positive Popcorn, I ran my own business for over 10 years and
+            created multiple websites using Wix. Through that experience, I saw
+            first-hand how important it is to have a brand, website and message
+            that feels professional, memorable and true to who you are.
+          </p>
+
+          <p>
+            I also understand the pressure of trying to stand out, apply for
+            grants, respond to tenders and explain your value in a way that
+            people actually connect with.
+          </p>
+
+          <p>
+            Alongside my creative business experience, I also bring years of
+            strategic leadership and project experience working within Charles
+            Darwin University and the Northern Territory vocational education
+            sector.
+          </p>
+
+          <p>
+            This experience has given me strong insight into strategic planning,
+            stakeholder engagement, funding priorities, grants, tenders and how
+            to communicate ideas in a way that connects with decision-makers.
+          </p>
+
+          <p>
+            Now, I combine creative thinking, AI-powered design tools and
+            strategic writing to help businesses, community organisations and
+            local brands stand out with confidence.
+          </p>
+        </div>
+      </section>
+
+      <section className="section services" id="services">
+        <p className="eyebrow">What I can help with</p>
+        <h2>Creative support for your next big idea.</h2>
+
+        <div className="cards">
+          <div className="card">
+            <h3>AI Website Design</h3>
+            <p>
+              Modern, eye-catching websites designed to feel authentic,
+              welcoming and easy to navigate.
+            </p>
+          </div>
+
+          <div className="card">
+            <h3>Logos & Branding</h3>
+            <p>
+              Unique logo concepts, colour direction and brand ideas that help
+              your business get noticed.
+            </p>
+          </div>
+
+          <div className="card">
+            <h3>Grant Writing</h3>
+            <p>
+              Support to shape clear, persuasive grant applications that tell
+              your story and strengthen your case.
+            </p>
+          </div>
+
+          <div className="card">
+            <h3>Tender & Application Support</h3>
+            <p>
+              Help turning your ideas, services and experience into strong,
+              structured written responses.
+            </p>
+          </div>
+
+          <div className="card">
+            <h3>Merchandise Ideas</h3>
+            <p>
+              Creative product, campaign and merchandise concepts to help your
+              brand feel fun and memorable.
+            </p>
+          </div>
+
+          <div className="card">
+            <h3>Creative Strategy</h3>
+            <p>
+              Big-picture thinking to help you refine your message, visual style
+              and customer experience.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section statement">
+        <h2>Local stories deserve to stand out.</h2>
+        <p>
+          Whether you need a website, a logo, a grant application, a tender
+          response or just someone to help turn your idea into something that
+          feels exciting and professional — Positive Popcorn is here to help you
+          pop.
+        </p>
+      </section>
+
+      <footer>
+        <p>
+          Positive Popcorn — designed in the Territory, inspired by coastlines,
+          red dirt and real stories.
+        </p>
+      </footer>
     </main>
   );
 }
+
+export default App;
