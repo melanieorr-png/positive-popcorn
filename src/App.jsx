@@ -3,6 +3,8 @@ import "./index.css";
 function App() {
   return (
     <main className="page">
+
+      {/* HERO SECTION */}
       <section className="hero">
         <div className="heroOverlay">
           <p className="eyebrow">Local • Creative • AI-powered</p>
@@ -17,11 +19,12 @@ function App() {
           </p>
 
           <a href="#services" className="button">
-            Let’s create something
+            Let’s Create Something
           </a>
         </div>
       </section>
 
+      {/* INTRO */}
       <section className="section intro">
         <h2>Creative websites, branding and applications with pop.</h2>
 
@@ -39,10 +42,14 @@ function App() {
         </p>
       </section>
 
+      {/* ABOUT */}
       <section className="section about">
         <div>
           <p className="eyebrow">Meet Mel</p>
-          <h2>Built from creative, business and strategic experience.</h2>
+
+          <h2>
+            Built from creative, business and strategic experience.
+          </h2>
         </div>
 
         <div>
@@ -80,13 +87,17 @@ function App() {
         </div>
       </section>
 
+      {/* SERVICES */}
       <section className="section services" id="services">
         <p className="eyebrow">What I can help with</p>
+
         <h2>Creative support for your next big idea.</h2>
 
         <div className="cards">
+
           <div className="card">
             <h3>AI Website Design</h3>
+
             <p>
               Modern, eye-catching websites designed to feel authentic,
               welcoming and easy to navigate.
@@ -95,6 +106,7 @@ function App() {
 
           <div className="card">
             <h3>Logos & Branding</h3>
+
             <p>
               Unique logo concepts, colour direction and brand ideas that help
               your business get noticed.
@@ -103,6 +115,7 @@ function App() {
 
           <div className="card">
             <h3>Grant Writing</h3>
+
             <p>
               Support to shape clear, persuasive grant applications that tell
               your story and strengthen your case.
@@ -111,6 +124,7 @@ function App() {
 
           <div className="card">
             <h3>Tender & Application Support</h3>
+
             <p>
               Help turning your ideas, services and experience into strong,
               structured written responses.
@@ -119,6 +133,7 @@ function App() {
 
           <div className="card">
             <h3>Merchandise Ideas</h3>
+
             <p>
               Creative product, campaign and merchandise concepts to help your
               brand feel fun and memorable.
@@ -127,16 +142,20 @@ function App() {
 
           <div className="card">
             <h3>Creative Strategy</h3>
+
             <p>
               Big-picture thinking to help you refine your message, visual style
               and customer experience.
             </p>
           </div>
+
         </div>
       </section>
 
+      {/* FINAL STATEMENT */}
       <section className="section statement">
         <h2>Local stories deserve to stand out.</h2>
+
         <p>
           Whether you need a website, a logo, a grant application, a tender
           response or just someone to help turn your idea into something that
@@ -145,12 +164,14 @@ function App() {
         </p>
       </section>
 
+      {/* FOOTER */}
       <footer>
         <p>
           Positive Popcorn — designed in the Territory, inspired by coastlines,
           red dirt and real stories.
         </p>
       </footer>
+
     </main>
   );
 }
