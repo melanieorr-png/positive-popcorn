@@ -42,21 +42,39 @@ function App() {
       <section id="about" className="section">
         <p className="eyebrow">Meet Mel</p>
 
-        <h2>Built from creative, business and strategic experience.</h2>
+       <h2>
+      Built from creative thinking, real business experience and strategic
+      leadership.
+    </h2>
 
-        <p>
-          Before Positive Popcorn, I ran my own family business for over 10 years and
-          created multiple websites. Through that experience, I saw
-          first-hand how important it is to have a brand, website and message
-          that feels professional, memorable and true to who you are.
-        </p>
+    <p>
+      Before Positive Popcorn, I spent over 10 years running my own
+      business, where I created our brand, built our websites and learnt
+      first-hand what it takes to stand out in a competitive world.
+    </p>
 
-        <p>
-          I’m local, I understand the Territory, and I know how hard it can be
-          for small businesses, community groups and organisations to stand out,
-          win opportunities and tell their story clearly.
-        </p>
-      </section>
+    <p>
+      That experience taught me how important it is for businesses to have
+      a strong identity, clear messaging and an online presence that people
+      remember.
+    </p>
+
+    <p>
+      Alongside business ownership, I also worked within leadership and
+      executive support roles at Charles Darwin University and CDU TAFE,
+      contributing to strategic initiatives, major projects and award-winning
+      applications that helped showcase Territory education on a national
+      stage.
+    </p>
+
+    <p>
+      I’m local, I understand the Territory, and I know how hard businesses,
+      community groups and organisations work to build something meaningful.
+      Positive Popcorn was created to help those stories stand out with
+      confidence, creativity and impact.
+    </p>
+  </div>
+</section>
 
       {/* SERVICES */}
       <section id="services" className="section soft">
