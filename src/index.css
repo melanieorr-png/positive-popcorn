@@ -1,14 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap');
 
 :root {
   --cream: #f5eee5;
-  --soft-cream: #fbf7f1;
+  --soft-cream: #f8f4ef;
   --text: #1d1d1d;
   --sage: #8a9477;
-  --sage-dark: #687159;
+  --sage-dark: #6f775f;
   --terracotta: #d78b61;
-  --white: #ffffff;
-  --border: rgba(0, 0, 0, 0.08);
+  --border: rgba(0,0,0,0.08);
 }
 
 * {
@@ -33,204 +32,279 @@ body {
   overflow-x: hidden;
 }
 
+/* HERO SECTION */
+
 .hero {
-  min-height: 92vh;
-  background:
-    linear-gradient(rgba(245, 238, 229, 0.2), rgba(245, 238, 229, 0.92)),
-    url('/positive-popcorn-hero.png');
-  background-size: cover;
-  background-position: center;
+  position: relative;
+  min-height: 100vh;
+
   display: flex;
   align-items: center;
-  padding: 40px 8%;
+
+  padding: 4rem 8%;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(245,238,229,0.96) 0%,
+      rgba(245,238,229,0.9) 25%,
+      rgba(245,238,229,0.55) 50%,
+      rgba(245,238,229,0.15) 72%
+    );
 }
 
-.heroOverlay {
-  max-width: 760px;
-  background: rgba(245, 238, 229, 0.72);
-  padding: 46px;
-  border: 1px solid var(--border);
-  backdrop-filter: blur(4px);
+.heroImage {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  z-index: 0;
+
+  opacity: 0.96;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+
+  max-width: 620px;
+
+  margin-top: 9rem;
+  margin-left: 5rem;
+
+  padding: 3.5rem;
+
+  background: rgba(248, 244, 239, 0.58);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255,255,255,0.25);
+
+  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+
+  border-radius: 2px;
 }
 
 .eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+
+  font-size: 0.78rem;
+  font-weight: 600;
+
   color: var(--terracotta);
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  margin-bottom: 18px;
+
+  margin-bottom: 1.5rem;
 }
 
-h1,
-h2,
-h3 {
+.heroContent h1 {
   font-family: 'Cormorant Garamond', serif;
-  font-weight: 500;
+
+  font-size: clamp(4rem, 7vw, 6rem);
+
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+
+  color: #111;
+
+  margin-bottom: 2rem;
 }
 
-h1 {
-  font-size: clamp(4rem, 9vw, 8rem);
-  line-height: 0.9;
-  margin-bottom: 24px;
+.heroContent p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+
+  color: #4f4a45;
+
+  max-width: 520px;
+
+  margin-bottom: 2rem;
 }
 
-h2 {
-  font-size: clamp(3rem, 6vw, 5.5rem);
-  line-height: 0.95;
-  margin-bottom: 24px;
-}
-
-h3 {
-  font-size: 2rem;
-  margin-bottom: 14px;
-}
-
-.heroText,
-.section p {
-  font-size: 1.05rem;
-  line-height: 1.9;
-  color: #444;
-  margin-bottom: 22px;
-}
-
-.button {
-  display: inline-block;
+.heroContent button {
   background: var(--sage);
+
   color: white;
-  text-decoration: none;
-  padding: 14px 24px;
+
+  border: none;
+
+  padding: 1rem 2rem;
+
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  letter-spacing: 1.8px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  transition: 0.3s ease;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
 }
 
-.button:hover {
+.heroContent button:hover {
   background: var(--sage-dark);
   transform: translateY(-2px);
 }
 
-.tabs {
-  background: #e8e0d4;
-  padding: 18px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
+/* VISUAL SECTION */
 
-.tabs a {
-  background: var(--sage);
-  color: white;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 0.7rem;
-  letter-spacing: 1.6px;
-  padding: 11px 18px;
-}
+.visual-break {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
 
-.tabs a:hover {
-  background: var(--sage-dark);
-}
+  gap: 3rem;
 
-.section {
-  padding: 100px 8%;
-  max-width: 1180px;
-  margin: 0 auto;
-}
+  align-items: center;
 
-.soft {
-  max-width: none;
+  padding: 6rem 8%;
+
   background: var(--soft-cream);
 }
 
-.soft > * {
-  max-width: 1180px;
-  margin-left: auto;
-  margin-right: auto;
+.visual-break-text h2 {
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: clamp(2.5rem, 5vw, 4rem);
+
+  margin-bottom: 1rem;
+
+  line-height: 1;
+}
+
+.visual-break-text p {
+  line-height: 1.8;
+
+  color: #5f5148;
+
+  max-width: 520px;
+}
+
+.visual-break-image {
+  width: 100%;
+
+  border-radius: 24px;
+
+  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+}
+
+/* SERVICES */
+
+.services {
+  padding: 6rem 8%;
+
+  background: white;
 }
 
 .servicesGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 22px;
-  margin-top: 45px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+  gap: 2rem;
 }
 
-.card {
-  background: rgba(255, 255, 255, 0.55);
-  border: 1px solid var(--border);
-  padding: 34px;
-  transition: 0.3s ease;
+.serviceCard {
+  background: var(--soft-cream);
+
+  padding: 2.5rem;
+
+  border-radius: 24px;
+
+  transition: all 0.3s ease;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  background: white;
+.serviceCard:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
 }
 
-.card p {
-  font-size: 0.95rem;
+.serviceCard h3 {
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 2rem;
+
+  margin-bottom: 1rem;
 }
 
-.statement {
+.serviceCard p {
+  line-height: 1.7;
+
+  color: #5f5148;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 5rem 8% 3rem;
+
+  background:
+    linear-gradient(
+      rgba(248,244,239,0.92),
+      rgba(248,244,239,0.96)
+    ),
+    url('/src/assets/positive-popcorn-hero.png');
+
+  background-size: cover;
+  background-position: center;
+
   text-align: center;
 }
 
-.statement p {
-  max-width: 760px;
-  margin-left: auto;
-  margin-right: auto;
+footer h2 {
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 3rem;
+
+  margin-bottom: 1rem;
 }
 
-.contact {
-  text-align: center;
+footer p {
+  color: #5f5148;
+
+  margin-bottom: 1rem;
 }
 
-.emailLink {
-  color: var(--sage-dark);
-  font-weight: 700;
-  text-decoration: none;
-  font-size: 1.1rem;
-}
+/* MOBILE */
 
-.emailLink:hover {
-  color: var(--terracotta);
-}
+@media (max-width: 900px) {
 
-@media (max-width: 768px) {
   .hero {
-    min-height: 85vh;
-    padding: 28px 20px;
+    padding: 2rem;
+    align-items: flex-start;
   }
 
-  .heroOverlay {
-    padding: 30px 24px;
+  .heroContent {
+    margin: 7rem 0 0;
+
+    max-width: 100%;
+
+    padding: 2.5rem;
   }
 
-  h1 {
-    font-size: 4rem;
+  .heroContent h1 {
+    font-size: clamp(3rem, 12vw, 4.5rem);
   }
 
-  h2 {
-    font-size: 3rem;
+  .heroContent p {
+    font-size: 1rem;
   }
 
-  .section {
-    padding: 75px 22px;
+  .visual-break {
+    grid-template-columns: 1fr;
+
+    padding: 4rem 2rem;
   }
 
-  .tabs {
-    position: relative;
+  .services {
+    padding: 4rem 2rem;
   }
 
-  .tabs a {
-    font-size: 0.62rem;
-    padding: 10px 14px;
+  footer {
+    padding: 4rem 2rem 2rem;
   }
 }
