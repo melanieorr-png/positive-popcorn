@@ -107,7 +107,7 @@ function App() {
 
         <p>
           Alongside business ownership, I also worked within leadership and
-          executive support roles at Charles Darwin University and CDU TAFE,
+          executive support roles at Charles Darwin University TAFE,
           contributing to strategic initiatives, major projects and
           award-winning applications that helped showcase Territory education on
           a national stage.
