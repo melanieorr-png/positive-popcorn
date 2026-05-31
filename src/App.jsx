@@ -78,7 +78,7 @@ function App() {
         <p className="eyebrow">Ready when you are</p>
         <h2>Let’s make your idea stand out.</h2>
         <a href="mailto:hello@positivepopcorn.com.au" className="emailLink">
-          hello@positivepopcorn.com.au
+          melanieorr@gmail.com
         </a>
       </section>
     </main>
