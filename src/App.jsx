@@ -1,5 +1,5 @@
 import "./index.css";
-import heroImage from "./assets/positive-popcorn-hero.png";
+import heroImage from "./assets/hero.png";
 
 function App() {
   return (
