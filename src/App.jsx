@@ -45,8 +45,8 @@ function App() {
         <h2>Built from creative, business and strategic experience.</h2>
 
         <p>
-          Before Positive Popcorn, I ran my own business for over 10 years and
-          created multiple websites using Wix. Through that experience, I saw
+          Before Positive Popcorn, I ran my own family business for over 10 years and
+          created multiple websites. Through that experience, I saw
           first-hand how important it is to have a brand, website and message
           that feels professional, memorable and true to who you are.
         </p>
@@ -106,9 +106,9 @@ function App() {
         <h2>NT proud. Creative by nature. Built with pop.</h2>
 
         <p>
-          Positive Popcorn is inspired by warm sunsets, coastal textures, red
-          dirt landscapes and rugged remote locations — because Territory
-          businesses deserve branding that feels bold, local and unforgettable.
+          Positive Popcorn was inspired by the idea that businesses shouldn't 
+          blend in. Born from the Territory's bold lanscapes, rugged spirit and creative energy,
+          we help brands stand out, be remembered and make noise in a crowded digital world.
         </p>
       </section>
 
