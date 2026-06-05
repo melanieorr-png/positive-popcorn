@@ -137,6 +137,45 @@ function App() {
         </a>
       </section>
 
+   <section className="contactSection" id="contact">
+  <h2>Contact</h2>
+
+  <p>
+    For enquiries, collaborations or project discussions,
+    please complete the form below.
+  </p>
+
+  <form
+    action="https://formspree.io/f/mbdelwza"
+    method="POST"
+    className="contactForm"
+  >
+    <input
+      type="text"
+      name="name"
+      placeholder="Your Name"
+      required
+    />
+
+    <input
+      type="email"
+      name="email"
+      placeholder="Your Email"
+      required
+    />
+
+    <textarea
+      name="message"
+      placeholder="Your Message"
+      rows="6"
+      required
+    ></textarea>
+
+    <button type="submit">
+      Send Enquiry
+    </button>
+  </form>
+</section>   
     </div>
   )
 }
