@@ -132,7 +132,7 @@ function App() {
           to life.
         </p>
 
-        <a href="mailto:hello@positivepopcorn.com.au" className="emailLink">
+        <a href="mailto:melanieorr@gmail.com" className="emailLink">
           Email Positive Popcorn
         </a>
       </section>
