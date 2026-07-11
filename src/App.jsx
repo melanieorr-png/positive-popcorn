@@ -58,11 +58,8 @@ function App() {
           className="heroImage"
         />
 
-        <div className="heroContent">
-          <p className="eyebrow">Creative websites, branding & storytelling</p>
-
           <h1>
-            Where ideas <span>pop</span> into impact.
+            Creative websites, <span>bradning</span> & storytelling.
           </h1>
 
           <p>
