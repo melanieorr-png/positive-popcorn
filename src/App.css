@@ -62,7 +62,15 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   backdrop-filter:blur(8px);
   border-bottom:1px solid rgba(33,31,27,0.08);
 }
-.brandLogo img{ height:38px; }
+.brandLogo{ display:flex; align-items:baseline; gap:6px; }
+.brandScript{
+  font-family:'Caveat', cursive; font-weight:700; font-size:1.6rem;
+  color:var(--sage);
+}
+.brandBlock{
+  font-family:'Fraunces', serif; font-weight:600; font-size:1.05rem;
+  letter-spacing:0.04em; text-transform:uppercase; color:var(--charcoal);
+}
 .navLinks{ display:flex; gap:30px; flex-wrap:wrap; }
 .navLinks a{
   font-size:0.92rem; color:var(--sage-dark); position:relative; padding-bottom:2px;
@@ -190,15 +198,21 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   content:''; position:absolute; left:0; top:9px; width:8px; height:8px;
   border-radius:50%; background:var(--sage);
 }
-.featureImage{
-  border-radius:18px; width:100%; height:100%;
-  object-fit:cover; aspect-ratio:4/3;
+.featureVisual{
+  border-radius:18px; width:100%; aspect-ratio:4/3;
+  display:flex; align-items:center; justify-content:center;
+  background:linear-gradient(155deg, var(--sage) 0%, var(--sage-dark) 100%);
+  color:var(--cream);
 }
+.featureVisual.alt{
+  background:linear-gradient(155deg, var(--terracotta) 0%, var(--terracotta-dark) 100%);
+}
+.featureVisual .kernelIcon{ width:34%; max-width:130px; }
 @media (max-width:820px){
   .splitSection, .splitSection.reverse{
     grid-template-columns:1fr; direction:ltr; gap:28px; padding:56px 24px;
   }
-  .featureImage{ order:-1; }
+  .featureVisual{ order:-1; aspect-ratio:16/9; }
 }
 
 /* ---------- PORTFOLIO ---------- */
@@ -217,7 +231,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   transform:translateY(-5px);
   box-shadow:0 16px 32px -18px rgba(33,31,27,0.24);
 }
-.portfolioCard img{ width:100%; aspect-ratio:4/3; object-fit:cover; }
+.portfolioVisual{
+  width:100%; aspect-ratio:4/3;
+  display:flex; align-items:center; justify-content:center;
+  background:var(--cream-deep); color:var(--sage);
+}
+.portfolioVisual .kernelIcon{ width:30%; max-width:70px; }
 .portfolioCard h3{ font-size:1.1rem; margin:18px 22px 4px; }
 .portfolioCard p{ font-size:0.92rem; margin:0 22px 22px; }
 
@@ -230,12 +249,16 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   text-align:left;
 }
 .aboutSection h2{ font-size:clamp(1.8rem, 3vw, 2.3rem); }
-.aboutSection img{
-  border-radius:18px; width:100%; aspect-ratio:1/1; object-fit:cover;
+.aboutVisual{
+  border-radius:18px; width:100%; aspect-ratio:1/1;
+  display:flex; align-items:center; justify-content:center;
+  background:linear-gradient(155deg, var(--sage) 0%, var(--sage-dark) 100%);
+  color:var(--cream);
 }
+.aboutVisual .kernelIcon{ width:44%; max-width:150px; }
 @media (max-width:820px){
   .aboutSection{ grid-template-columns:1fr; padding:64px 24px; gap:28px; }
-  .aboutSection img{ order:-1; max-width:320px; margin:0 auto; }
+  .aboutVisual{ order:-1; max-width:280px; margin:0 auto; }
 }
 
 /* ---------- PRICING ---------- */
