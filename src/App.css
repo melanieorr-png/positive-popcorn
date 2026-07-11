@@ -159,7 +159,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 @media (max-width:560px){ .servicesGrid{ grid-template-columns:1fr; } }
 
 .serviceCard{
-  background:#fff; border:1px solid rgba(33,31,27,0.07); border-radius:16px;
+  background:#fff; border:1px solid rgba(33,31,27,0.07); border-radius:22px;
   padding:30px 26px;
   display:flex; flex-direction:column; gap:10px;
   transition:transform .3s cubic-bezier(.2,.8,.3,1.2), box-shadow .3s ease, border-color .3s ease;
@@ -199,20 +199,22 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   border-radius:50%; background:var(--sage);
 }
 .featureVisual{
-  border-radius:18px; width:100%; aspect-ratio:4/3;
+  border-radius:200px 200px 16px 16px;
+  width:100%; aspect-ratio:4/3;
   display:flex; align-items:center; justify-content:center;
-  background:linear-gradient(155deg, var(--sage) 0%, var(--sage-dark) 100%);
-  color:var(--cream);
+  background:linear-gradient(180deg, var(--gold) 0%, var(--cream-deep) 100%);
+  color:var(--terracotta-dark);
 }
 .featureVisual.alt{
-  background:linear-gradient(155deg, var(--terracotta) 0%, var(--terracotta-dark) 100%);
+  background:linear-gradient(180deg, #cfd9c2 0%, var(--cream-deep) 100%);
+  color:var(--sage-dark);
 }
-.featureVisual .kernelIcon{ width:34%; max-width:130px; }
+.featureVisual .bohoIcon{ width:36%; max-width:140px; }
 @media (max-width:820px){
   .splitSection, .splitSection.reverse{
     grid-template-columns:1fr; direction:ltr; gap:28px; padding:56px 24px;
   }
-  .featureVisual{ order:-1; aspect-ratio:16/9; }
+  .featureVisual{ order:-1; aspect-ratio:16/9; border-radius:120px 120px 16px 16px; }
 }
 
 /* ---------- PORTFOLIO ---------- */
@@ -223,7 +225,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 @media (max-width:820px){ .portfolioGrid{ grid-template-columns:1fr; } }
 
 .portfolioCard{
-  background:#fff; border-radius:16px; overflow:hidden;
+  background:#fff; border-radius:22px; overflow:hidden;
   border:1px solid rgba(33,31,27,0.07);
   transition:transform .3s cubic-bezier(.2,.8,.3,1.2), box-shadow .3s ease;
 }
@@ -234,9 +236,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .portfolioVisual{
   width:100%; aspect-ratio:4/3;
   display:flex; align-items:center; justify-content:center;
-  background:var(--cream-deep); color:var(--sage);
+  background:linear-gradient(180deg, var(--cream-deep) 0%, #e8dcc4 100%);
+  color:var(--terracotta-dark);
 }
-.portfolioVisual .kernelIcon{ width:30%; max-width:70px; }
+.portfolioVisual .bohoIcon{ width:32%; max-width:76px; }
 .portfolioCard h3{ font-size:1.1rem; margin:18px 22px 4px; }
 .portfolioCard p{ font-size:0.92rem; margin:0 22px 22px; }
 
@@ -250,12 +253,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .aboutSection h2{ font-size:clamp(1.8rem, 3vw, 2.3rem); }
 .aboutVisual{
-  border-radius:18px; width:100%; aspect-ratio:1/1;
+  border-radius:50% 50% 16px 16px;
+  width:100%; aspect-ratio:1/1;
   display:flex; align-items:center; justify-content:center;
-  background:linear-gradient(155deg, var(--sage) 0%, var(--sage-dark) 100%);
-  color:var(--cream);
+  background:linear-gradient(180deg, var(--gold) 0%, var(--cream-deep) 100%);
+  color:var(--terracotta-dark);
 }
-.aboutVisual .kernelIcon{ width:44%; max-width:150px; }
+.aboutVisual .bohoIcon{ width:40%; max-width:150px; }
 @media (max-width:820px){
   .aboutSection{ grid-template-columns:1fr; padding:64px 24px; gap:28px; }
   .aboutVisual{ order:-1; max-width:280px; margin:0 auto; }
@@ -270,7 +274,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 @media (max-width:560px){ .pricingGrid{ grid-template-columns:1fr; } }
 
 .priceCard{
-  background:#fff; border:1px solid rgba(33,31,27,0.07); border-radius:16px;
+  background:#fff; border:1px solid rgba(33,31,27,0.07); border-radius:22px;
   padding:30px 24px;
   transition:transform .3s cubic-bezier(.2,.8,.3,1.2), box-shadow .3s ease, border-color .3s ease;
 }
