@@ -31,6 +31,50 @@ function BohoSunIcon({ className = "" }) {
   );
 }
 
+function WebDesignIcon({ className = "" }) {
+  return (
+    <svg
+      className={`bohoIcon ${className}`}
+      viewBox="0 0 120 120"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect x="18" y="28" width="84" height="58" rx="10" stroke="currentColor" strokeWidth="3" />
+      <path d="M18 42h84" stroke="currentColor" strokeWidth="3" />
+      <circle cx="28" cy="35" r="2.4" fill="currentColor" />
+      <circle cx="37" cy="35" r="2.4" fill="currentColor" />
+      <circle cx="46" cy="35" r="2.4" fill="currentColor" />
+      <path
+        d="M32 66c8-8 16-8 24 0s16 8 24 0"
+        stroke="currentColor"
+        strokeWidth="3"
+        strokeLinecap="round"
+      />
+      <line x1="42" y1="96" x2="78" y2="96" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+      <line x1="60" y1="86" x2="60" y2="96" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function RoomDesignIcon({ className = "" }) {
+  return (
+    <svg
+      className={`bohoIcon ${className}`}
+      viewBox="0 0 120 120"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M20 62v30h80V62" stroke="currentColor" strokeWidth="3" strokeLinejoin="round" />
+      <path d="M20 62c0-10 8-16 18-16h44c10 0 18 6 18 16" stroke="currentColor" strokeWidth="3" strokeLinejoin="round" />
+      <path d="M20 78h80" stroke="currentColor" strokeWidth="3" />
+      <line x1="32" y1="78" x2="32" y2="92" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+      <line x1="88" y1="78" x2="88" y2="92" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+      <circle cx="94" cy="34" r="7" stroke="currentColor" strokeWidth="3" />
+      <line x1="94" y1="41" x2="94" y2="50" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+    </svg>
+  );
+}
+
 function App() {
   return (
     <main className="siteWrapper">
@@ -59,7 +103,7 @@ function App() {
         />
 
         <div className="heroContent">
-          <h1>Creative websites, design, <span className="brandingWord">branding</span> &amp; storytelling</h1>
+          <h1>Creative websites, <span className="brandingWord">branding</span> &amp; storytelling</h1>
 
           <p>
             Helping Territory businesses, community organisations and
@@ -124,6 +168,16 @@ function App() {
             </p>
             <span>Learn more →</span>
           </a>
+
+          <a href="#roomdesign" className="serviceCard">
+            <div className="serviceIcon">🛋️</div>
+            <h3>Room Design</h3>
+            <p>
+              Warm, considered interiors and styling advice that turn a space
+              into somewhere you actually want to be.
+            </p>
+            <span>Learn more →</span>
+          </a>
         </div>
       </section>
 
@@ -149,7 +203,7 @@ function App() {
         </div>
 
         <div className="featureVisual">
-          <BohoSunIcon />
+          <WebDesignIcon />
         </div>
       </section>
 
@@ -230,6 +284,32 @@ function App() {
 
         <div className="featureVisual alt">
           <BohoSunIcon />
+        </div>
+      </section>
+
+      {/* ROOM DESIGN */}
+      <section id="roomdesign" className="splitSection">
+        <div>
+          <p className="eyebrow">Spaces that feel like you</p>
+          <h2>Room Design</h2>
+
+          <p>
+            From a single room refresh to a full styling plan, I help you
+            create spaces that feel warm, considered and genuinely yours.
+          </p>
+
+          <ul>
+            <li>Room layout &amp; styling plans</li>
+            <li>Colour &amp; texture direction</li>
+            <li>Furniture &amp; decor sourcing</li>
+            <li>Mood boards</li>
+            <li>Small-space solutions</li>
+            <li>Coastal &amp; boho interior styling</li>
+          </ul>
+        </div>
+
+        <div className="featureVisual">
+          <RoomDesignIcon />
         </div>
       </section>
 
@@ -322,6 +402,12 @@ function App() {
             <p className="price">Custom Quote</p>
             <p>Strategic writing support tailored to the opportunity.</p>
           </div>
+
+          <div className="priceCard">
+            <h3>Room Design</h3>
+            <p className="price">From $450</p>
+            <p>A styling plan and mood board for a single room.</p>
+          </div>
         </div>
       </section>
 
@@ -360,6 +446,14 @@ function App() {
             <p>
               Yes. I can help with updates, content, design changes and future
               improvements.
+            </p>
+          </div>
+
+          <div>
+            <h3>Do you only work on websites and branding?</h3>
+            <p>
+              No — I also offer room design, from single-room styling plans
+              to full mood boards and furniture sourcing.
             </p>
           </div>
         </div>
