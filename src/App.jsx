@@ -58,9 +58,8 @@ function App() {
           className="heroImage"
         />
 
-          <h1>
-            Creative websites, <span>branding</span> & storytelling.
-          </h1>
+        <div className="heroContent">
+          <h1>Creative websites, branding &amp; storytelling</h1>
 
           <p>
             Helping Territory businesses, community organisations and
