@@ -104,7 +104,6 @@ function App() {
         <div className="navLinks">
           <a href="#about">About</a>
           <a href="#services">Services</a>
-          <a href="#portfolio">Portfolio</a>
           <a href="#pricing">Pricing</a>
           <a href="#contact">Contact</a>
         </div>
@@ -368,38 +367,6 @@ function App() {
 
         <div className="featureVisual alt">
           <VideoIcon />
-        </div>
-      </section>
-
-      {/* PORTFOLIO */}
-      <section id="portfolio" className="section portfolioSection">
-        <p className="eyebrow">Recent work</p>
-        <h2>Portfolio</h2>
-
-        <div className="portfolioGrid">
-          <div className="portfolioCard">
-            <div className="portfolioVisual">
-              <BohoSunIcon />
-            </div>
-            <h3>Positive Popcorn</h3>
-            <p>Brand identity, website design and creative direction.</p>
-          </div>
-
-          <div className="portfolioCard">
-            <div className="portfolioVisual">
-              <BohoSunIcon />
-            </div>
-            <h3>Mike Hamilton Consulting</h3>
-            <p>Website design, content structure and professional positioning.</p>
-          </div>
-
-          <div className="portfolioCard">
-            <div className="portfolioVisual">
-              <BohoSunIcon />
-            </div>
-            <h3>Business Cards</h3>
-            <p>Coastal NT-inspired print design and QR-ready contact cards.</p>
-          </div>
         </div>
       </section>
 
