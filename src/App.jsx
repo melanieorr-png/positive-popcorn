@@ -405,8 +405,8 @@ function App() {
 
           <div className="priceCard">
             <h3>Room Design</h3>
-            <p className="price">From $450</p>
-            <p>A styling plan and mood board for a single room.</p>
+            <p className="price">From $50</p>
+            <p>A simple change design of a single room to a styling plan and mood board for an entire commercial building.</p>
           </div>
         </div>
       </section>
@@ -453,7 +453,7 @@ function App() {
             <h3>Do you only work on websites and branding?</h3>
             <p>
               No — I also offer room design, from single-room styling plans
-              to full mood boards and furniture sourcing.
+              to full mood boards and furniture sourcing for commercial plans.
             </p>
           </div>
         </div>
