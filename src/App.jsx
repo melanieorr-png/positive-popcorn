@@ -1,32 +1,30 @@
 import "./App.css";
 
-function KernelIcon({ className = "" }) {
+function BohoSunIcon({ className = "" }) {
   return (
     <svg
-      className={`kernelIcon ${className}`}
+      className={`bohoIcon ${className}`}
       viewBox="0 0 120 120"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M60 55c-8-6-18-2-18 8s10 14 18 10c8 4 18 0 18-10s-10-14-18-8z"
+        d="M20 78a40 40 0 0 1 80 0"
         stroke="currentColor"
-        strokeWidth="3.5"
+        strokeWidth="3"
       />
       <path
-        d="M46 70c-6 2-8 10-2 14s14 0 14-6"
+        d="M30 78a30 30 0 0 1 60 0"
         stroke="currentColor"
-        strokeWidth="3.5"
+        strokeWidth="3"
       />
+      <line x1="60" y1="20" x2="60" y2="32" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+      <line x1="27" y1="35" x2="35" y2="43" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+      <line x1="93" y1="35" x2="85" y2="43" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
       <path
-        d="M74 70c6 2 8 10 2 14s-14 0-14-6"
+        d="M14 92c8-6 16-6 24 0s16 6 24 0 16-6 24 0 16 6 24 0"
         stroke="currentColor"
-        strokeWidth="3.5"
-      />
-      <path
-        d="M40 30l3 8M60 24l0 9M80 30l-3 8"
-        stroke="currentColor"
-        strokeWidth="3.5"
+        strokeWidth="3"
         strokeLinecap="round"
       />
     </svg>
@@ -155,7 +153,7 @@ function App() {
         </div>
 
         <div className="featureVisual">
-          <KernelIcon />
+          <BohoSunIcon />
         </div>
       </section>
 
@@ -181,7 +179,7 @@ function App() {
         </div>
 
         <div className="featureVisual alt">
-          <KernelIcon />
+          <BohoSunIcon />
         </div>
       </section>
 
@@ -208,7 +206,7 @@ function App() {
         </div>
 
         <div className="featureVisual">
-          <KernelIcon />
+          <BohoSunIcon />
         </div>
       </section>
 
@@ -235,7 +233,7 @@ function App() {
         </div>
 
         <div className="featureVisual alt">
-          <KernelIcon />
+          <BohoSunIcon />
         </div>
       </section>
 
@@ -247,7 +245,7 @@ function App() {
         <div className="portfolioGrid">
           <div className="portfolioCard">
             <div className="portfolioVisual">
-              <KernelIcon />
+              <BohoSunIcon />
             </div>
             <h3>Positive Popcorn</h3>
             <p>Brand identity, website design and creative direction.</p>
@@ -255,7 +253,7 @@ function App() {
 
           <div className="portfolioCard">
             <div className="portfolioVisual">
-              <KernelIcon />
+              <BohoSunIcon />
             </div>
             <h3>Mike Hamilton Consulting</h3>
             <p>Website design, content structure and professional positioning.</p>
@@ -263,7 +261,7 @@ function App() {
 
           <div className="portfolioCard">
             <div className="portfolioVisual">
-              <KernelIcon />
+              <BohoSunIcon />
             </div>
             <h3>Business Cards</h3>
             <p>Coastal NT-inspired print design and QR-ready contact cards.</p>
@@ -295,7 +293,7 @@ function App() {
         </div>
 
         <div className="aboutVisual">
-          <KernelIcon />
+          <BohoSunIcon />
         </div>
       </section>
 
