@@ -75,6 +75,22 @@ function RoomDesignIcon({ className = "" }) {
   );
 }
 
+function VideoIcon({ className = "" }) {
+  return (
+    <svg
+      className={`bohoIcon ${className}`}
+      viewBox="0 0 120 120"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect x="16" y="34" width="62" height="52" rx="10" stroke="currentColor" strokeWidth="3" />
+      <path d="M78 52l26-14v44l-26-14" stroke="currentColor" strokeWidth="3" strokeLinejoin="round" />
+      <path d="M40 50l16 10-16 10z" stroke="currentColor" strokeWidth="3" strokeLinejoin="round" />
+      <line x1="26" y1="96" x2="68" y2="96" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+    </svg>
+  );
+}
+
 function App() {
   return (
     <main className="siteWrapper">
@@ -178,6 +194,16 @@ function App() {
             </p>
             <span>Learn more →</span>
           </a>
+
+          <a href="#video" className="serviceCard">
+            <div className="serviceIcon">🎬</div>
+            <h3>Video &amp; Social Content</h3>
+            <p>
+              Help growing your YouTube channel, TikTok or Facebook page —
+              content made to pop into impact.
+            </p>
+            <span>Learn more →</span>
+          </a>
         </div>
       </section>
 
@@ -252,6 +278,8 @@ function App() {
             <li>Business cases</li>
             <li>Expressions of interest</li>
             <li>Award applications</li>
+            <li>Government acquittals</li>
+            <li>Strategic report writing</li>
           </ul>
         </div>
 
@@ -294,22 +322,52 @@ function App() {
           <h2>Room Design</h2>
 
           <p>
-            From a single room refresh to a full styling plan, I help you
-            create spaces that feel warm, considered and genuinely yours.
+            Two ways to work together: send through a photo of your room for
+            a quick AI-generated concept from $50, or go all in with a full
+            styling plan and mood board.
           </p>
 
           <ul>
+            <li>AI room concepts from a single photo</li>
             <li>Room layout &amp; styling plans</li>
             <li>Colour &amp; texture direction</li>
             <li>Furniture &amp; decor sourcing</li>
             <li>Mood boards</li>
-            <li>Small-space solutions</li>
             <li>Coastal &amp; boho interior styling</li>
           </ul>
         </div>
 
         <div className="featureVisual">
           <RoomDesignIcon />
+        </div>
+      </section>
+
+      {/* VIDEO & SOCIAL CONTENT */}
+      <section id="video" className="splitSection reverse">
+        <div>
+          <p className="eyebrow">Content that gets watched</p>
+          <h2>Video &amp; Social Content</h2>
+
+          <p>
+            Whether you need help getting a YouTube channel off the ground,
+            keeping up a consistent TikTok presence, or making your Facebook
+            page actually work for your business — I make video content that
+            feels authentic, on-brand and made to pop into impact, not just
+            noise in the feed.
+          </p>
+
+          <ul>
+            <li>YouTube channel strategy &amp; growth</li>
+            <li>TikTok content creation</li>
+            <li>Facebook page content &amp; management</li>
+            <li>Instagram Reels</li>
+            <li>Scripting, filming &amp; editing</li>
+            <li>Content calendars &amp; posting schedules</li>
+          </ul>
+        </div>
+
+        <div className="featureVisual alt">
+          <VideoIcon />
         </div>
       </section>
 
@@ -363,6 +421,12 @@ function App() {
             direction to help businesses and organisations stand out.
           </p>
 
+          <p>
+            I also work as a strategic report writing consultant, with
+            hands-on experience preparing government acquittals — so I know
+            what funders are actually looking for.
+          </p>
+
           <a href="#contact" className="button">
             Let’s Work Together
           </a>
@@ -404,9 +468,21 @@ function App() {
           </div>
 
           <div className="priceCard">
-            <h3>Room Design</h3>
+            <h3>AI Room Concept</h3>
             <p className="price">From $50</p>
-            <p>A simple change design of a single room to a styling plan and mood board for an entire commercial building.</p>
+            <p>Send a photo of your room and get back an AI-redesigned concept.</p>
+          </div>
+
+          <div className="priceCard">
+            <h3>Room Design</h3>
+            <p className="price">From $450</p>
+            <p>A full styling plan and mood board for a single room.</p>
+          </div>
+
+          <div className="priceCard">
+            <h3>Video &amp; Social Content</h3>
+            <p className="price">From $70</p>
+            <p>From a single short-form video up to a full content package.</p>
           </div>
         </div>
       </section>
@@ -452,8 +528,9 @@ function App() {
           <div>
             <h3>Do you only work on websites and branding?</h3>
             <p>
-              No — I also offer room design, from single-room styling plans
-              to full mood boards and furniture sourcing for commercial plans.
+              No — I also offer room design (from a $50 AI concept up to a
+              full styling plan) and video &amp; social content for TikTok,
+              Reels and YouTube.
             </p>
           </div>
         </div>
