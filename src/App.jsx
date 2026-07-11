@@ -1,4 +1,37 @@
-import "./index.css";
+import "./App.css";
+
+function KernelIcon({ className = "" }) {
+  return (
+    <svg
+      className={`kernelIcon ${className}`}
+      viewBox="0 0 120 120"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M60 55c-8-6-18-2-18 8s10 14 18 10c8 4 18 0 18-10s-10-14-18-8z"
+        stroke="currentColor"
+        strokeWidth="3.5"
+      />
+      <path
+        d="M46 70c-6 2-8 10-2 14s14 0 14-6"
+        stroke="currentColor"
+        strokeWidth="3.5"
+      />
+      <path
+        d="M74 70c6 2 8 10 2 14s-14 0-14-6"
+        stroke="currentColor"
+        strokeWidth="3.5"
+      />
+      <path
+        d="M40 30l3 8M60 24l0 9M80 30l-3 8"
+        stroke="currentColor"
+        strokeWidth="3.5"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
 
 function App() {
   return (
@@ -6,16 +39,15 @@ function App() {
       {/* NAV */}
       <nav className="mainNav">
         <a href="#home" className="brandLogo">
-          <img src="/logo.png" alt="Positive Popcorn logo" />
+          <span className="brandScript">Positive</span>
+          <span className="brandBlock">Popcorn</span>
         </a>
 
         <div className="navLinks">
-          <a href="#home">Home</a>
           <a href="#about">About</a>
           <a href="#services">Services</a>
           <a href="#portfolio">Portfolio</a>
           <a href="#pricing">Pricing</a>
-          <a href="#faq">FAQ</a>
           <a href="#contact">Contact</a>
         </div>
       </nav>
@@ -122,11 +154,9 @@ function App() {
           </ul>
         </div>
 
-        <img
-          src="/website-design.png"
-          alt="Coastal website design workspace"
-          className="featureImage"
-        />
+        <div className="featureVisual">
+          <KernelIcon />
+        </div>
       </section>
 
       {/* BRANDING */}
@@ -150,11 +180,9 @@ function App() {
           </ul>
         </div>
 
-        <img
-          src="/branding.png"
-          alt="Coastal boho branding materials"
-          className="featureImage"
-        />
+        <div className="featureVisual alt">
+          <KernelIcon />
+        </div>
       </section>
 
       {/* GRANTS */}
@@ -179,11 +207,9 @@ function App() {
           </ul>
         </div>
 
-        <img
-          src="/grants.png"
-          alt="Notebook and grant writing workspace"
-          className="featureImage"
-        />
+        <div className="featureVisual">
+          <KernelIcon />
+        </div>
       </section>
 
       {/* STORYTELLING */}
@@ -208,11 +234,9 @@ function App() {
           </ul>
         </div>
 
-        <img
-          src="/storytelling.png"
-          alt="Camera, laptop and coastal storytelling scene"
-          className="featureImage"
-        />
+        <div className="featureVisual alt">
+          <KernelIcon />
+        </div>
       </section>
 
       {/* PORTFOLIO */}
@@ -222,19 +246,25 @@ function App() {
 
         <div className="portfolioGrid">
           <div className="portfolioCard">
-            <img src="/portfolio-positive-popcorn.png" alt="Positive Popcorn website" />
+            <div className="portfolioVisual">
+              <KernelIcon />
+            </div>
             <h3>Positive Popcorn</h3>
             <p>Brand identity, website design and creative direction.</p>
           </div>
 
           <div className="portfolioCard">
-            <img src="/portfolio-mike.png" alt="Mike Hamilton Consulting website" />
+            <div className="portfolioVisual">
+              <KernelIcon />
+            </div>
             <h3>Mike Hamilton Consulting</h3>
             <p>Website design, content structure and professional positioning.</p>
           </div>
 
           <div className="portfolioCard">
-            <img src="/portfolio-cards.png" alt="Business card design" />
+            <div className="portfolioVisual">
+              <KernelIcon />
+            </div>
             <h3>Business Cards</h3>
             <p>Coastal NT-inspired print design and QR-ready contact cards.</p>
           </div>
@@ -264,7 +294,9 @@ function App() {
           </a>
         </div>
 
-        <img src="/about-mel.png" alt="Mel from Positive Popcorn" />
+        <div className="aboutVisual">
+          <KernelIcon />
+        </div>
       </section>
 
       {/* PRICING */}
