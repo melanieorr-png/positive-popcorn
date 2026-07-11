@@ -152,10 +152,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 /* ---------- SERVICES GRID ---------- */
 .servicesGrid{
-  display:grid; grid-template-columns:repeat(4, 1fr); gap:22px;
+  display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:22px;
   margin-top:44px; text-align:left;
 }
-@media (max-width:920px){ .servicesGrid{ grid-template-columns:repeat(2,1fr); } }
 @media (max-width:560px){ .servicesGrid{ grid-template-columns:1fr; } }
 
 .serviceCard{
@@ -267,10 +266,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 /* ---------- PRICING ---------- */
 .pricingGrid{
-  display:grid; grid-template-columns:repeat(4, 1fr); gap:22px;
+  display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:22px;
   margin-top:44px;
 }
-@media (max-width:920px){ .pricingGrid{ grid-template-columns:repeat(2,1fr); } }
 @media (max-width:560px){ .pricingGrid{ grid-template-columns:1fr; } }
 
 .priceCard{
