@@ -59,7 +59,7 @@ function App() {
         />
 
           <h1>
-            Creative websites, <span>bradning</span> & storytelling.
+            Creative websites, <span>branding</span> & storytelling.
           </h1>
 
           <p>
