@@ -59,7 +59,7 @@ function App() {
         />
 
         <div className="heroContent">
-          <h1>Creative websites, branding &amp; storytelling</h1>
+          <h1>Creative websites, <span className="brandingWord">branding</span> &amp; storytelling</h1>
 
           <p>
             Helping Territory businesses, community organisations and
