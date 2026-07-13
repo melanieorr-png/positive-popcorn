@@ -137,11 +137,9 @@ function App() {
         />
 
         <div className="heroContent">
-          <h1>Creative websites, <span className="brandingWord">branding</span> &amp; storytelling</h1>
-
           <p>
-            Helping Territory businesses, community organisations and
-            professionals stand out with heart, clarity and creativity.
+            Helping businesses, community organisations and professionals
+            stand out with heart, clarity and creativity.
           </p>
 
           <div className="heroButtons">
@@ -559,8 +557,17 @@ function App() {
             <h3>Do you only work on websites and branding?</h3>
             <p>
               No — I also offer room design (from a $50 AI concept up to a
-              full styling plan) and video &amp; social content for TikTok,
-              Reels and YouTube.
+              full styling plan), video &amp; social content for TikTok,
+              Reels and YouTube, and custom templates &amp; business tools.
+            </p>
+          </div>
+
+          <div>
+            <h3>Can you build templates or business tools for me?</h3>
+            <p>
+              Yes. From Word documents, newsletters and capability statements
+              to trackers, registers and Notion workspaces — I build
+              templates customised to how your business actually works.
             </p>
           </div>
         </div>
