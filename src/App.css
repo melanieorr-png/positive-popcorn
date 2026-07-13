@@ -88,6 +88,26 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .navLinks a:hover::after{ width:100%; }
 
+.homeLink{
+  font-weight:600; color:var(--terracotta) !important;
+}
+.homeLink::after{ display:none; }
+
+.servicePage{
+  padding-top:64px;
+}
+
+.backToHomeRow{
+  max-width:var(--max-w);
+  margin:0 auto;
+  padding:0 40px 64px;
+}
+.backLink{
+  font-size:0.95rem; font-weight:600; color:var(--sage-dark);
+  text-decoration:none;
+}
+.backLink:hover{ text-decoration:underline; }
+
 @media (max-width:760px){
   .mainNav{ padding:14px 20px; flex-direction:column; gap:12px; }
   .navLinks{ gap:16px 22px; justify-content:center; }
