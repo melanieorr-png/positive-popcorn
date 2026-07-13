@@ -91,6 +91,25 @@ function VideoIcon({ className = "" }) {
   );
 }
 
+function TemplatesIcon({ className = "" }) {
+  return (
+    <svg
+      className={`bohoIcon ${className}`}
+      viewBox="0 0 120 120"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect x="28" y="20" width="64" height="82" rx="8" stroke="currentColor" strokeWidth="3" />
+      <rect x="44" y="14" width="32" height="14" rx="5" stroke="currentColor" strokeWidth="3" />
+      <path d="M42 46l6 6 10-12" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+      <line x1="66" y1="48" x2="82" y2="48" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+      <path d="M42 68l6 6 10-12" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+      <line x1="66" y1="70" x2="82" y2="70" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+      <line x1="42" y1="88" x2="82" y2="88" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+    </svg>
+  );
+}
+
 function App() {
   return (
     <main className="siteWrapper">
@@ -190,6 +209,16 @@ function App() {
             <p>
               Warm, considered interiors and styling advice that turn a space
               into somewhere you actually want to be.
+            </p>
+            <span>Learn more →</span>
+          </a>
+
+          <a href="#templates" className="serviceCard">
+            <div className="serviceIcon">📋</div>
+            <h3>Templates &amp; Business Tools</h3>
+            <p>
+              Custom templates and trackers that save you time and keep your
+              business organised, built around the way you work.
             </p>
             <span>Learn more →</span>
           </a>
@@ -314,6 +343,34 @@ function App() {
         </div>
       </section>
 
+      {/* TEMPLATES & BUSINESS TOOLS */}
+      <section id="templates" className="splitSection">
+        <div>
+          <p className="eyebrow">Systems that save you time</p>
+          <h2>Templates &amp; Business Tools</h2>
+
+          <p>
+            Beautiful, practical templates designed to save time and keep
+            your business organised. From newsletters and client documents
+            to tracking systems, project planners and operational logbooks —
+            every template is customised to the way you work.
+          </p>
+
+          <ul>
+            <li>Business documents &amp; Word templates</li>
+            <li>Trackers, registers &amp; KPI dashboards</li>
+            <li>Operational logbooks &amp; checklists</li>
+            <li>Newsletters &amp; marketing templates</li>
+            <li>Notion, Smartsheet &amp; AI-powered workflows</li>
+            <li>Custom-built to suit your business</li>
+          </ul>
+        </div>
+
+        <div className="featureVisual">
+          <TemplatesIcon />
+        </div>
+      </section>
+
       {/* ROOM DESIGN */}
       <section id="roomdesign" className="splitSection">
         <div>
@@ -435,6 +492,18 @@ function App() {
           </div>
 
           <div className="priceCard">
+            <h3>Templates &amp; Business Tools</h3>
+            <p className="price">From $100</p>
+            <p>A custom template or tracker built around how you work.</p>
+          </div>
+
+          <div className="priceCard">
+            <h3>AI Room Concept</h3>
+            <p className="price">From $50</p>
+            <p>Send a photo of your room and get back an AI-redesigned concept.</p>
+          </div>
+
+          <div className="priceCard">
             <h3>Room Design</h3>
             <p className="price">From $450</p>
             <p>A full styling plan and mood board for a single room.</p>
@@ -442,7 +511,7 @@ function App() {
 
           <div className="priceCard">
             <h3>Video &amp; Social Content</h3>
-            <p className="price">From $100</p>
+            <p className="price">From $70</p>
             <p>From a single short-form video up to a full content package.</p>
           </div>
         </div>
@@ -489,7 +558,7 @@ function App() {
           <div>
             <h3>Do you only work on websites and branding?</h3>
             <p>
-              No — I also offer room design (AI concept up to a
+              No — I also offer room design (from a $50 AI concept up to a
               full styling plan) and video &amp; social content for TikTok,
               Reels and YouTube.
             </p>
