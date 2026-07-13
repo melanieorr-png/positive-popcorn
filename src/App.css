@@ -118,9 +118,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .heroContent h1 .brandingWord{ color:var(--charcoal); font-style:normal; font-weight:600; }
 .heroContent > p{
-  color:rgba(255,255,255,0.88);
-  max-width:520px;
-  font-size:1.05rem;
+  color:rgba(255,255,255,0.92);
+  max-width:560px;
+  font-size:1.3rem;
+  line-height:1.5;
 }
 .heroButtons{ display:flex; gap:16px; flex-wrap:wrap; margin-top:8px; }
 
