@@ -388,7 +388,7 @@ function App() {
             </div>
 
             <div className="aboutVisual">
-              <img src="/mel-photo.jpg" alt="Mel, founder of Positive Popcorn" />
+              <img src="/mel-photo.jpeg" alt="Mel, founder of Positive Popcorn" />
             </div>
           </section>
 
