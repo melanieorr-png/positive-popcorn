@@ -306,24 +306,80 @@ function App() {
           <section id="about" className="aboutSection">
             <div>
               <p className="eyebrow">About Mel</p>
-              <h2>Creative thinking with real business experience.</h2>
+              <h2>Creative thinking backed by real-world experience.</h2>
+
+              <p>Hi, I’m Mel, founder of Positive Popcorn.</p>
 
               <p>
-                Hi, I’m Mel. I created Positive Popcorn to help good ideas come to
-                life through beautiful websites, memorable branding and clear
-                storytelling.
+                I believe every great idea deserves to be presented
+                beautifully — whether that’s through a website, a brand, a
+                funding application or a well-designed business system.
               </p>
 
               <p>
-                With experience across business, government, education and creative
-                projects, I bring together strategic thinking and warm creative
-                direction to help businesses and organisations stand out.
+                For many years I’ve worked across government, education and
+                industry, leading strategic projects, executive
+                communications and large-scale reporting. Along the way I
+                discovered that my favourite part of every role was helping
+                people take an idea and turn it into something people could
+                genuinely connect with.
+              </p>
+
+              <p>That’s why I created Positive Popcorn.</p>
+
+              <p>
+                Today I help small businesses, creators and organisations
+                bring their ideas to life through thoughtful design, clear
+                communication and practical business solutions.
               </p>
 
               <p>
-                I also work as a strategic report writing consultant, with
-                hands-on experience preparing government acquittals — so I know
-                what funders are actually looking for.
+                From AI-powered websites and branding to grant writing,
+                templates, content creation and creative strategy, I love
+                building things that are not only beautiful but genuinely
+                useful.
+              </p>
+
+              <p>
+                Whether you’re starting from scratch or looking to refresh
+                what you’ve already built, I’d love to help make your next
+                idea pop.
+              </p>
+
+              <p>
+                Alongside Positive Popcorn, I provide strategic reporting and
+                grant writing support, drawing on extensive experience
+                preparing executive reports, funding acquittals and
+                government documentation. I understand how to communicate
+                complex information clearly and what funding bodies are
+                looking for when assessing applications.
+              </p>
+
+              <h3>Why work with me?</h3>
+              <ul className="whyList">
+                <li>✔ Creative with a strategic mindset</li>
+                <li>✔ Real experience across government, education and business</li>
+                <li>✔ Friendly, collaborative approach</li>
+                <li>✔ AI-powered tools that save you time</li>
+                <li>✔ Beautiful design with practical outcomes</li>
+                <li>✔ One-on-one support from start to finish</li>
+              </ul>
+
+              <h3>A little about me...</h3>
+              <p>
+                When I’m not designing websites or creating content, you’ll
+                usually find me exploring the Northern Territory, camping,
+                prospecting for gold, or dreaming up the next creative
+                project over a good coffee.
+              </p>
+
+              <p>
+                I believe the best ideas often come from getting outside,
+                slowing down and seeing things differently.
+              </p>
+
+              <p>
+                <strong>Let’s create something you’re proud to share.</strong>
               </p>
 
               <a href="#contact" className="button">
@@ -332,7 +388,7 @@ function App() {
             </div>
 
             <div className="aboutVisual">
-              <BohoSunIcon />
+              <img src="/mel-photo.jpg" alt="Mel, founder of Positive Popcorn" />
             </div>
           </section>
 
