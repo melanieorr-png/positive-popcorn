@@ -435,12 +435,6 @@ function App() {
           </div>
 
           <div className="priceCard">
-            <h3>AI Room Concept</h3>
-            <p className="price">From $50</p>
-            <p>Send a photo of your room and get back an AI-redesigned concept.</p>
-          </div>
-
-          <div className="priceCard">
             <h3>Room Design</h3>
             <p className="price">From $450</p>
             <p>A full styling plan and mood board for a single room.</p>
@@ -448,7 +442,7 @@ function App() {
 
           <div className="priceCard">
             <h3>Video &amp; Social Content</h3>
-            <p className="price">From $70</p>
+            <p className="price">From $100</p>
             <p>From a single short-form video up to a full content package.</p>
           </div>
         </div>
@@ -495,7 +489,7 @@ function App() {
           <div>
             <h3>Do you only work on websites and branding?</h3>
             <p>
-              No — I also offer room design (from a $50 AI concept up to a
+              No — I also offer room design (AI concept up to a
               full styling plan) and video &amp; social content for TikTok,
               Reels and YouTube.
             </p>
