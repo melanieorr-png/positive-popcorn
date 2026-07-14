@@ -439,15 +439,12 @@ function App() {
                 approach is always the same:
               </p>
 
-              <p className="popLines">
-                Create something authentic.
-                <br />
-                Make it beautiful.
-                <br />
-                Keep it practical.
-                <br />
-                Deliver something that works.
-              </p>
+              <ul className="tickList">
+                <li>Create something authentic.</li>
+                <li>Make it memorable.</li>
+                <li>Keep it practical.</li>
+                <li>Deliver something that works.</li>
+              </ul>
 
               <h3>Why Positive Popcorn?</h3>
               <p>Because ideas are a little like popcorn.</p>
@@ -457,8 +454,11 @@ function App() {
                 encouragement, they grow into something people can’t help
                 but notice.
               </p>
-              <p>That’s the part I love.</p>
-              <p>Watching an idea become something real.</p>
+              <p className="popLines">
+                That’s the part I love.
+                <br />
+                Watching an idea become something real.
+              </p>
 
               <h3>What you’ll get working with me</h3>
               <ul className="whyList">
