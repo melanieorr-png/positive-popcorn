@@ -302,94 +302,107 @@ function App() {
           {/* PORTFOLIO */}
           <section id="portfolio" className="section portfolioSection">
             <p className="eyebrow">Real projects. Real stories. Real results.</p>
-            <h2>Every project starts with an idea.</h2>
+            <h2>From idea to impact.</h2>
             <p className="portfolioIntro">
-              Some begin as a sketch on paper. Others start as a conversation
-              over coffee, or a business owner with a dream. Here are a few
-              of the ideas I’ve helped bring to life.
+              Every great project starts with an idea. Sometimes it’s a
+              sketch on paper. Sometimes it’s a conversation over coffee.
+              Sometimes it’s someone saying, “I’ve always wanted to...” Here
+              are a few ideas I’ve had the privilege of bringing to life.
             </p>
 
-            <div className="projectList">
+            <div className="projectGrid">
               <div className="projectCard">
-                <p className="eyebrow">Executive Consultant | Website &amp; Brand</p>
-                <h3>Mike Hamilton</h3>
-                <div className="projectTags">
-                  <span className="tag">Brand Identity</span>
-                  <span className="tag">Website Design &amp; Development</span>
-                  <span className="tag">Copywriting</span>
-                  <span className="tag">Service Strategy</span>
-                  <span className="tag">SEO</span>
-                  <span className="tag">Document Templates</span>
+                <div className="projectVisual">
+                  <WebDesignIcon />
                 </div>
-                <p>
-                  Developed a modern, professional online presence for a
-                  nationally recognised VET executive, creating a website
-                  that reflects decades of leadership experience while
-                  positioning Mike for consulting opportunities.
-                </p>
-                <a
-                  href="https://mikehamilton.com.au"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="projectLink"
-                >
-                  Visit Website → mikehamilton.com.au
-                </a>
+                <div className="projectBody">
+                  <p className="eyebrow">Executive Consultant | Website &amp; Brand</p>
+                  <h3>Mike Hamilton</h3>
+                  <p>
+                    Helping one of Australia’s most experienced VET leaders
+                    establish a professional consulting brand through a
+                    modern website, clear messaging and polished business
+                    resources.
+                  </p>
+                  <div className="projectTags">
+                    <span className="tag">Brand Identity</span>
+                    <span className="tag">Website Design</span>
+                    <span className="tag">SEO</span>
+                  </div>
+                  <a
+                    href="https://mikehamilton.com.au"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="projectLink"
+                  >
+                    View Project → mikehamilton.com.au
+                  </a>
+                </div>
               </div>
 
               <div className="projectCard">
-                <p className="eyebrow">YouTube Brand | Adventure Storytelling</p>
-                <h3>Barefoot Prospector</h3>
-                <div className="projectTags">
-                  <span className="tag">Brand Development</span>
-                  <span className="tag">YouTube Strategy</span>
-                  <span className="tag">Channel Artwork</span>
-                  <span className="tag">Content Planning</span>
-                  <span className="tag">Video Titles</span>
-                  <span className="tag">Thumbnails</span>
-                  <span className="tag">Storytelling</span>
+                <div className="projectVisual alt">
+                  <VideoIcon />
                 </div>
-                <p>
-                  Built the creative direction behind Barefoot Prospector,
-                  helping transform remote gold adventures into a
-                  recognisable digital brand focused on authentic Territory
-                  storytelling.
-                </p>
+                <div className="projectBody">
+                  <p className="eyebrow">Adventure Storytelling | YouTube Brand</p>
+                  <h3>Barefoot Prospector</h3>
+                  <p>
+                    Creating the creative identity behind a YouTube channel
+                    that captures real Territory adventures, remote gold
+                    prospecting and authentic storytelling.
+                  </p>
+                  <div className="projectTags">
+                    <span className="tag">Brand Identity</span>
+                    <span className="tag">Channel Artwork</span>
+                    <span className="tag">Content Strategy</span>
+                  </div>
+                </div>
               </div>
 
               <div className="projectCard">
-                <p className="eyebrow">Outdoor Lifestyle Brand</p>
-                <h3>Outdoor Territory</h3>
-                <div className="projectTags">
-                  <span className="tag">Brand Development</span>
-                  <span className="tag">Website Design</span>
-                  <span className="tag">Content Strategy</span>
-                  <span className="tag">Photography Direction</span>
-                  <span className="tag">Social Media Planning</span>
+                <div className="projectVisual">
+                  <BohoSunIcon />
                 </div>
-                <p>
-                  Creating a brand that celebrates life outdoors across
-                  Northern Australia through authentic stories, adventure
-                  and exploration.
-                </p>
+                <div className="projectBody">
+                  <p className="eyebrow">Lifestyle Brand | Coming Soon</p>
+                  <h3>Outdoor Territory</h3>
+                  <p>
+                    Building a brand inspired by the people, places and
+                    adventures that make Northern Australia unique.
+                  </p>
+                  <div className="projectTags">
+                    <span className="tag">Website</span>
+                    <span className="tag">Brand Identity</span>
+                    <span className="tag">Content Strategy</span>
+                  </div>
+                </div>
               </div>
 
               <div className="projectCard">
-                <p className="eyebrow">My Creative Studio</p>
-                <h3>Positive Popcorn</h3>
-                <p>
-                  Because every creative business should practise what it
-                  preaches. Positive Popcorn is my own brand and creative
-                  playground, where I experiment with ideas, build websites,
-                  develop new services and continually explore better ways
-                  to help businesses grow.
-                </p>
+                <div className="projectVisual alt">
+                  <BohoSunIcon />
+                </div>
+                <div className="projectBody">
+                  <p className="eyebrow">My Creative Playground</p>
+                  <h3>Positive Popcorn</h3>
+                  <p>
+                    Every designer should have a space to experiment.
+                    Positive Popcorn is where I test ideas, explore new
+                    technology, refine my craft and build better ways to
+                    help businesses grow.
+                  </p>
+                </div>
               </div>
             </div>
 
-            <p className="portfolioComingSoon">
-              Coming soon — your business could be the next story here.
-            </p>
+            <div className="projectCta">
+              <p className="eyebrow">Your business?</p>
+              <p>Maybe the next success story belongs here.</p>
+              <a href="#contact" className="button">
+                Let’s Build Something Worth Talking About
+              </a>
+            </div>
           </section>
 
           {/* ABOUT */}
