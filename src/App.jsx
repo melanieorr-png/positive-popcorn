@@ -357,6 +357,14 @@ function App() {
                     <span className="tag">Channel Artwork</span>
                     <span className="tag">Content Strategy</span>
                   </div>
+                  <a
+                    href="http://www.youtube.com/@TheBarefootProspector"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="projectLink"
+                  >
+                    View Channel → @TheBarefootProspector
+                  </a>
                 </div>
               </div>
 
@@ -370,7 +378,7 @@ function App() {
                   <p>
                     Designing a logo and full brand identity — colours,
                     fonts and visual direction — for an interior design
-                    business, built to feel as considered as the spaces
+                    idea, built to feel as considered as the spaces
                     Sharon creates.
                   </p>
                   <div className="projectTags">
