@@ -313,7 +313,7 @@ function App() {
             <div className="projectGrid">
               <div className="projectCard">
                 <div className="projectVisual">
-                  <WebDesignIcon />
+                  <img src="/portfolio-mike.png" alt="Mike Hamilton consulting website" />
                 </div>
                 <div className="projectBody">
                   <p className="eyebrow">Executive Consultant | Website &amp; Brand</p>
@@ -342,7 +342,7 @@ function App() {
 
               <div className="projectCard">
                 <div className="projectVisual alt">
-                  <VideoIcon />
+                  <img src="/portfolio-barefoot.png" alt="The Barefoot Prospector YouTube channel banner" />
                 </div>
                 <div className="projectBody">
                   <p className="eyebrow">Adventure Storytelling | YouTube Brand</p>
@@ -361,20 +361,22 @@ function App() {
               </div>
 
               <div className="projectCard">
-                <div className="projectVisual">
-                  <BohoSunIcon />
+                <div className="projectVisual logoVisual">
+                  <img src="/portfolio-sharon.png" alt="Sharon Scherell Interiors logo" />
                 </div>
                 <div className="projectBody">
-                  <p className="eyebrow">Lifestyle Brand | Coming Soon</p>
-                  <h3>Outdoor Territory</h3>
+                  <p className="eyebrow">Interior Design | Logo &amp; Brand Identity</p>
+                  <h3>Sharon Scherell</h3>
                   <p>
-                    Building a brand inspired by the people, places and
-                    adventures that make Northern Australia unique.
+                    Designing a logo and full brand identity — colours,
+                    fonts and visual direction — for an interior design
+                    business, built to feel as considered as the spaces
+                    Sharon creates.
                   </p>
                   <div className="projectTags">
-                    <span className="tag">Website</span>
+                    <span className="tag">Logo Design</span>
                     <span className="tag">Brand Identity</span>
-                    <span className="tag">Content Strategy</span>
+                    <span className="tag">Colour &amp; Typography</span>
                   </div>
                 </div>
               </div>
