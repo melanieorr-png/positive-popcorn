@@ -378,7 +378,7 @@ function App() {
                   <p>
                     Designing a logo and full brand identity — colours,
                     fonts and visual direction — for an interior design
-                    idea, built to feel as considered as the spaces
+                    business, built to feel as considered as the spaces
                     Sharon creates.
                   </p>
                   <div className="projectTags">
@@ -390,8 +390,8 @@ function App() {
               </div>
 
               <div className="projectCard">
-                <div className="projectVisual alt">
-                  <BohoSunIcon />
+                <div className="projectVisual alt logoVisual">
+                  <img src="/portfolio-popcorn.png" alt="Positive Popcorn logo" />
                 </div>
                 <div className="projectBody">
                   <p className="eyebrow">My Creative Playground</p>
@@ -719,3 +719,4 @@ function App() {
 }
 
 export default App;
+
