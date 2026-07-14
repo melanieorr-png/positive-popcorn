@@ -370,20 +370,20 @@ function App() {
 
               <h3>What I bring</h3>
               <ul className="whyList">
-                <li>✨ Creative thinking backed by real business experience</li>
-                <li>✨ Strategic planning with practical solutions</li>
-                <li>✨ Beautiful, user-friendly design</li>
-                <li>✨ Government reporting and grant writing expertise</li>
-                <li>✨ AI-powered tools that save time and simplify work</li>
-                <li>✨ Honest advice and genuine collaboration</li>
+                <li>Creative thinking backed by real business experience</li>
+                <li>Strategic planning with practical solutions</li>
+                <li>Beautiful, user-friendly design</li>
+                <li>Government reporting and grant writing expertise</li>
+                <li>AI-powered tools that save time and simplify work</li>
+                <li>Honest advice and genuine collaboration</li>
               </ul>
 
               <h3>A little about me</h3>
               <p>
                 When I’m not behind the computer, you’ll usually find me out
-                fishing around the Top End, exploring the Northern
-                Territory, enjoying time with family, or dreaming up my next
-                creative project over a good coffee.
+                fishing around the Top End, exploring the outdoors, enjoying
+                time with family, or dreaming up my next creative project
+                over a good coffee.
               </p>
               <p>
                 Living in the Territory has taught me to appreciate
