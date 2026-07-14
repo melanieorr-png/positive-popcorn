@@ -338,6 +338,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 /* ---------- PRICING ---------- */
+.pricingNote{
+  max-width:560px; margin:0 auto; color:#4a463f; font-size:0.98rem;
+}
 .pricingGrid{
   display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:22px;
   margin-top:44px;
