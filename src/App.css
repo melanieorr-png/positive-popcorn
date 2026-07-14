@@ -392,6 +392,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .footer p{ margin-bottom:10px; color:#7a756a; }
 .footer > div{ display:flex; gap:22px; justify-content:center; flex-wrap:wrap; font-size:0.85rem; }
+.footer > div a{ color:#7a756a; text-decoration:underline; }
+.footer > div a:hover{ color:var(--terracotta); }
 
 @media (prefers-reduced-motion: reduce){
   .button, .serviceCard, .portfolioCard, .priceCard, .contactForm button, .navLinks a::after{
