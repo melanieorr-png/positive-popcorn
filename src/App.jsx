@@ -396,103 +396,111 @@ function App() {
           <section id="about" className="aboutSection">
             <div>
               <p className="eyebrow">About Mel</p>
-              <h2>Every great idea starts with a spark.</h2>
+              <h2>I believe every great idea deserves the chance to grow.</h2>
 
               <p>Hi, I’m Mel — founder of Positive Popcorn.</p>
 
               <p>
-                I created Positive Popcorn because I believe good ideas
-                deserve more than sitting in a notebook or waiting for “one
-                day.” They deserve to be brought to life.
+                Too many ideas stay scribbled in notebooks, waiting for the
+                “perfect time.” I love helping people take those ideas and
+                turn them into something real — whether that’s a beautiful
+                website, a memorable brand, a winning grant application or a
+                business that finally feels like them.
               </p>
 
               <p>
-                Throughout my career, I’ve worked across government,
-                education and business, leading strategic projects,
-                executive communications, funding reports and business
-                improvement initiatives. Along the way, I realised the work
-                I loved most wasn’t simply managing projects — it was
-                helping people transform ideas into something real.
+                My career has taken me through executive leadership,
+                strategic planning, communications and business improvement,
+                but one thing has always stayed the same...
+              </p>
+
+              <p>I’ve always been the person who loves making ideas happen.</p>
+
+              <p>
+                I realised the work that energised me most wasn’t ticking
+                off project plans or writing reports — it was helping people
+                find clarity, solve problems creatively and build something
+                they’re genuinely proud of.
+              </p>
+
+              <p>So I created Positive Popcorn.</p>
+
+              <p>
+                Today, I combine creativity with practical business
+                experience to help small businesses, community
+                organisations and passionate people bring their ideas to
+                life.
               </p>
 
               <p>
-                Whether that meant building a brand, designing a website,
-                creating business systems, writing a grant application or
-                telling a story that genuinely connects with people, I found
-                myself naturally drawn to the creative process.
+                Whether we’re creating a website, building a brand,
+                designing business templates, developing content, writing
+                funding applications or streamlining the way you work, my
+                approach is always the same:
               </p>
 
-              <p>So I decided to build a business around it.</p>
-
-              <p>
-                Today, Positive Popcorn brings together everything I love:
-                creativity, strategy, design and practical business
-                thinking.
-              </p>
-
-              <p>
-                I work with small businesses, entrepreneurs, community
-                organisations and passionate people who have big ideas but
-                need someone to help shape them, simplify them and bring
-                them to life.
-              </p>
-
-              <p>
-                Whether we’re creating a website, developing a brand,
-                designing templates, planning content, writing funding
-                applications or building smarter business systems, my goal
-                is always the same: to create work that feels authentic,
-                looks beautiful and makes a genuine impact.
+              <p className="popLines">
+                Create something authentic.
+                <br />
+                Make it beautiful.
+                <br />
+                Keep it practical.
+                <br />
+                Deliver something that works.
               </p>
 
               <h3>Why Positive Popcorn?</h3>
               <p>Because ideas are a little like popcorn.</p>
-              <p>They often start as something small and ordinary.</p>
+              <p>They often start as something small.</p>
               <p>
                 With the right mix of creativity, strategy and
-                encouragement, they become something exciting that people
-                can’t help but notice.
+                encouragement, they grow into something people can’t help
+                but notice.
               </p>
-              <p>That’s what I love helping people do.</p>
-              <p className="popLines">
-                Take an idea.
-                <br />
-                Help it grow.
-                <br />
-                Then watch it pop.
-              </p>
+              <p>That’s the part I love.</p>
+              <p>Watching an idea become something real.</p>
 
-              <h3>What I bring</h3>
+              <h3>What you’ll get working with me</h3>
               <ul className="whyList">
-                <li>Creative thinking backed by real business experience</li>
-                <li>Strategic planning with practical solutions</li>
-                <li>Beautiful, user-friendly design</li>
-                <li>Government reporting and grant writing expertise</li>
-                <li>AI-powered tools that save time and simplify work</li>
-                <li>Honest advice and genuine collaboration</li>
+                <li>Creative thinking backed by real business experience.</li>
+                <li>Honest advice — not confusing jargon.</li>
+                <li>Practical solutions that actually work.</li>
+                <li>Beautiful websites and branding with purpose.</li>
+                <li>AI-powered tools and systems that save time.</li>
+                <li>A genuine collaborator who cares about your success.</li>
               </ul>
 
               <h3>A little about me</h3>
               <p>
-                When I’m not behind the computer, you’ll usually find me out
-                fishing around the Top End, exploring the outdoors, enjoying
-                time with family, or dreaming up my next creative project
-                over a good coffee.
+                When I’m not behind the computer, you’ll usually find me
+                fishing somewhere around the Top End, exploring remote
+                places, spending time with family, or planning my next
+                creative adventure over a good coffee.
               </p>
               <p>
-                Living in the Territory has taught me to appreciate
-                authenticity, adventure and the simple things in life. Those
-                values shape the way I work — with honesty, creativity and a
-                genuine desire to help others succeed.
+                People often ask where ideas come from. I don’t hunt for
+                them — I go fishing. I cast a line, stay curious, and before
+                long something exciting bites.
+              </p>
+              <p>
+                Maybe that’s why I love this work so much. I’m always
+                looking for the next great catch... the next idea with
+                potential, the next story waiting to be told, or the next
+                business ready to grow.
+              </p>
+              <p>
+                Living in the Northern Territory has taught me to value
+                authenticity, resilience and community. Those values shape
+                everything I do.
               </p>
 
               <p>
-                <strong>Let’s create something worth sharing.</strong>
+                <strong>Let’s make something worth sharing.</strong>
               </p>
               <p>
-                Whether you’re launching a new business, refreshing your
+                Whether you’re launching something new, refreshing your
                 brand, applying for funding or simply trying to organise the
-                ideas spinning around in your head, I’d love to help.
+                ideas swirling around in your head, I’d love to help.
               </p>
               <p>Let’s turn your next idea into something that truly pops.</p>
 
