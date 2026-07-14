@@ -406,6 +406,25 @@ function App() {
               </div>
             </div>
 
+            <div className="portfolioWhy">
+              <h3>Why Positive Popcorn?</h3>
+              <p>
+                I believe the best ideas don’t need to be the biggest — they
+                just need someone who believes in them.
+              </p>
+              <p>
+                Whether you’re launching a business, applying for funding,
+                building a brand or simply trying to get organised, I’m here
+                to help turn scattered thoughts into something clear,
+                professional and purposeful.
+              </p>
+              <p>
+                Every project is created with creativity, strategy and
+                genuine care, so your ideas don’t just stay ideas.
+              </p>
+              <p className="popLines">They pop into impact.</p>
+            </div>
+
             <div className="projectCta">
               <p className="eyebrow">Your business?</p>
               <p>Maybe the next success story belongs here.</p>
@@ -719,4 +738,3 @@ function App() {
 }
 
 export default App;
-
