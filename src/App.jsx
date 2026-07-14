@@ -488,21 +488,7 @@ function App() {
                 <li>Deliver something that works.</li>
               </ul>
 
-              <h3>Why Positive Popcorn?</h3>
-              <p>Because ideas are a little like popcorn.</p>
-              <p>They often start as something small.</p>
-              <p>
-                With the right mix of creativity, strategy and
-                encouragement, they grow into something people can’t help
-                but notice.
-              </p>
-              <p className="popLines">
-                That’s the part I love.
-                <br />
-                Watching an idea become something real.
-              </p>
-
-              <h3>What you’ll get working with me</h3>
+              <h3>What You’ll Get Working With Me</h3>
               <ul className="whyList">
                 <li>Creative thinking backed by real business experience.</li>
                 <li>Honest advice — not confusing jargon.</li>
@@ -512,7 +498,7 @@ function App() {
                 <li>A genuine collaborator who cares about your success.</li>
               </ul>
 
-              <h3>A little about me</h3>
+              <h3>Where I Find Inspiration</h3>
               <p>
                 When I’m not behind the computer, you’ll usually find me
                 fishing somewhere around the Top End, exploring remote
@@ -560,23 +546,28 @@ function App() {
           <section id="pricing" className="section pricingSection">
             <p className="eyebrow">Simple starting points</p>
             <h2>Pricing</h2>
+            <p className="pricingNote">
+              Every project is unique. These prices are starting points to
+              help you plan your investment. Once we chat about your goals,
+              I’ll provide a tailored quote with no surprises.
+            </p>
 
             <div className="pricingGrid">
               <div className="priceCard">
                 <h3>Website Starter</h3>
-                <p className="price">From $1,200</p>
+                <p className="price">From $1,950</p>
                 <p>Perfect for a simple, polished business website.</p>
               </div>
 
               <div className="priceCard">
                 <h3>Website Plus</h3>
-                <p className="price">From $2,200</p>
+                <p className="price">From $3,250</p>
                 <p>For growing businesses needing more pages and functionality.</p>
               </div>
 
               <div className="priceCard">
                 <h3>Branding Package</h3>
-                <p className="price">From $650</p>
+                <p className="price">From $950</p>
                 <p>Logo concepts, colours and visual direction.</p>
               </div>
 
@@ -588,7 +579,7 @@ function App() {
 
               <div className="priceCard">
                 <h3>Templates &amp; Business Tools</h3>
-                <p className="price">From $100</p>
+                <p className="price">From $150</p>
                 <p>A custom template or tracker built around how you work.</p>
               </div>
 
@@ -600,13 +591,13 @@ function App() {
 
               <div className="priceCard">
                 <h3>Room Design</h3>
-                <p className="price">From $450</p>
+                <p className="price">From $650</p>
                 <p>A full styling plan and mood board for a single room.</p>
               </div>
 
               <div className="priceCard">
                 <h3>Video &amp; Social Content</h3>
-                <p className="price">From $70</p>
+                <p className="price">From $150</p>
                 <p>From a single short-form video up to a full content package.</p>
               </div>
             </div>
