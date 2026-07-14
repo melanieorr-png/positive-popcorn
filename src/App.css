@@ -314,7 +314,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   position:relative; padding-left:34px;
 }
 .tickList li::before{
-  content:'âœ”';
+  content:'\2714';
   position:absolute; left:0; top:1px;
   font-style:normal;
   font-family:'Work Sans', sans-serif;
@@ -424,6 +424,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .projectCta p:not(.eyebrow){
   font-family:'Fraunces', serif; font-size:1.3rem; margin-bottom:22px;
 }
+
+.portfolioWhy{
+  max-width:620px; margin:56px auto 0; text-align:center;
+}
+.portfolioWhy h3{ font-size:1.3rem; margin-bottom:16px; }
+.portfolioWhy p{ color:#4a463f; }
+.portfolioWhy .popLines{ margin-top:18px; }
 
 /* ---------- FAQ ---------- */
 .faqGrid{
