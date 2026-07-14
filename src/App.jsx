@@ -181,6 +181,7 @@ function Nav({ onHome, showHome }) {
           <>
             <a href="#about">About</a>
             <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
             <a href="#pricing">Pricing</a>
             <a href="#contact">Contact</a>
           </>
@@ -298,6 +299,99 @@ function App() {
             </div>
           </section>
 
+          {/* PORTFOLIO */}
+          <section id="portfolio" className="section portfolioSection">
+            <p className="eyebrow">Real projects. Real stories. Real results.</p>
+            <h2>Every project starts with an idea.</h2>
+            <p className="portfolioIntro">
+              Some begin as a sketch on paper. Others start as a conversation
+              over coffee, or a business owner with a dream. Here are a few
+              of the ideas I’ve helped bring to life.
+            </p>
+
+            <div className="projectList">
+              <div className="projectCard">
+                <p className="eyebrow">Executive Consultant | Website &amp; Brand</p>
+                <h3>Mike Hamilton</h3>
+                <div className="projectTags">
+                  <span className="tag">Brand Identity</span>
+                  <span className="tag">Website Design &amp; Development</span>
+                  <span className="tag">Copywriting</span>
+                  <span className="tag">Service Strategy</span>
+                  <span className="tag">SEO</span>
+                  <span className="tag">Document Templates</span>
+                </div>
+                <p>
+                  Developed a modern, professional online presence for a
+                  nationally recognised VET executive, creating a website
+                  that reflects decades of leadership experience while
+                  positioning Mike for consulting opportunities.
+                </p>
+                <a
+                  href="https://mikehamilton.com.au"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="projectLink"
+                >
+                  Visit Website → mikehamilton.com.au
+                </a>
+              </div>
+
+              <div className="projectCard">
+                <p className="eyebrow">YouTube Brand | Adventure Storytelling</p>
+                <h3>Barefoot Prospector</h3>
+                <div className="projectTags">
+                  <span className="tag">Brand Development</span>
+                  <span className="tag">YouTube Strategy</span>
+                  <span className="tag">Channel Artwork</span>
+                  <span className="tag">Content Planning</span>
+                  <span className="tag">Video Titles</span>
+                  <span className="tag">Thumbnails</span>
+                  <span className="tag">Storytelling</span>
+                </div>
+                <p>
+                  Built the creative direction behind Barefoot Prospector,
+                  helping transform remote gold adventures into a
+                  recognisable digital brand focused on authentic Territory
+                  storytelling.
+                </p>
+              </div>
+
+              <div className="projectCard">
+                <p className="eyebrow">Outdoor Lifestyle Brand</p>
+                <h3>Outdoor Territory</h3>
+                <div className="projectTags">
+                  <span className="tag">Brand Development</span>
+                  <span className="tag">Website Design</span>
+                  <span className="tag">Content Strategy</span>
+                  <span className="tag">Photography Direction</span>
+                  <span className="tag">Social Media Planning</span>
+                </div>
+                <p>
+                  Creating a brand that celebrates life outdoors across
+                  Northern Australia through authentic stories, adventure
+                  and exploration.
+                </p>
+              </div>
+
+              <div className="projectCard">
+                <p className="eyebrow">My Creative Studio</p>
+                <h3>Positive Popcorn</h3>
+                <p>
+                  Because every creative business should practise what it
+                  preaches. Positive Popcorn is my own brand and creative
+                  playground, where I experiment with ideas, build websites,
+                  develop new services and continually explore better ways
+                  to help businesses grow.
+                </p>
+              </div>
+            </div>
+
+            <p className="portfolioComingSoon">
+              Coming soon — your business could be the next story here.
+            </p>
+          </section>
+
           {/* ABOUT */}
           <section id="about" className="aboutSection">
             <div>
@@ -408,7 +502,7 @@ function App() {
             </div>
 
             <div className="aboutVisual">
-              <img src="/mel-photo.jpeg" alt="Mel, founder of Positive Popcorn" />
+              <img src="/mel-logo.png" alt="Mel, founder of Positive Popcorn" />
             </div>
           </section>
 
