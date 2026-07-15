@@ -307,8 +307,8 @@ function App() {
               </div>
 
               <div className="projectCard">
-                <div className="projectVisual alt">
-                  <img src="/portfolio-barefoot.png" alt="The Barefoot Prospector YouTube channel banner" />
+                <div className="projectVisual logoVisual">
+                  <img src="/portfolio-barefoot-logo.jpg" alt="The Barefoot Prospector logo" />
                 </div>
                 <div className="projectBody">
                   <p className="eyebrow">Adventure Storytelling | YouTube Brand</p>
@@ -322,30 +322,6 @@ function App() {
                     <span className="tag">Brand Identity</span>
                     <span className="tag">Channel Artwork</span>
                     <span className="tag">Content Strategy</span>
-                  </div>
-                  <a href="http://www.youtube.com/@TheBarefootProspector" target="_blank" rel="noopener noreferrer" className="projectLink">
-                    View Channel → @TheBarefootProspector
-                  </a>
-                </div>
-              </div>
-
-              <div className="projectCard">
-                <div className="projectVisual logoVisual">
-                  <img src="/portfolio-sharon.png" alt="Sharon Scherell Interiors logo" />
-                </div>
-                <div className="projectBody">
-                  <p className="eyebrow">Interior Design | Logo &amp; Brand Identity</p>
-                  <h3>Sharon Scherell</h3>
-                  <p>
-                    Designing a logo and full brand identity — colours,
-                    fonts and visual direction — for an interior design
-                    business, built to feel as considered as the spaces
-                    Sharon creates.
-                  </p>
-                  <div className="projectTags">
-                    <span className="tag">Logo Design</span>
-                    <span className="tag">Brand Identity</span>
-                    <span className="tag">Colour &amp; Typography</span>
                   </div>
                 </div>
               </div>
