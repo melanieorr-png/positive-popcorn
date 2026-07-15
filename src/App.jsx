@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "./App.css";
-
 function BohoSunIcon({ className = "" }) {
   return (
     <svg className={`bohoIcon ${className}`} viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -13,7 +12,6 @@ function BohoSunIcon({ className = "" }) {
     </svg>
   );
 }
-
 function WebDesignIcon({ className = "" }) {
   return (
     <svg className={`bohoIcon ${className}`} viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -28,7 +26,6 @@ function WebDesignIcon({ className = "" }) {
     </svg>
   );
 }
-
 function RoomDesignIcon({ className = "" }) {
   return (
     <svg className={`bohoIcon ${className}`} viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -42,7 +39,6 @@ function RoomDesignIcon({ className = "" }) {
     </svg>
   );
 }
-
 function TemplatesIcon({ className = "" }) {
   return (
     <svg className={`bohoIcon ${className}`} viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -56,7 +52,6 @@ function TemplatesIcon({ className = "" }) {
     </svg>
   );
 }
-
 function VideoIcon({ className = "" }) {
   return (
     <svg className={`bohoIcon ${className}`} viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -67,7 +62,6 @@ function VideoIcon({ className = "" }) {
     </svg>
   );
 }
-
 // ---------- Service data ----------
 const services = [
   {
@@ -148,11 +142,10 @@ const services = [
     Icon: VideoIcon,
   },
 ];
-
 function Nav({ onHome, showHome }) {
   return (
     <nav className="mainNav">
-      <a
+      
         href="#home"
         className="brandLogo"
         onClick={(e) => {
@@ -163,10 +156,9 @@ function Nav({ onHome, showHome }) {
         <span className="brandScript">Positive</span>
         <span className="brandBlock">Popcorn</span>
       </a>
-
       <div className="navLinks">
         {showHome && (
-          <a
+          
             href="#home"
             className="homeLink"
             onClick={(e) => {
@@ -190,7 +182,6 @@ function Nav({ onHome, showHome }) {
     </nav>
   );
 }
-
 function ServicePage({ service, onHome }) {
   const Icon = service.Icon;
   return (
@@ -213,9 +204,8 @@ function ServicePage({ service, onHome }) {
           <Icon />
         </div>
       </section>
-
       <div className="backToHomeRow">
-        <a
+        
           href="#home"
           className="backLink"
           onClick={(e) => {
@@ -229,30 +219,23 @@ function ServicePage({ service, onHome }) {
     </>
   );
 }
-
 function App() {
   const [page, setPage] = useState("home");
-
   const goHome = () => {
     setPage("home");
     window.scrollTo(0, 0);
   };
-
   const goToService = (id) => {
     setPage(id);
     window.scrollTo(0, 0);
   };
-
   const activeService = services.find((s) => s.id === page);
-
   return (
     <main className="siteWrapper">
       <Nav onHome={goHome} showHome={page !== "home"} />
-
       {page !== "home" && activeService && (
         <ServicePage service={activeService} onHome={goHome} />
       )}
-
       {page === "home" && (
         <>
           {/* HERO */}
@@ -273,15 +256,13 @@ function App() {
               </div>
             </div>
           </section>
-
           {/* SERVICES OVERVIEW */}
           <section id="services" className="section servicesIntro">
             <p className="eyebrow">What I can help with</p>
             <h2>Creative support for your next big idea.</h2>
-
             <div className="servicesGrid">
               {services.map((service) => (
-                <a
+                
                   key={service.id}
                   href={`#${service.id}`}
                   className="serviceCard"
@@ -298,7 +279,6 @@ function App() {
               ))}
             </div>
           </section>
-
           {/* PORTFOLIO */}
           <section id="portfolio" className="section portfolioSection">
             <p className="eyebrow">Real projects. Real stories. Real results.</p>
@@ -309,7 +289,6 @@ function App() {
               Sometimes it’s someone saying, “I’ve always wanted to...” Here
               are a few ideas I’ve had the privilege of bringing to life.
             </p>
-
             <div className="projectGrid">
               <div className="projectCard">
                 <div className="projectVisual">
@@ -329,7 +308,7 @@ function App() {
                     <span className="tag">Website Design</span>
                     <span className="tag">SEO</span>
                   </div>
-                  <a
+                  
                     href="https://mikehamilton.com.au"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -339,56 +318,34 @@ function App() {
                   </a>
                 </div>
               </div>
-
               <div className="projectCard">
-                <div className="projectVisual alt">
-                  <img src="/portfolio-barefoot.png" alt="The Barefoot Prospector YouTube channel banner" />
+                <div className="projectVisual alt logoVisual">
+                  <img src="/portfolio-barefoot.png" alt="The Barefoot Prospector logo" />
                 </div>
-                <div className="projectBody">
-                  <p className="eyebrow">Adventure Storytelling | YouTube Brand</p>
-                  <h3>Barefoot Prospector</h3>
-                  <p>
-                    Creating the creative identity behind a YouTube channel
-                    that captures real Territory adventures, remote gold
-                    prospecting and authentic storytelling.
-                  </p>
-                  <div className="projectTags">
-                    <span className="tag">Brand Identity</span>
-                    <span className="tag">Channel Artwork</span>
-                    <span className="tag">Content Strategy</span>
-                  </div>
-                  <a
-                    href="http://www.youtube.com/@TheBarefootProspector"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="projectLink"
+                <div
+                  className="projectBody"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    padding: "24px",
+                  }}
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="48"
+                    height="48"
+                    role="img"
+                    aria-label="YouTube"
                   >
-                    View Channel → @TheBarefootProspector
-                  </a>
+                    <path
+                      fill="#FF0000"
+                      d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8z"
+                    />
+                    <path fill="#fff" d="M9.6 15.6V8.4L15.8 12z" />
+                  </svg>
                 </div>
               </div>
-
-              <div className="projectCard">
-                <div className="projectVisual logoVisual">
-                  <img src="/portfolio-sharon.png" alt="Sharon Scherell Interiors logo" />
-                </div>
-                <div className="projectBody">
-                  <p className="eyebrow">Interior Design | Logo &amp; Brand Identity</p>
-                  <h3>Sharon Scherell</h3>
-                  <p>
-                    Designing a logo and full brand identity — colours,
-                    fonts and visual direction — for an interior design
-                    business, built to feel as considered as the spaces
-                    Sharon creates.
-                  </p>
-                  <div className="projectTags">
-                    <span className="tag">Logo Design</span>
-                    <span className="tag">Brand Identity</span>
-                    <span className="tag">Colour &amp; Typography</span>
-                  </div>
-                </div>
-              </div>
-
               <div className="projectCard">
                 <div className="projectVisual alt logoVisual">
                   <img src="/portfolio-popcorn.png" alt="Positive Popcorn logo" />
@@ -405,7 +362,6 @@ function App() {
                 </div>
               </div>
             </div>
-
             <div className="portfolioWhy">
               <h3>Why Positive Popcorn?</h3>
               <p>
@@ -424,7 +380,6 @@ function App() {
               </p>
               <p className="popLines">They pop into impact.</p>
             </div>
-
             <div className="projectCta">
               <p className="eyebrow">Your business?</p>
               <p>Maybe the next success story belongs here.</p>
@@ -433,15 +388,12 @@ function App() {
               </a>
             </div>
           </section>
-
           {/* ABOUT */}
           <section id="about" className="aboutSection">
             <div>
               <p className="eyebrow">About Mel</p>
               <h2>I believe every great idea deserves the chance to grow.</h2>
-
               <p>Hi, I’m Mel — founder of Positive Popcorn.</p>
-
               <p>
                 Too many ideas stay scribbled in notebooks, waiting for the
                 “perfect time.” I love helping people take those ideas and
@@ -449,45 +401,37 @@ function App() {
                 website, a memorable brand, a winning grant application or a
                 business that finally feels like them.
               </p>
-
               <p>
                 My career has taken me through executive leadership,
                 strategic planning, communications and business improvement,
                 but one thing has always stayed the same...
               </p>
-
               <p>I’ve always been the person who loves making ideas happen.</p>
-
               <p>
                 I realised the work that energised me most wasn’t ticking
                 off project plans or writing reports — it was helping people
                 find clarity, solve problems creatively and build something
                 they’re genuinely proud of.
               </p>
-
               <p>So I created Positive Popcorn.</p>
-
               <p>
                 Today, I combine creativity with practical business
                 experience to help small businesses, community
                 organisations and passionate people bring their ideas to
                 life.
               </p>
-
               <p>
                 Whether we’re creating a website, building a brand,
                 designing business templates, developing content, writing
                 funding applications or streamlining the way you work, my
                 approach is always the same:
               </p>
-
               <ul className="tickList">
                 <li>Create something authentic.</li>
                 <li>Make it memorable.</li>
                 <li>Keep it practical.</li>
                 <li>Deliver something that works.</li>
               </ul>
-
               <h3>What You’ll Get Working With Me</h3>
               <ul className="whyList">
                 <li>Creative thinking backed by real business experience.</li>
@@ -497,7 +441,6 @@ function App() {
                 <li>AI-powered tools and systems that save time.</li>
                 <li>A genuine collaborator who cares about your success.</li>
               </ul>
-
               <h3>Where I Find Inspiration</h3>
               <p>
                 When I’m not behind the computer, you’ll usually find me
@@ -521,7 +464,6 @@ function App() {
                 authenticity, resilience and community. Those values shape
                 everything I do.
               </p>
-
               <p>
                 <strong>Let’s make something worth sharing.</strong>
               </p>
@@ -531,17 +473,14 @@ function App() {
                 ideas swirling around in your head, I’d love to help.
               </p>
               <p>Let’s turn your next idea into something that truly pops.</p>
-
               <a href="#contact" className="button">
                 Let’s Work Together
               </a>
             </div>
-
             <div className="aboutVisual">
               <img src="/mel-logo.png" alt="Mel, founder of Positive Popcorn" />
             </div>
           </section>
-
           {/* PRICING */}
           <section id="pricing" className="section pricingSection">
             <p className="eyebrow">Simple starting points</p>
@@ -551,50 +490,42 @@ function App() {
               help you plan your investment. Once we chat about your goals,
               I’ll provide a tailored quote with no surprises.
             </p>
-
             <div className="pricingGrid">
               <div className="priceCard">
                 <h3>Website Starter</h3>
                 <p className="price">From $1,950</p>
                 <p>Perfect for a simple, polished business website.</p>
               </div>
-
               <div className="priceCard">
                 <h3>Website Plus</h3>
                 <p className="price">From $3,250</p>
                 <p>For growing businesses needing more pages and functionality.</p>
               </div>
-
               <div className="priceCard">
                 <h3>Branding Package</h3>
                 <p className="price">From $950</p>
                 <p>Logo concepts, colours and visual direction.</p>
               </div>
-
               <div className="priceCard">
                 <h3>Grant & Tender Support</h3>
                 <p className="price">Custom Quote</p>
                 <p>Strategic writing support tailored to the opportunity.</p>
               </div>
-
               <div className="priceCard">
                 <h3>Templates &amp; Business Tools</h3>
                 <p className="price">From $150</p>
                 <p>A custom template or tracker built around how you work.</p>
               </div>
-
               <div className="priceCard">
                 <h3>AI Room Concept</h3>
                 <p className="price">From $50</p>
                 <p>Send a photo of your room and get back an AI-redesigned concept.</p>
               </div>
-
               <div className="priceCard">
                 <h3>Room Design</h3>
                 <p className="price">From $650</p>
                 <p>A full styling plan and mood board for a single room.</p>
               </div>
-
               <div className="priceCard">
                 <h3>Video &amp; Social Content</h3>
                 <p className="price">From $150</p>
@@ -602,12 +533,10 @@ function App() {
               </div>
             </div>
           </section>
-
           {/* FAQ */}
           <section id="faq" className="section faqSection">
             <p className="eyebrow">Good to know</p>
             <h2>FAQ</h2>
-
             <div className="faqGrid">
               <div>
                 <h3>Do you only work with NT businesses?</h3>
@@ -616,7 +545,6 @@ function App() {
                   anywhere.
                 </p>
               </div>
-
               <div>
                 <h3>Can you redesign an existing website?</h3>
                 <p>
@@ -624,7 +552,6 @@ function App() {
                   update the overall look and feel.
                 </p>
               </div>
-
               <div>
                 <h3>Can you help with grants and tenders?</h3>
                 <p>
@@ -632,7 +559,6 @@ function App() {
                   make your application clearer and stronger.
                 </p>
               </div>
-
               <div>
                 <h3>Do you provide ongoing support?</h3>
                 <p>
@@ -640,7 +566,6 @@ function App() {
                   improvements.
                 </p>
               </div>
-
               <div>
                 <h3>Do you only work on websites and branding?</h3>
                 <p>
@@ -649,7 +574,6 @@ function App() {
                   Reels and YouTube, and custom templates &amp; business tools.
                 </p>
               </div>
-
               <div>
                 <h3>Can you build templates or business tools for me?</h3>
                 <p>
@@ -660,29 +584,24 @@ function App() {
               </div>
             </div>
           </section>
-
           {/* CONTACT */}
           <section id="contact" className="contactSection">
             <div className="contactIntro">
               <p className="eyebrow">Let’s connect</p>
               <h2>Ready to make your idea pop?</h2>
-
               <p>
                 Whether you need a website, brand direction, grant support or digital
                 storytelling, I’d love to hear what you’re creating.
               </p>
-
               <p>
                 <strong>Email:</strong> melanieorr@gmail.com
               </p>
-
               <p>
                 <strong>Phone:</strong> 0414 271 593
               </p>
-
               <p>
                 <strong>LinkedIn:</strong>{" "}
-                <a
+                
                   href="https://www.linkedin.com/in/melanie-grant-darwin/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -691,7 +610,6 @@ function App() {
                 </a>
               </p>
             </div>
-
             <form
               className="contactForm"
               action="https://formspree.io/f/xnnzvdoq"
@@ -700,22 +618,19 @@ function App() {
               <input type="text" name="name" placeholder="Your Name" required />
               <input type="email" name="email" placeholder="Your Email" required />
               <textarea name="message" placeholder="Your Message" required></textarea>
-
               <button type="submit">Send Message</button>
             </form>
           </section>
         </>
       )}
-
       {/* FOOTER */}
       <footer className="footer">
         <p>Territorians helping Territorians ♡</p>
-
         <div>
           <span>melanieorr@gmail.com</span>
           <span>0414 271 593</span>
-          <span>www.positivepopcorn.com.au</span>
-          <a
+          <span>[www.positivepopcorn.com.au](https://www.positivepopcorn.com.au)</span>
+          
             href="https://www.linkedin.com/in/melanie-grant-darwin/"
             target="_blank"
             rel="noopener noreferrer"
@@ -727,5 +642,4 @@ function App() {
     </main>
   );
 }
-
 export default App;
