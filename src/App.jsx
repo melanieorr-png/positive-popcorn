@@ -177,7 +177,7 @@ function Nav({ onHome, showHome }) {
   );
 }
 
-function ServicePage({ service, onHome }) {
+function ServicePage({ service, onHome, onContact }) {
   const Icon = service.Icon;
   return (
     <>
@@ -191,7 +191,7 @@ function ServicePage({ service, onHome }) {
               <li key={b}>{b}</li>
             ))}
           </ul>
-          <a href="mailto:melanieorr@gmail.com" className="button">
+          <a href="#contact" className="button" onClick={(e) => { e.preventDefault(); onContact(); }}>
             Get in Touch
           </a>
         </div>
@@ -222,6 +222,14 @@ function App() {
     window.scrollTo(0, 0);
   };
 
+  const goToContact = () => {
+    setPage("home");
+    setTimeout(() => {
+      const el = document.getElementById("contact");
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }, 0);
+  };
+
   const activeService = services.find((s) => s.id === page);
 
   return (
@@ -229,7 +237,7 @@ function App() {
       <Nav onHome={goHome} showHome={page !== "home"} />
 
       {page !== "home" && activeService && (
-        <ServicePage service={activeService} onHome={goHome} />
+        <ServicePage service={activeService} onHome={goHome} onContact={goToContact} />
       )}
 
       {page === "home" && (
@@ -610,10 +618,6 @@ function App() {
               </p>
 
               <p>
-                <strong>Email:</strong> melanieorr@gmail.com
-              </p>
-
-              <p>
                 <strong>Phone:</strong> 0414 271 593
               </p>
 
@@ -645,7 +649,6 @@ function App() {
         <p>Territorians helping Territorians ♡</p>
 
         <div>
-          <span>melanieorr@gmail.com</span>
           <span>0414 271 593</span>
           <span>www.positivepopcorn.com.au</span>
           <a href="https://www.linkedin.com/in/melanie-grant-darwin/" target="_blank" rel="noopener noreferrer">
