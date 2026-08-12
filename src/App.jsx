@@ -29,20 +29,6 @@ function WebDesignIcon({ className = "" }) {
   );
 }
 
-function RoomDesignIcon({ className = "" }) {
-  return (
-    <svg className={`bohoIcon ${className}`} viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M20 62v30h80V62" stroke="currentColor" strokeWidth="3" strokeLinejoin="round" />
-      <path d="M20 62c0-10 8-16 18-16h44c10 0 18 6 18 16" stroke="currentColor" strokeWidth="3" strokeLinejoin="round" />
-      <path d="M20 78h80" stroke="currentColor" strokeWidth="3" />
-      <line x1="32" y1="78" x2="32" y2="92" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
-      <line x1="88" y1="78" x2="88" y2="92" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
-      <circle cx="94" cy="34" r="7" stroke="currentColor" strokeWidth="3" />
-      <line x1="94" y1="41" x2="94" y2="50" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
-    </svg>
-  );
-}
-
 function TemplatesIcon({ className = "" }) {
   return (
     <svg className={`bohoIcon ${className}`} viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -113,17 +99,6 @@ const services = [
     description: "Every business has a story worth telling. I help bring that story to life through words, visuals and messaging that feel clear, confident and memorable.",
     bullets: ["Website copy", "About pages", "Social media content", "Newsletters", "Case studies", "Marketing material"],
     Icon: BohoSunIcon,
-  },
-  {
-    id: "roomdesign",
-    emoji: "🛋️",
-    cardTitle: "Room Design",
-    cardTeaser: "Warm, considered interiors and styling advice that turn a space into somewhere you actually want to be.",
-    eyebrow: "Spaces that feel like you",
-    title: "Room Design",
-    description: "Two ways to work together: send through a photo of your room for a quick AI-generated concept from $50, or go all in with a full styling plan and mood board.",
-    bullets: ["AI room concepts from a single photo", "Room layout & styling plans", "Colour & texture direction", "Furniture & decor sourcing", "Mood boards", "Coastal & boho interior styling"],
-    Icon: RoomDesignIcon,
   },
   {
     id: "templates",
@@ -529,18 +504,6 @@ function App() {
               </div>
 
               <div className="priceCard">
-                <h3>AI Room Concept</h3>
-                <p className="price">From $50</p>
-                <p>Send a photo of your room and get back an AI-redesigned concept.</p>
-              </div>
-
-              <div className="priceCard">
-                <h3>Room Design</h3>
-                <p className="price">From $650</p>
-                <p>A full styling plan and mood board for a single room.</p>
-              </div>
-
-              <div className="priceCard">
                 <h3>Video &amp; Social Content</h3>
                 <p className="price">From $150</p>
                 <p>From a single short-form video up to a full content package.</p>
@@ -589,8 +552,7 @@ function App() {
               <div>
                 <h3>Do you only work on websites and branding?</h3>
                 <p>
-                  No — I also offer room design (from a $50 AI concept up to a
-                  full styling plan), video &amp; social content for TikTok,
+                  No — I also offer video &amp; social content for TikTok,
                   Reels and YouTube, and custom templates &amp; business tools.
                 </p>
               </div>
