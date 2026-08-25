@@ -120,7 +120,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   overflow:hidden;
 }
 .heroImage{
-  position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 75%; z-index:0;
+  position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 20%; z-index:0;
 }
 .hero::after{
   content:'';
