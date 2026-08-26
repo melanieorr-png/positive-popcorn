@@ -113,46 +113,51 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .navLinks{ gap:16px 22px; justify-content:center; }
 }
 
-/* ---------- HERO ---------- */
+/* ---------- HERO ----------
+   Artwork-based hero: the full Positive Popcorn logo lockup, scaled
+   responsively. No fixed height, no cropping — width:100% + height:auto
+   preserves the artwork's own aspect ratio at every screen size, and
+   object-fit:contain + max-height stop it from ever being cropped or
+   stretched on unusually short viewports. */
 .hero{
-  position:relative;
-  height:min(65vh, 560px);
+  width:100%;
+  min-height:clamp(260px, 45vh, 640px); /* floor + ceiling, not a fixed height */
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:clamp(1.5rem, 3vw, 2.5rem);
+  padding:clamp(2rem, 6vw, 5rem) clamp(1.25rem, 5vw, 3rem);
+  background:#fcf5ed; /* matched to the hero artwork's own cream background
+                          so the edges disappear seamlessly — slightly
+                          lighter than the site's --cream token by design */
   overflow:hidden;
 }
-.heroImage{
-  position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 20%; z-index:0;
-}
-.hero::after{
-  content:'';
-  position:absolute; inset:0;
-  background:linear-gradient(180deg, rgba(33,31,27,0) 35%, rgba(33,31,27,0.35) 100%);
-  z-index:1;
-}
-.heroContent{
-  position:absolute; left:0; right:0; bottom:0; z-index:2;
-  max-width:var(--max-w);
+
+.heroArtWrap{
+  width:100%;
+  max-width:1300px; /* stays under the artwork's native resolution so it's
+                        never upscaled/blurred, even on a 32" monitor */
   margin:0 auto;
-  padding:32px 40px 48px;
-  color:#fff;
 }
-.heroContent .eyebrow{ color:var(--gold); }
-.heroContent h1{
-  color:#fff;
-  font-size:clamp(1.5rem, 2.6vw, 2.1rem);
-  max-width:600px;
-  line-height:1.3;
+
+.heroImage{
+  display:block;
+  width:100%;         /* scales down fluidly on smaller screens */
+  height:auto;         /* preserves the artwork's original aspect ratio */
+  max-height:min(50vh, 480px); /* keeps the hero from getting too tall on
+                                   unusually narrow/short viewports */
+  object-fit:contain;  /* if max-height ever kicks in, the artwork
+                           letterboxes instead of stretching or cropping */
+  margin:0 auto;
 }
-.heroContent h1 .brandingWord{ color:var(--charcoal); font-style:normal; font-weight:600; }
-.heroContent > p{
-  color:rgba(255,255,255,0.92);
-  max-width:560px;
-  font-size:1.3rem;
-  line-height:1.5;
+
+.heroButtons{
+  display:flex; gap:16px; flex-wrap:wrap; justify-content:center;
 }
-.heroButtons{ display:flex; gap:16px; flex-wrap:wrap; margin-top:8px; }
 
 @media (max-width:480px){
-  .heroContent{ padding:24px 20px 32px; }
+  .heroButtons{ flex-direction:column; align-items:stretch; width:100%; max-width:320px; }
   .button{ padding:12px 22px; font-size:0.92rem; }
 }
 
@@ -166,11 +171,16 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   cursor:pointer;
 }
 .button:hover{ transform:translateY(-3px); background:var(--terracotta-dark); border-color:var(--terracotta-dark); }
+
+/* Restyled for the cream hero background (previously white-on-transparent
+   for a dark photo overlay, which is now unused elsewhere on the page) */
 .button.secondary{
-  background:transparent; color:#fff; border-color:rgba(255,255,255,0.7);
+  background:transparent; color:var(--terracotta); border-color:var(--terracotta);
   box-shadow:none;
 }
-.button.secondary:hover{ background:rgba(255,255,255,0.12); border-color:#fff; }
+.button.secondary:hover{
+  background:rgba(189,90,50,0.08); color:var(--terracotta-dark); border-color:var(--terracotta-dark);
+}
 
 /* ---------- GENERIC SECTION ---------- */
 .section{
