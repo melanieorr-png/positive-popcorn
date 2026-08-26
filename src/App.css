@@ -442,6 +442,35 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   font-family:'Fraunces', serif; font-size:1.3rem; margin-bottom:22px;
 }
 
+/* ---------- TESTIMONIAL ---------- */
+.testimonial{
+  max-width:760px;
+  margin:56px auto 0;
+  background:#fff;
+  border:1px solid rgba(33,31,27,0.07);
+  border-radius:22px;
+  padding:clamp(28px, 5vw, 48px);
+  text-align:center;
+}
+.testimonial .eyebrow{ margin-bottom:6px; }
+.testimonialQuote{ margin:0; }
+.testimonialQuote p{
+  font-family:'Fraunces', serif;
+  font-style:italic;
+  font-size:clamp(1.05rem, 2vw, 1.25rem);
+  line-height:1.7;
+  color:var(--charcoal);
+  margin-bottom:18px;
+}
+.testimonialQuote p:last-of-type{ margin-bottom:0; }
+.testimonialAttribution{
+  margin:18px 0 0;
+  font-family:'Work Sans', sans-serif;
+  font-weight:600;
+  font-size:0.95rem;
+  color:var(--sage-dark);
+}
+
 .portfolioWhy{
   max-width:620px; margin:56px auto 0; text-align:center;
 }
