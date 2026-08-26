@@ -324,6 +324,59 @@ function App() {
                   </p>
                 </div>
               </div>
+
+              <div className="projectCard">
+                <div className="projectVisual logoVisual">
+                  <img src="/portfolio-lymphstudio.png" alt="The Lymph Studio logo" />
+                </div>
+                <div className="projectBody">
+                  <p className="eyebrow">Small Business Support &amp; Digital Capability</p>
+                  <h3>The Lymph Studio</h3>
+                  <p>
+                    Supported a Darwin small business to simplify
+                    bookkeeping, organise receipts and create a practical
+                    bookkeeping template, while introducing AI tools to
+                    reduce admin workload and build confidence in managing
+                    business systems independently.
+                  </p>
+                  <div className="projectTags">
+                    <span className="tag">Bookkeeping Systems</span>
+                    <span className="tag">AI Tools &amp; Training</span>
+                    <span className="tag">Small Business Support</span>
+                  </div>
+                  <a href="https://www.lymphaticdrainagedarwin.com/" target="_blank" rel="noopener noreferrer" className="projectLink">
+                    View Website → lymphaticdrainagedarwin.com
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="testimonial">
+              <p className="eyebrow">Client Feedback</p>
+              <blockquote className="testimonialQuote">
+                <p>
+                  I was drowning trying to get my bookkeeping organised. Mel
+                  from Positive Popcorn stepped in and made it simple. She
+                  helped me get my receipts sorted and built me a
+                  bookkeeping template to help me maintain the new order —
+                  something I could actually use straight away instead of
+                  trying to build it from scratch.
+                </p>
+                <p>
+                  She also reminded me about Claude and showed me how much
+                  of the admin work I’d been stressing over could actually
+                  be handled with AI, rather than me having to manage
+                  alone. I wasn’t just handed a fix — I actually learned
+                  how to keep doing it going forward.
+                </p>
+                <p>
+                  Nothing ever felt like too much trouble. Mel is
+                  professional and relatable to work with. If you’re
+                  feeling overwhelmed by the admin side of running a
+                  business, I can’t recommend her enough.
+                </p>
+              </blockquote>
+              <p className="testimonialAttribution">— Kate Wild, The Lymph Studio</p>
             </div>
 
             <div className="portfolioWhy">
