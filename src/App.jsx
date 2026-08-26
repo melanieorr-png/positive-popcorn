@@ -219,20 +219,20 @@ function App() {
         <>
           {/* HERO */}
           <section id="home" className="hero">
-            <img
-              src="/hero1.png"
-              alt="Positive Popcorn coastal sunset hero"
-              className="heroImage"
-            />
-            <div className="heroContent">
-              <div className="heroButtons">
-                <a href="#services" className="button">
-                  Explore Services
-                </a>
-                <a href="#contact" className="button secondary">
-                  Get in Touch
-                </a>
-              </div>
+            <div className="heroArtWrap">
+              <img
+                src="/hero1.png"
+                alt="Positive Popcorn — where ideas pop into impact"
+                className="heroImage"
+              />
+            </div>
+            <div className="heroButtons">
+              <a href="#services" className="button">
+                Explore Services
+              </a>
+              <a href="#contact" className="button secondary">
+                Get in Touch
+              </a>
             </div>
           </section>
 
