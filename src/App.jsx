@@ -1,11 +1,6 @@
 import { useState } from "react";
 import "./App.css";
 
-// TODO: replace with your live Eventbrite listing link once it's published.
-// Enrollment and payment for the AI Training Course happen on Eventbrite —
-// this site only needs to point people there.
-const EVENTBRITE_URL = "https://www.eventbrite.com.au/o/positive-popcorn";
-
 function BohoSunIcon({ className = "" }) {
   return (
     <svg className={`bohoIcon ${className}`} viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -165,7 +160,6 @@ const services = [
     Icon: AISparkIcon,
     image: "/big-4-ai-companions.png",
     imageAlt: "The Big 4 AI Companions — ChatGPT the Creative Collaborator, Claude the Digital Developer, Gemini the Live Researcher, and Copilot the Office Co-Worker",
-    cta: { label: "Enrol via Eventbrite", href: EVENTBRITE_URL, external: true },
   },
 ];
 
@@ -197,9 +191,28 @@ function Nav({ onHome, showHome }) {
   );
 }
 
+function InterestForm() {
+  return (
+    <div className="interestFormWrap">
+      <p className="interestFormNote">
+        No payment, no commitment — just pop in your details and we’ll be in
+        touch with dates, locations and pricing as soon as they’re locked in.
+      </p>
+      <form className="contactForm" action="https://formspree.io/f/xnnzvdoq" method="POST">
+        <input type="hidden" name="_subject" value="AI Training Course — Register Interest" />
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="text" name="location" placeholder="Your Town / Region" />
+        <textarea name="message" placeholder="Anything you'd like us to know? (optional)"></textarea>
+        <button type="submit">Register My Interest</button>
+      </form>
+    </div>
+  );
+}
+
 function ServicePage({ service, onHome, onContact }) {
   const Icon = service.Icon;
-  const { cta } = service;
+  const isCourse = service.id === "ai-course";
   return (
     <>
       <section className="splitSection servicePage">
@@ -212,19 +225,8 @@ function ServicePage({ service, onHome, onContact }) {
               <li key={b}>{b}</li>
             ))}
           </ul>
-          {cta ? (
-            <div className="ctaRow">
-              <a
-                href={cta.href}
-                className="button"
-                {...(cta.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-              >
-                {cta.label}
-              </a>
-              <a href="#contact" className="button secondary" onClick={(e) => { e.preventDefault(); onContact(); }}>
-                Have Questions? Get in Touch
-              </a>
-            </div>
+          {isCourse ? (
+            <InterestForm />
           ) : (
             <a href="#contact" className="button" onClick={(e) => { e.preventDefault(); onContact(); }}>
               Get in Touch
@@ -625,8 +627,8 @@ function App() {
 
               <div className="priceCard">
                 <h3>AI Training Course</h3>
-                <p className="price">See Eventbrite</p>
-                <p>Non-accredited, everyday AI skills. Dates, locations and pricing on Eventbrite.</p>
+                <p className="price">Register Interest</p>
+                <p>Non-accredited, everyday AI skills. Register your interest for dates, locations and pricing.</p>
               </div>
             </div>
           </section>
