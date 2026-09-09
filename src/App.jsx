@@ -1,6 +1,11 @@
 import { useState } from "react";
 import "./App.css";
 
+// TODO: replace with your live Eventbrite listing link once it's published.
+// Enrollment and payment for the AI Training Course happen on Eventbrite —
+// this site only needs to point people there.
+const EVENTBRITE_URL = "https://www.eventbrite.com.au/o/positive-popcorn";
+
 function BohoSunIcon({ className = "" }) {
   return (
     <svg className={`bohoIcon ${className}`} viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -50,6 +55,21 @@ function VideoIcon({ className = "" }) {
       <path d="M78 52l26-14v44l-26-14" stroke="currentColor" strokeWidth="3" strokeLinejoin="round" />
       <path d="M40 50l16 10-16 10z" stroke="currentColor" strokeWidth="3" strokeLinejoin="round" />
       <line x1="26" y1="96" x2="68" y2="96" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function AISparkIcon({ className = "" }) {
+  return (
+    <svg className={`bohoIcon ${className}`} viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="60" cy="64" r="26" stroke="currentColor" strokeWidth="3" />
+      <circle cx="60" cy="64" r="6" fill="currentColor" />
+      <path
+        d="M60 18v14M60 96v14M18 64h14M88 64h14M32 36l10 10M88 92l-10-10M88 36l-10 10M32 92l10-10"
+        stroke="currentColor"
+        strokeWidth="3"
+        strokeLinecap="round"
+      />
     </svg>
   );
 }
@@ -122,6 +142,29 @@ const services = [
     bullets: ["YouTube channel strategy & growth", "TikTok content creation", "Facebook page content & management", "Instagram Reels", "Scripting, filming & editing", "Content calendars & posting schedules"],
     Icon: VideoIcon,
   },
+  {
+    id: "ai-course",
+    emoji: "🤖",
+    cardTitle: "AI Training Course",
+    cardTeaser: "A friendly, non-accredited course in everyday AI skills — practical tools for daily life and business, no tech background needed.",
+    eyebrow: "Practical AI skills for everyday life",
+    title: "Everyday AI Skills Training",
+    // TODO: swap this description and the bullets below for your real
+    // curriculum, format (in-person/online) and target regional NT towns —
+    // this is placeholder copy to get the page structure in place.
+    description:
+      "A relaxed, non-accredited course that helps everyday people, business owners and community groups get confident using AI — no jargon, no tech background required. Built especially for regional Territory communities who want practical skills they can use straight away.",
+    bullets: [
+      "Getting started with ChatGPT, Claude and everyday AI tools",
+      "Writing better emails, messages and documents with AI help",
+      "Using AI to plan, organise and save time day-to-day",
+      "AI tips for small businesses and side hustles",
+      "Staying safe online and spotting AI mistakes",
+      "Hands-on practice in a friendly, judgement-free space",
+    ],
+    Icon: AISparkIcon,
+    cta: { label: "Enrol via Eventbrite", href: EVENTBRITE_URL, external: true },
+  },
 ];
 
 function Nav({ onHome, showHome }) {
@@ -154,6 +197,7 @@ function Nav({ onHome, showHome }) {
 
 function ServicePage({ service, onHome, onContact }) {
   const Icon = service.Icon;
+  const { cta } = service;
   return (
     <>
       <section className="splitSection servicePage">
@@ -166,9 +210,24 @@ function ServicePage({ service, onHome, onContact }) {
               <li key={b}>{b}</li>
             ))}
           </ul>
-          <a href="#contact" className="button" onClick={(e) => { e.preventDefault(); onContact(); }}>
-            Get in Touch
-          </a>
+          {cta ? (
+            <div className="ctaRow">
+              <a
+                href={cta.href}
+                className="button"
+                {...(cta.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+              >
+                {cta.label}
+              </a>
+              <a href="#contact" className="button secondary" onClick={(e) => { e.preventDefault(); onContact(); }}>
+                Have Questions? Get in Touch
+              </a>
+            </div>
+          ) : (
+            <a href="#contact" className="button" onClick={(e) => { e.preventDefault(); onContact(); }}>
+              Get in Touch
+            </a>
+          )}
         </div>
         <div className="featureVisual">
           <Icon />
@@ -561,6 +620,12 @@ function App() {
                 <p className="price">From $150</p>
                 <p>From a single short-form video up to a full content package.</p>
               </div>
+
+              <div className="priceCard">
+                <h3>AI Training Course</h3>
+                <p className="price">See Eventbrite</p>
+                <p>Non-accredited, everyday AI skills. Dates, locations and pricing on Eventbrite.</p>
+              </div>
             </div>
           </section>
 
@@ -616,6 +681,14 @@ function App() {
                   Yes. From Word documents, newsletters and capability statements
                   to trackers, registers and Notion workspaces — I build
                   templates customised to how your business actually works.
+                </p>
+              </div>
+
+              <div>
+                <h3>Do I need any tech experience for the AI Training Course?</h3>
+                <p>
+                  Not at all. It’s a non-accredited, everyday-skills course designed
+                  for complete beginners — just bring your curiosity.
                 </p>
               </div>
             </div>
