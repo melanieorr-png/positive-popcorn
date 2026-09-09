@@ -198,7 +198,7 @@ function InterestForm() {
         No payment, no commitment — just pop in your details and we’ll be in
         touch with dates, locations and pricing as soon as they’re locked in.
       </p>
-      <form className="contactForm" action="https://formspree.io/f/xnnzvdoq" method="POST">
+      <form className="contactForm" action="https://formspree.io/f/mbdelwza" method="POST">
         <input type="hidden" name="_subject" value="AI Training Course — Register Interest" />
         <input type="text" name="name" placeholder="Your Name" required />
         <input type="email" name="email" placeholder="Your Email" required />
