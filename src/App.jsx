@@ -163,6 +163,8 @@ const services = [
       "Hands-on practice in a friendly, judgement-free space",
     ],
     Icon: AISparkIcon,
+    image: "/big-4-ai-companions.png",
+    imageAlt: "The Big 4 AI Companions — ChatGPT the Creative Collaborator, Claude the Digital Developer, Gemini the Live Researcher, and Copilot the Office Co-Worker",
     cta: { label: "Enrol via Eventbrite", href: EVENTBRITE_URL, external: true },
   },
 ];
@@ -229,8 +231,8 @@ function ServicePage({ service, onHome, onContact }) {
             </a>
           )}
         </div>
-        <div className="featureVisual">
-          <Icon />
+        <div className={`featureVisual${service.image ? " hasImage" : ""}`}>
+          {service.image ? <img src={service.image} alt={service.imageAlt || ""} /> : <Icon />}
         </div>
       </section>
 
