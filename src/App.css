@@ -115,7 +115,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 /* ---------- HERO ----------
    Artwork-based hero: the full Positive Popcorn logo lockup, scaled
-   responsively. No fixed height, no cropping — width:100% + height:auto
+   responsively. No fixed height, no cropping â€” width:100% + height:auto
    preserves the artwork's own aspect ratio at every screen size, and
    object-fit:contain + max-height stop it from ever being cropped or
    stretched on unusually short viewports. */
@@ -129,7 +129,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   gap:clamp(1.5rem, 3vw, 2.5rem);
   padding:clamp(2rem, 6vw, 5rem) clamp(1.25rem, 5vw, 3rem);
   background:#fcf5ed; /* matched to the hero artwork's own cream background
-                          so the edges disappear seamlessly — slightly
+                          so the edges disappear seamlessly â€” slightly
                           lighter than the site's --cream token by design */
   overflow:hidden;
 }
@@ -238,6 +238,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .splitSection ul li::before{
   content:''; position:absolute; left:0; top:9px; width:8px; height:8px;
   border-radius:50%; background:var(--sage);
+}
+.ctaRow{
+  display:flex; gap:14px; flex-wrap:wrap; align-items:center;
 }
 .featureVisual{
   border-radius:200px 200px 16px 16px;
