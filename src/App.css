@@ -115,7 +115,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 /* ---------- HERO ----------
    Artwork-based hero: the full Positive Popcorn logo lockup, scaled
-   responsively. No fixed height, no cropping — width:100% + height:auto
+   responsively. No fixed height, no cropping â€” width:100% + height:auto
    preserves the artwork's own aspect ratio at every screen size, and
    object-fit:contain + max-height stop it from ever being cropped or
    stretched on unusually short viewports. */
@@ -129,7 +129,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   gap:clamp(1.5rem, 3vw, 2.5rem);
   padding:clamp(2rem, 6vw, 5rem) clamp(1.25rem, 5vw, 3rem);
   background:#fcf5ed; /* matched to the hero artwork's own cream background
-                          so the edges disappear seamlessly — slightly
+                          so the edges disappear seamlessly â€” slightly
                           lighter than the site's --cream token by design */
   overflow:hidden;
 }
@@ -534,7 +534,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   background:#fff; border:1px solid rgba(33,31,27,0.07); border-radius:18px;
   padding:32px;
 }
-.contactForm input, .contactForm textarea{
+.contactForm input, .contactForm textarea, .contactForm select{
   font-family:'Work Sans', sans-serif; font-size:0.98rem;
   padding:13px 16px; border-radius:10px;
   border:1px solid rgba(33,31,27,0.15);
@@ -542,6 +542,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   color:var(--charcoal);
 }
 .contactForm input::placeholder, .contactForm textarea::placeholder{ color:#8a8578; }
+.contactForm select:invalid{ color:#8a8578; }
 .contactForm textarea{ min-height:130px; resize:vertical; }
 .contactForm button{
   font-family:'Work Sans', sans-serif; font-weight:600; font-size:1rem;
