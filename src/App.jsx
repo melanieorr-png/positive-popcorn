@@ -144,9 +144,6 @@ const services = [
     cardTeaser: "A friendly, non-accredited course in everyday AI skills — practical tools for daily life and business, no tech background needed.",
     eyebrow: "Practical AI skills for everyday life",
     title: "Everyday AI Skills Training",
-    // TODO: swap this description and the bullets below for your real
-    // curriculum, format (in-person/online) and target regional NT towns —
-    // this is placeholder copy to get the page structure in place.
     description:
       "A relaxed, non-accredited course that helps everyday people, business owners and community groups get confident using AI — no jargon, no tech background required. Built especially for regional Territory communities who want practical skills they can use straight away.",
     bullets: [
@@ -157,6 +154,13 @@ const services = [
       "Staying safe online and spotting AI mistakes",
       "Hands-on practice in a friendly, judgement-free space",
     ],
+    // TODO: confirm the Darwin venue for both sessions once it's booked.
+    sessions: [
+      { date: "25 September", time: "10am – 12pm", details: "Face to face, Darwin — venue TBC" },
+      { date: "30 October", time: "10am – 12pm", details: "Face to face, Darwin — venue TBC" },
+    ],
+    customNote:
+      "Prefer something tailored? We also offer half-day or full-day sessions built around your business, focused on the tools you need to get ahead.",
     Icon: AISparkIcon,
     image: "/big-4-ai-companions.png",
     imageAlt: "The Big 4 AI Companions — ChatGPT the Creative Collaborator, Claude the Digital Developer, Gemini the Live Researcher, and Copilot the Office Co-Worker",
@@ -226,7 +230,22 @@ function ServicePage({ service, onHome, onContact }) {
             ))}
           </ul>
           {isCourse ? (
-            <InterestForm />
+            <>
+              {service.sessions && (
+                <div className="sessionList">
+                  <h3>Upcoming Sessions</h3>
+                  {service.sessions.map((s) => (
+                    <div className="sessionRow" key={s.date}>
+                      <span className="sessionDate">{s.date}</span>
+                      <span className="sessionTime">{s.time}</span>
+                      <span className="sessionDetails">{s.details}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
+              {service.customNote && <p className="customNote">{service.customNote}</p>}
+              <InterestForm />
+            </>
           ) : (
             <a href="#contact" className="button" onClick={(e) => { e.preventDefault(); onContact(); }}>
               Get in Touch
