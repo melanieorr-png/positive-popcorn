@@ -207,6 +207,14 @@ function InterestForm() {
         <input type="text" name="name" placeholder="Your Name" required />
         <input type="email" name="email" placeholder="Your Email" required />
         <input type="text" name="location" placeholder="Your Town / Region" />
+        <select name="session" defaultValue="" required>
+          <option value="" disabled>Which session are you interested in?</option>
+          <option value="25 September, 10am-12pm, Darwin (venue TBC)">25 September — 10am–12pm, Darwin</option>
+          <option value="30 October, 10am-12pm, Darwin (venue TBC)">30 October — 10am–12pm, Darwin</option>
+          <option value="Not sure / either date works">Not sure / either date works</option>
+          <option value="Tailor-made session for my business">Tailor-made session for my business</option>
+        </select>
+        <input type="number" name="people" min="1" placeholder="How many people are interested?" />
         <textarea name="message" placeholder="Anything you'd like us to know? (optional)"></textarea>
         <button type="submit">Register My Interest</button>
       </form>
