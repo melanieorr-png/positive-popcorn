@@ -618,19 +618,19 @@ function App() {
             <div className="pricingGrid">
               <div className="priceCard">
                 <h3>Website Starter</h3>
-                <p className="price">From $1,950</p>
+                <p className="price">From $850</p>
                 <p>Perfect for a simple, polished business website.</p>
               </div>
 
               <div className="priceCard">
                 <h3>Website Plus</h3>
-                <p className="price">From $3,250</p>
+                <p className="price">From $1,200</p>
                 <p>For growing businesses needing more pages and functionality.</p>
               </div>
 
               <div className="priceCard">
                 <h3>Branding Package</h3>
-                <p className="price">From $950</p>
+                <p className="price">From $250</p>
                 <p>Logo concepts, colours and visual direction.</p>
               </div>
 
