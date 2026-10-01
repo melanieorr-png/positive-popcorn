@@ -239,22 +239,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   content:''; position:absolute; left:0; top:9px; width:8px; height:8px;
   border-radius:50%; background:var(--sage);
 }
-.sessionList{
-  margin:22px 0 4px;
-  display:flex; flex-direction:column; gap:10px;
-}
-.sessionList h3{
-  font-size:1rem; margin-bottom:2px;
-}
-.sessionRow{
-  background:#fff; border:1px solid rgba(33,31,27,0.07); border-radius:14px;
-  padding:14px 18px;
-  display:flex; flex-wrap:wrap; align-items:baseline; gap:6px 12px;
-  font-size:0.95rem;
-}
-.sessionDate{ font-weight:600; color:var(--terracotta); }
-.sessionTime{ color:var(--charcoal); }
-.sessionDetails{ color:#6b6658; }
 .customNote{
   font-size:0.94rem; color:#4a463f; margin-top:16px;
   font-style:italic;
