@@ -154,11 +154,6 @@ const services = [
       "Staying safe online and spotting AI mistakes",
       "Hands-on practice in a friendly, judgement-free space",
     ],
-    // TODO: confirm the Darwin venue for both sessions once it's booked.
-    sessions: [
-      { date: "25 September", time: "10am – 12pm", details: "Face to face, Darwin — venue TBC" },
-      { date: "30 October", time: "10am – 12pm", details: "Face to face, Darwin — venue TBC" },
-    ],
     customNote:
       "Prefer something tailored? We also offer half-day or full-day sessions built around your business, focused on the tools you need to get ahead.",
     Icon: AISparkIcon,
@@ -208,10 +203,8 @@ function InterestForm() {
         <input type="email" name="email" placeholder="Your Email" required />
         <input type="text" name="location" placeholder="Your Town / Region" />
         <select name="session" defaultValue="" required>
-          <option value="" disabled>Which session are you interested in?</option>
-          <option value="25 September, 10am-12pm, Darwin (venue TBC)">25 September — 10am–12pm, Darwin</option>
-          <option value="30 October, 10am-12pm, Darwin (venue TBC)">30 October — 10am–12pm, Darwin</option>
-          <option value="Not sure / either date works">Not sure / either date works</option>
+          <option value="" disabled>What are you interested in?</option>
+          <option value="General session">General session</option>
           <option value="Tailor-made session for my business">Tailor-made session for my business</option>
         </select>
         <input type="number" name="people" min="1" placeholder="How many people are interested?" />
@@ -239,18 +232,6 @@ function ServicePage({ service, onHome, onContact }) {
           </ul>
           {isCourse ? (
             <>
-              {service.sessions && (
-                <div className="sessionList">
-                  <h3>Upcoming Sessions</h3>
-                  {service.sessions.map((s) => (
-                    <div className="sessionRow" key={s.date}>
-                      <span className="sessionDate">{s.date}</span>
-                      <span className="sessionTime">{s.time}</span>
-                      <span className="sessionDetails">{s.details}</span>
-                    </div>
-                  ))}
-                </div>
-              )}
               {service.customNote && <p className="customNote">{service.customNote}</p>}
               <InterestForm />
             </>
