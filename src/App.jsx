@@ -217,9 +217,10 @@ function InterestForm() {
   );
 }
 
-function ServicePage({ service, onHome, onContact }) {
+function ServicePage({ service, onHome, onContact, onPopReady }) {
   const Icon = service.Icon;
   const isCourse = service.id === "ai-course";
+  const isGrants = service.id === "grants";
   return (
     <>
       <section className="splitSection servicePage">
@@ -232,6 +233,15 @@ function ServicePage({ service, onHome, onContact }) {
               <li key={b}>{b}</li>
             ))}
           </ul>
+          {isGrants && (
+            <p className="customNote">
+              Not sure you're ready to apply yet?{" "}
+              <a href="#popready" onClick={(e) => { e.preventDefault(); onPopReady(); }} style={{ color: "var(--terracotta)", fontWeight: 600, textDecoration: "underline" }}>
+                Try POP Ready™
+              </a>{" "}
+              — a quick self-check that scores your readiness and gives you a clear next-steps plan.
+            </p>
+          )}
           {isCourse ? (
             <>
               {service.customNote && <p className="customNote">{service.customNote}</p>}
@@ -285,7 +295,7 @@ function App() {
       <Nav onHome={goHome} showHome={page !== "home"} onPopReady={() => goToService("popready")} />
 
       {page !== "home" && activeService && (
-        <ServicePage service={activeService} onHome={goHome} onContact={goToContact} />
+        <ServicePage service={activeService} onHome={goHome} onContact={goToContact} onPopReady={() => goToService("popready")} />
       )}
 
       {page === "popready" && <PopReady onHome={goHome} onContact={goToContact} />}
