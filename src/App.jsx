@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import PopReady from "./PopReady";
 
 function BohoSunIcon({ className = "" }) {
   return (
@@ -162,7 +163,7 @@ const services = [
   },
 ];
 
-function Nav({ onHome, showHome }) {
+function Nav({ onHome, showHome, onPopReady }) {
   return (
     <nav className="mainNav">
       <a href="#home" className="brandLogo" onClick={(e) => { e.preventDefault(); onHome(); }}>
@@ -181,6 +182,7 @@ function Nav({ onHome, showHome }) {
             <a href="#about">About</a>
             <a href="#services">Services</a>
             <a href="#portfolio">Portfolio</a>
+            <a href="#popready" onClick={(e) => { e.preventDefault(); onPopReady(); }}>POP Ready™</a>
             <a href="#pricing">Pricing</a>
             <a href="#contact">Contact</a>
           </>
@@ -280,11 +282,13 @@ function App() {
 
   return (
     <main className="siteWrapper">
-      <Nav onHome={goHome} showHome={page !== "home"} />
+      <Nav onHome={goHome} showHome={page !== "home"} onPopReady={() => goToService("popready")} />
 
       {page !== "home" && activeService && (
         <ServicePage service={activeService} onHome={goHome} onContact={goToContact} />
       )}
+
+      {page === "popready" && <PopReady onHome={goHome} onContact={goToContact} />}
 
       {page === "home" && (
         <>
