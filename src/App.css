@@ -70,7 +70,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   border-bottom:1px solid rgba(33,31,27,0.08);
 }
 .brandLogo{ display:flex; align-items:center; flex-shrink:0; }
-.brandLogoImg{ height:92px; width:auto; max-width:none; display:block; }
+.brandLogoImg{ height:130px; width:auto; max-width:100%; display:block; }
 .navLinks{ display:flex; gap:30px; flex-wrap:wrap; }
 .navLinks a{
   font-size:0.92rem; color:var(--sage-dark); position:relative; padding-bottom:2px;
@@ -104,7 +104,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 @media (max-width:760px){
   .mainNav{ padding:14px 20px; flex-direction:column; gap:12px; }
   .navLinks{ gap:16px 22px; justify-content:center; }
-  .brandLogoImg{ height:42px; }
+  .brandLogo{ justify-content:center; width:100%; }
+  .brandLogoImg{ height:auto; width:min(300px, 100%); }
 }
 
 /* ---------- HERO ----------
