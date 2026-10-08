@@ -199,6 +199,61 @@ function Nav({ onHome, showHome, onPopReady }) {
   );
 }
 
+const FORMSPREE_URL = "https://formspree.io/f/mbdelwza";
+
+function ContactForm() {
+  const [status, setStatus] = useState("idle"); // idle | sending | success | error
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    setStatus("sending");
+    try {
+      const res = await fetch(FORMSPREE_URL, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: new FormData(form),
+      });
+      if (res.ok) {
+        form.reset();
+        setStatus("success");
+      } else {
+        setStatus("error");
+      }
+    } catch (err) {
+      setStatus("error");
+    }
+  };
+
+  if (status === "success") {
+    return (
+      <div className="contactForm" role="status">
+        <h3>Thank you!</h3>
+        <p>Your message has landed. I’ll be in touch soon.</p>
+      </div>
+    );
+  }
+
+  return (
+    <form className="contactForm" onSubmit={handleSubmit}>
+      <input type="hidden" name="_subject" value="Website Enquiry — Positive Popcorn" />
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+
+      <button type="submit" disabled={status === "sending"}>
+        {status === "sending" ? "Sending…" : "Send Message"}
+      </button>
+
+      {status === "error" && (
+        <p role="alert" style={{ color: "var(--terracotta-dark)", fontWeight: 600 }}>
+          Sorry, that didn’t send. Please try again, or call 0414 271 593.
+        </p>
+      )}
+    </form>
+  );
+}
+
 function InterestForm() {
   return (
     <div className="interestFormWrap">
@@ -772,17 +827,7 @@ function App() {
               </p>
             </div>
 
-            <form
-              className="contactForm"
-              action="https://formspree.io/f/xnnzvdoq"
-              method="POST"
-            >
-              <input type="text" name="name" placeholder="Your Name" required />
-              <input type="email" name="email" placeholder="Your Email" required />
-              <textarea name="message" placeholder="Your Message" required></textarea>
-
-              <button type="submit">Send Message</button>
-            </form>
+            <ContactForm />
           </section>
         </>
       )}
