@@ -414,8 +414,21 @@ function ResultsScreen({ results, path, onRestart, onContact }) {
         <div className="pr-cta">
           <div>
             <span className="pr-kicker">POSITIVE POPCORN</span>
-            <h2>Want a hand turning this into an application?</h2>
-            <p>Positive Popcorn supports grants, tenders and acquittals from scoping through to submission.</p>
+            {results.recommendation === "Apply Now" ? (
+              <>
+                <h2>Want a hand turning this into an application?</h2>
+                <p>Positive Popcorn supports grants, tenders and acquittals from scoping through to submission.</p>
+              </>
+            ) : (
+              <>
+                <h2>Not quite ready? It's often an easy fix.</h2>
+                <p>
+                  Something as simple as reviewing your letters of support or getting your policies updated can
+                  make all the difference. Positive Popcorn can help you close the gaps, then turn your idea into
+                  an application that's ready to submit.
+                </p>
+              </>
+            )}
           </div>
           <a className="pr-button pr-light" href="#contact" onClick={(e) => { e.preventDefault(); onContact(); }}>Get in touch ↗</a>
         </div>
