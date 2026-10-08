@@ -235,8 +235,9 @@ function Hero({ stage, answeredCount, total }) {
     <section className="pr-hero">
       <div className="pr-orbit" aria-hidden="true"><span>✳</span></div>
       <img src="/popdude.png" alt="" aria-hidden="true" className="pr-popdude pr-popdude-hero" />
+      <span className="pr-popdude-tm" aria-hidden="true">POPDude™</span>
       <div className="pr-eyebrow">THE POSITIVE POPCORN TOOLKIT · GRANTS &amp; TENDERS</div>
-      <h1>Are you <em>POPReady?</em></h1>
+      <h1>Are you <em>POPReady<sup className="pr-tm">™</sup>?</em></h1>
       <p>
         Great ideas deserve a strong application. Work through seven plain-English areas to see
         what's ready, what needs work, and where to focus next.
@@ -244,7 +245,7 @@ function Hero({ stage, answeredCount, total }) {
       <div className="pr-hero-bottom">
         <span>7 areas</span>
         <span>21 questions</span>
-        <span>{stage === "assessment" ? `${answeredCount} of ${total} answered` : "Your own POP Score"}</span>
+        <span>{stage === "assessment" ? `${answeredCount} of ${total} answered` : "Your own POP Score™"}</span>
       </div>
     </section>
   );
@@ -408,7 +409,7 @@ function ResultsScreen({ results, path, onRestart, onContact }) {
       </div>
 
       <p className="pr-disclaimer">
-        POPReady is a self-assessment planning tool. It does not determine eligibility or guarantee grant or
+        POPReady™ is a self-assessment planning tool. It does not determine eligibility or guarantee grant or
         tender success. Always check the requirements of the specific opportunity.
       </p>
     </>
@@ -476,9 +477,11 @@ export default function PopReady({ onHome, onContact }) {
 .pr-orbit:after{inset:80px}
 .pr-orbit span{font-size:110px;color:#2d1a10}
 .pr-popdude{position:absolute;pointer-events:none}
-.pr-popdude-hero{right:24px;bottom:14px;width:120px;height:auto}
+.pr-popdude-hero{right:24px;bottom:34px;width:120px;height:auto}
+.pr-popdude-tm{position:absolute;right:24px;bottom:12px;width:120px;text-align:center;font-family:'Caveat',cursive;font-weight:700;font-size:18px;color:#fff;pointer-events:none}
+.pr-tm{font-size:.3em;font-weight:600;vertical-align:super;line-height:0;margin-left:.08em}
 .pr-popdude-score{right:26px;top:20px;width:72px;height:auto}
-@media(max-width:750px){.pr-popdude-hero{width:90px;right:10px;bottom:8px}}
+@media(max-width:750px){.pr-popdude-hero{width:90px;right:10px;bottom:26px}.pr-popdude-tm{width:90px;right:10px;bottom:6px;font-size:15px}}
 .pr-panel,.pr-result-detail,.pr-priorities{background:white;border:1px solid var(--line);border-radius:22px;padding:34px;margin-bottom:20px}
 .pr-panel-top{display:flex;justify-content:space-between;align-items:end;gap:20px}
 .pr-panel h2,.pr-result-detail h2,.pr-priorities h2{font-size:30px;letter-spacing:0;margin:6px 0 19px}
