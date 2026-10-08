@@ -163,6 +163,13 @@ const services = [
   },
 ];
 
+// ---------- POP Method ----------
+const popMethod = [
+  { num: "POP 1", name: "BUILD", words: ["Plan", "Organise", "Perform"], line: "Turn ideas into action." },
+  { num: "POP 2", name: "IMPROVE", words: ["Progression", "Optimisation", "Performance"], line: "Turn good outcomes into exceptional results." },
+  { num: "POP 3", name: "GROW", words: ["Potential", "Opportunity", "Prosperity"], line: "Create long-term business success." },
+];
+
 function Nav({ onHome, showHome, onPopReady }) {
   return (
     <nav className="mainNav">
@@ -282,10 +289,15 @@ function App() {
 
   const goToContact = () => {
     setPage("home");
-    setTimeout(() => {
+    const scrollWhenReady = (attemptsLeft) => {
       const el = document.getElementById("contact");
-      if (el) el.scrollIntoView({ behavior: "smooth" });
-    }, 0);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      } else if (attemptsLeft > 0) {
+        setTimeout(() => scrollWhenReady(attemptsLeft - 1), 50);
+      }
+    };
+    setTimeout(() => scrollWhenReady(10), 50);
   };
 
   const activeService = services.find((s) => s.id === page);
@@ -334,6 +346,23 @@ function App() {
                   <p>{service.cardTeaser}</p>
                   <span>Learn more →</span>
                 </a>
+              ))}
+            </div>
+          </section>
+
+          {/* POP METHOD */}
+          <section id="pop-method" className="section methodSection">
+            <p className="eyebrow">The Positive Popcorn approach</p>
+            <h2>The POP Method<sup className="methodTm">™</sup></h2>
+
+            <div className="methodGrid">
+              {popMethod.map((m) => (
+                <div key={m.num} className="methodCard">
+                  <span className="methodNum">{m.num}</span>
+                  <h3>{m.name}</h3>
+                  <p className="methodWords">{m.words.join(" • ")}</p>
+                  <p>{m.line}</p>
+                </div>
               ))}
             </div>
           </section>
