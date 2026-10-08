@@ -174,7 +174,7 @@ function Nav({ onHome, showHome, onPopReady }) {
   return (
     <nav className="mainNav">
       <a href="#home" className="brandLogo" aria-label="Positive Popcorn home" onClick={(e) => { e.preventDefault(); onHome(); }}>
-        <img src="/logo-header.png" alt="Positive Popcorn" className="brandLogoImg" />
+        <img src="/logo-header-full.png" alt="Positive Popcorn — where ideas pop into impact" className="brandLogoImg" />
       </a>
 
       <div className="navLinks">
