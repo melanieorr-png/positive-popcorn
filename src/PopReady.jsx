@@ -251,6 +251,19 @@ function Hero({ stage, answeredCount, total }) {
   );
 }
 
+function PopMethodOne() {
+  return (
+    <section className="pr-method">
+      <div className="pr-method-card">
+        <span className="pr-kicker">THE POP METHOD<sup className="pr-tm">™</sup></span>
+        <h2>POP 1 — BUILD</h2>
+        <p className="pr-method-words">Plan • Organise • Perform</p>
+        <p className="pr-method-line">Turn ideas into action.</p>
+      </div>
+    </section>
+  );
+}
+
 function PathGate({ onChoose }) {
   return (
     <section className="pr-panel pr-path-panel">
@@ -479,6 +492,11 @@ export default function PopReady({ onHome, onContact }) {
 .pr-popdude{position:absolute;pointer-events:none}
 .pr-popdude-hero{right:24px;bottom:34px;width:120px;height:auto}
 .pr-popdude-tm{position:absolute;right:24px;bottom:12px;width:120px;text-align:center;font-family:'Caveat',cursive;font-weight:700;font-size:18px;color:#fff;pointer-events:none}
+.pr-method{margin:0 0 28px;max-width:760px;margin-left:auto;margin-right:auto}
+.pr-method-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px 34px}
+.pr-method-card h2{font-size:30px;margin:6px 0 10px;letter-spacing:0}
+.pr-method-words{font-weight:700;font-size:15px;color:#3F4F34;margin:0 0 6px}
+.pr-method-line{font-size:15px;color:#6b6658;margin:0}
 .pr-tm{font-size:.3em;font-weight:600;vertical-align:super;line-height:0;margin-left:.08em}
 .pr-popdude-score{right:26px;top:20px;width:72px;height:auto}
 @media(max-width:750px){.pr-popdude-hero{width:90px;right:10px;bottom:26px}.pr-popdude-tm{width:90px;right:10px;bottom:6px;font-size:15px}}
@@ -553,6 +571,8 @@ export default function PopReady({ onHome, onContact }) {
       <TopBar onHome={onHome} onContact={onContact} />
       <main>
         <Hero stage={stage} answeredCount={answeredCount} total={total} />
+
+        {stage === "path" && <PopMethodOne />}
 
         {stage === "path" && <PathGate onChoose={choosePath} />}
 
