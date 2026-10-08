@@ -370,12 +370,14 @@ function App() {
         <>
           {/* HERO */}
           <section id="home" className="hero">
-            <div className="heroArtWrap">
-              <img
-                src="/hero1.png"
-                alt="Positive Popcorn — where ideas pop into impact"
-                className="heroImage"
-              />
+            <div className="heroText">
+              <p className="eyebrow">Websites • Branding • Grants • AI Training</p>
+              <h1>Where ideas pop into impact.</h1>
+              <p className="heroLead">
+                Creative, practical support for Territory businesses and
+                community groups — from websites and branding to grant
+                applications and everyday AI skills.
+              </p>
             </div>
             <div className="heroButtons">
               <a href="#services" className="button">
