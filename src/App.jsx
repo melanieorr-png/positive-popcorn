@@ -173,9 +173,8 @@ const popMethod = [
 function Nav({ onHome, showHome, onPopReady }) {
   return (
     <nav className="mainNav">
-      <a href="#home" className="brandLogo" onClick={(e) => { e.preventDefault(); onHome(); }}>
-        <span className="brandScript">Positive</span>
-        <span className="brandBlock">Popcorn</span>
+      <a href="#home" className="brandLogo" aria-label="Positive Popcorn home" onClick={(e) => { e.preventDefault(); onHome(); }}>
+        <img src="/logo-header.png" alt="Positive Popcorn" className="brandLogoImg" />
       </a>
 
       <div className="navLinks">
