@@ -139,24 +139,24 @@ const services = [
     Icon: VideoIcon,
   },
   {
-    id: "ai-course",
+    id: "ai-coaching",
     emoji: "🤖",
-    cardTitle: "AI Training Course",
-    cardTeaser: "A friendly, non-accredited course in everyday AI skills — practical tools for daily life and business, no tech background needed.",
-    eyebrow: "Practical AI skills for everyday life",
-    title: "Everyday AI Skills Training",
+    cardTitle: "AI Coaching",
+    cardTeaser: "Hands-on sessions where you use AI on your own real tasks — not a lecture about what AI is. No tech background needed.",
+    eyebrow: "Learn by doing, with your own work",
+    title: "AI Coaching",
     description:
-      "A relaxed, non-accredited course that helps everyday people, business owners and community groups get confident using AI — no jargon, no tech background required. Built especially for regional Territory communities who want practical skills they can use straight away.",
+      "Practical, hands-on coaching sessions that help you actually use AI — not just hear about it. We work side by side on your real emails, documents, plans and everyday tasks, so you leave knowing exactly how to make AI work for you. No jargon, no tech background required. Built especially for regional Territory people, businesses and community groups.",
     bullets: [
-      "Getting started with ChatGPT, Claude and everyday AI tools",
-      "Writing better emails, messages and documents with AI help",
-      "Using AI to plan, organise and save time day-to-day",
-      "AI tips for small businesses and side hustles",
-      "Staying safe online and spotting AI mistakes",
-      "Hands-on practice in a friendly, judgement-free space",
+      "Getting set up and comfortable with ChatGPT, Claude and other everyday AI tools",
+      "Using AI on your own emails, messages and documents",
+      "Planning, organising and saving time on your real day-to-day tasks",
+      "Putting AI to work in your small business or side hustle",
+      "Checking AI answers and staying safe online",
+      "Plenty of hands-on practice in a friendly, judgement-free space",
     ],
     customNote:
-      "Prefer something tailored? We also offer half-day or full-day sessions built around your business, focused on the tools you need to get ahead.",
+      "Prefer something tailored? We also offer half-day or full-day coaching sessions built around your business, focused on the tools you need to get ahead.",
     Icon: AISparkIcon,
     image: "/big-4-ai-companions.png",
     imageAlt: "The Big 4 AI Companions — ChatGPT the Creative Collaborator, Claude the Digital Developer, Gemini the Live Researcher, and Copilot the Office Co-Worker",
@@ -261,7 +261,7 @@ function InterestForm() {
         touch with dates, locations and pricing as soon as they’re locked in.
       </p>
       <form className="contactForm" action="https://formspree.io/f/mbdelwza" method="POST">
-        <input type="hidden" name="_subject" value="AI Training Course — Register Interest" />
+        <input type="hidden" name="_subject" value="AI Coaching — Register Interest" />
         <input type="text" name="name" placeholder="Your Name" required />
         <input type="email" name="email" placeholder="Your Email" required />
         <input type="text" name="location" placeholder="Your Town / Region" />
@@ -280,7 +280,7 @@ function InterestForm() {
 
 function ServicePage({ service, onHome, onContact, onPopReady }) {
   const Icon = service.Icon;
-  const isCourse = service.id === "ai-course";
+  const isCoaching = service.id === "ai-coaching";
   const isGrants = service.id === "grants";
   return (
     <>
@@ -303,7 +303,7 @@ function ServicePage({ service, onHome, onContact, onPopReady }) {
               — a quick self-check that scores your readiness and gives you a clear next-steps plan.
             </p>
           )}
-          {isCourse ? (
+          {isCoaching ? (
             <>
               {service.customNote && <p className="customNote">{service.customNote}</p>}
               <InterestForm />
@@ -371,7 +371,7 @@ function App() {
           {/* HERO */}
           <section id="home" className="hero">
             <div className="heroText">
-              <p className="eyebrow">Websites • Branding • Grants • AI Training</p>
+              <p className="eyebrow">Websites • Branding • Grants • AI Coaching</p>
               <h1>Where ideas pop into impact.</h1>
               <p className="heroLead">
                 Creative, practical support for Territory businesses and
@@ -511,7 +511,7 @@ function App() {
                   </p>
                   <div className="projectTags">
                     <span className="tag">Bookkeeping Systems</span>
-                    <span className="tag">AI Tools &amp; Training</span>
+                    <span className="tag">AI Tools &amp; Coaching</span>
                     <span className="tag">Small Business Support</span>
                   </div>
                   <a href="https://www.lymphaticdrainagedarwin.com/" target="_blank" rel="noopener noreferrer" className="projectLink">
@@ -733,9 +733,9 @@ function App() {
               </div>
 
               <div className="priceCard">
-                <h3>AI Training Course</h3>
+                <h3>AI Coaching</h3>
                 <p className="price">Register Interest</p>
-                <p>Non-accredited, everyday AI skills. Register your interest for dates, locations and pricing.</p>
+                <p>Hands-on sessions using AI on your real tasks. Register your interest for dates, locations and pricing.</p>
               </div>
             </div>
           </section>
@@ -796,10 +796,10 @@ function App() {
               </div>
 
               <div>
-                <h3>Do I need any tech experience for the AI Training Course?</h3>
+                <h3>Do I need any tech experience for AI Coaching?</h3>
                 <p>
-                  Not at all. It’s a non-accredited, everyday-skills course designed
-                  for complete beginners — just bring your curiosity.
+                  Not at all. Sessions are hands-on and beginner-friendly — we use
+                  AI together on your own real tasks, so just bring your curiosity.
                 </p>
               </div>
             </div>
