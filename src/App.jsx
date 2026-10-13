@@ -826,6 +826,13 @@ function App() {
                   melanie-grant-darwin
                 </a>
               </p>
+
+              <p>
+                <strong>Facebook:</strong>{" "}
+                <a href="https://www.facebook.com/profile.php?id=61595383199489" target="_blank" rel="noopener noreferrer">
+                  Follow Positive Popcorn
+                </a>
+              </p>
             </div>
 
             <ContactForm />
@@ -842,6 +849,9 @@ function App() {
           <span>www.positivepopcorn.com.au</span>
           <a href="https://www.linkedin.com/in/melanie-grant-darwin/" target="_blank" rel="noopener noreferrer">
             LinkedIn
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61595383199489" target="_blank" rel="noopener noreferrer">
+            Facebook
           </a>
         </div>
       </footer>
