@@ -622,94 +622,28 @@ function App() {
               <p>Hi, I’m Mel — founder of Positive Popcorn.</p>
 
               <p>
-                Too many ideas stay scribbled in notebooks, waiting for the
-                “perfect time.” I love helping people take those ideas and
-                turn them into something real — whether that’s a beautiful
-                website, a memorable brand, a winning grant application or a
-                business that finally feels like them.
+                My background is in executive leadership, strategic planning
+                and communications. Today I combine that experience with AI
+                to help Territory businesses, community organisations and
+                passionate people bring their ideas to life — websites,
+                branding, grant applications, and practical AI &amp;
+                Executive Support coaching that helps you and your team work
+                smarter.
               </p>
 
               <p>
-                My career has taken me through executive leadership,
-                strategic planning, communications and business improvement,
-                but one thing has always stayed the same...
+                I’m NT through and through — when I’m not at the computer,
+                I’m usually fishing somewhere around the Top End. That same
+                patience and curiosity is what I bring to every project.
               </p>
-
-              <p>I’ve always been the person who loves making ideas happen.</p>
-
-              <p>
-                I realised the work that energised me most wasn’t ticking
-                off project plans or writing reports — it was helping people
-                find clarity, solve problems creatively and build something
-                they’re genuinely proud of.
-              </p>
-
-              <p>So I created Positive Popcorn.</p>
-
-              <p>
-                Today, I combine creativity with practical business
-                experience to help small businesses, community
-                organisations and passionate people bring their ideas to
-                life.
-              </p>
-
-              <p>
-                Whether we’re creating a website, building a brand,
-                designing business templates, developing content, writing
-                funding applications or streamlining the way you work, my
-                approach is always the same:
-              </p>
-
-              <ul className="tickList">
-                <li>Create something authentic.</li>
-                <li>Make it memorable.</li>
-                <li>Keep it practical.</li>
-                <li>Deliver something that works.</li>
-              </ul>
 
               <h3>What You’ll Get Working With Me</h3>
               <ul className="whyList">
-                <li>Creative thinking backed by real business experience.</li>
-                <li>Honest advice — not confusing jargon.</li>
-                <li>Practical solutions that actually work.</li>
-                <li>Beautiful websites and branding with purpose.</li>
-                <li>AI-powered tools and systems that save time.</li>
+                <li>Creative thinking backed by real leadership and business experience.</li>
+                <li>Honest, practical advice — no jargon.</li>
+                <li>AI-powered websites, branding and coaching that actually save you time.</li>
                 <li>A genuine collaborator who cares about your success.</li>
               </ul>
-
-              <h3>Where I Find Inspiration</h3>
-              <p>
-                When I’m not behind the computer, you’ll usually find me
-                fishing somewhere around the Top End, exploring remote
-                places, spending time with family, or planning my next
-                creative adventure over a good coffee.
-              </p>
-              <p>
-                People often ask where ideas come from. I don’t hunt for
-                them — I go fishing. I cast a line, stay curious, and before
-                long something exciting bites.
-              </p>
-              <p>
-                Maybe that’s why I love this work so much. I’m always
-                looking for the next great catch... the next idea with
-                potential, the next story waiting to be told, or the next
-                business ready to grow.
-              </p>
-              <p>
-                Living in the Northern Territory has taught me to value
-                authenticity, resilience and community. Those values shape
-                everything I do.
-              </p>
-
-              <p>
-                <strong>Let’s make something worth sharing.</strong>
-              </p>
-              <p>
-                Whether you’re launching something new, refreshing your
-                brand, applying for funding or simply trying to organise the
-                ideas swirling around in your head, I’d love to help.
-              </p>
-              <p>Let’s turn your next idea into something that truly pops.</p>
 
               <a href="#contact" className="button">
                 Let’s Work Together
