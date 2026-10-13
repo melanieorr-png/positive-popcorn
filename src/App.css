@@ -235,6 +235,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   font-size:0.94rem; color:#4a463f; margin-top:16px;
   font-style:italic;
 }
+.bulletGroup{ margin-top:24px; }
+.bulletGroup:first-of-type{ margin-top:18px; }
+.bulletGroup h3{
+  font-size:1.05rem; margin-bottom:4px; color:var(--charcoal);
+}
+.bulletGroup ul{ margin-top:10px; }
 .interestFormWrap{ margin-top:6px; }
 .interestFormNote{
   font-size:0.92rem; color:#6b6658; margin-bottom:16px;
