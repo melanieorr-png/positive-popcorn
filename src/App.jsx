@@ -141,19 +141,37 @@ const services = [
   {
     id: "ai-coaching",
     emoji: "🤖",
-    cardTitle: "AI Coaching",
-    cardTeaser: "Hands-on sessions where you use AI on your own real tasks — not a lecture about what AI is. No tech background needed.",
-    eyebrow: "Learn by doing, with your own work",
-    title: "AI Coaching",
-    description:
+    cardTitle: "AI & Executive Support Coaching",
+    cardTeaser: "Hands-on AI coaching for everyday life — plus specialist training for Executive, Administration and Office Support roles, including Copilot-only government workplaces.",
+    eyebrow: "Practical AI skills — for everyday life and the office",
+    title: "AI & Executive Support Coaching",
+    description: [
       "Practical, hands-on coaching sessions that help you actually use AI — not just hear about it. We work side by side on your real emails, documents, plans and everyday tasks, so you leave knowing exactly how to make AI work for you. No jargon, no tech background required. Built especially for regional Territory people, businesses and community groups.",
-    bullets: [
-      "Getting set up and comfortable with ChatGPT, Claude and other everyday AI tools",
-      "Using AI on your own emails, messages and documents",
-      "Planning, organising and saving time on your real day-to-day tasks",
-      "Putting AI to work in your small business or side hustle",
-      "Checking AI answers and staying safe online",
-      "Plenty of hands-on practice in a friendly, judgement-free space",
+      "We also offer specialist training for Executive Assistants, Administration Support and Office Managers — including workplaces where Microsoft Copilot is the only approved AI tool, such as government. You'll learn to use AI correctly, efficiently and professionally, so you can keep your manager and office running smoothly and give the support your business needs to grow.",
+    ],
+    bulletGroups: [
+      {
+        heading: "Everyday AI Coaching",
+        items: [
+          "Getting set up and comfortable with ChatGPT, Claude and other everyday AI tools",
+          "Using AI on your own emails, messages and documents",
+          "Planning, organising and saving time on your real day-to-day tasks",
+          "Putting AI to work in your small business or side hustle",
+          "Checking AI answers and staying safe online",
+          "Plenty of hands-on practice in a friendly, judgement-free space",
+        ],
+      },
+      {
+        heading: "Executive & Administration Support Training",
+        items: [
+          "Using Microsoft Copilot (and other approved tools) correctly and confidently — built for Copilot-only workplaces like government",
+          "Drafting professional emails, briefs, minutes and correspondence faster with AI",
+          "Smart inbox, calendar and task management using AI assistance",
+          "Keeping your manager and office running efficiently, professionally and compliantly",
+          "Tailored for Executive Assistants, Administration Support, PAs and Office Managers",
+          "Building the confidence to support your manager and help grow the business",
+        ],
+      },
     ],
     customNote:
       "Prefer something tailored? We also offer half-day or full-day coaching sessions built around your business, focused on the tools you need to get ahead.",
@@ -261,13 +279,14 @@ function InterestForm() {
         touch with dates, locations and pricing as soon as they’re locked in.
       </p>
       <form className="contactForm" action="https://formspree.io/f/mbdelwza" method="POST">
-        <input type="hidden" name="_subject" value="AI Coaching — Register Interest" />
+        <input type="hidden" name="_subject" value="AI & Executive Support Coaching — Register Interest" />
         <input type="text" name="name" placeholder="Your Name" required />
         <input type="email" name="email" placeholder="Your Email" required />
         <input type="text" name="location" placeholder="Your Town / Region" />
         <select name="session" defaultValue="" required>
           <option value="" disabled>What are you interested in?</option>
-          <option value="General session">General session</option>
+          <option value="General AI coaching">General AI coaching</option>
+          <option value="Executive / Administration Support training">Executive / Administration Support training</option>
           <option value="Tailor-made session for my business">Tailor-made session for my business</option>
         </select>
         <input type="number" name="people" min="1" placeholder="How many people are interested?" />
@@ -288,12 +307,29 @@ function ServicePage({ service, onHome, onContact, onPopReady }) {
         <div>
           <p className="eyebrow">{service.eyebrow}</p>
           <h2>{service.title}</h2>
-          <p>{service.description}</p>
-          <ul>
-            {service.bullets.map((b) => (
-              <li key={b}>{b}</li>
-            ))}
-          </ul>
+          {Array.isArray(service.description) ? (
+            service.description.map((para) => <p key={para}>{para}</p>)
+          ) : (
+            <p>{service.description}</p>
+          )}
+          {service.bulletGroups ? (
+            service.bulletGroups.map((group) => (
+              <div className="bulletGroup" key={group.heading}>
+                <h3>{group.heading}</h3>
+                <ul>
+                  {group.items.map((b) => (
+                    <li key={b}>{b}</li>
+                  ))}
+                </ul>
+              </div>
+            ))
+          ) : (
+            <ul>
+              {service.bullets.map((b) => (
+                <li key={b}>{b}</li>
+              ))}
+            </ul>
+          )}
           {isGrants && (
             <p className="customNote">
               Not sure you're ready to apply yet?{" "}
@@ -733,9 +769,9 @@ function App() {
               </div>
 
               <div className="priceCard">
-                <h3>AI Coaching</h3>
+                <h3>AI &amp; Executive Support Coaching</h3>
                 <p className="price">Register Interest</p>
-                <p>Hands-on sessions using AI on your real tasks. Register your interest for dates, locations and pricing.</p>
+                <p>Hands-on AI coaching, plus specialist Executive &amp; Administration Support training. Register your interest for dates, locations and pricing.</p>
               </div>
             </div>
           </section>
@@ -800,6 +836,16 @@ function App() {
                 <p>
                   Not at all. Sessions are hands-on and beginner-friendly — we use
                   AI together on your own real tasks, so just bring your curiosity.
+                </p>
+              </div>
+
+              <div>
+                <h3>Can you train my team on Microsoft Copilot specifically?</h3>
+                <p>
+                  Yes. The Executive &amp; Administration Support track is built for
+                  workplaces — including government — where Copilot is the only
+                  approved AI tool, so your team learns to use it correctly,
+                  efficiently and professionally.
                 </p>
               </div>
             </div>
